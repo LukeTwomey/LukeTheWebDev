@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
+import BlogPreview from "../components/BlogPreview";
 
-export const App = () => {
+export const App = ({ featurePosts }) => {
   return (
     <>
       <Head>
@@ -32,11 +33,22 @@ export const App = () => {
           </p>
         </section>
 
-        {/* <BlogPreview />
-        <ProjectsPreview /> */}
+        <BlogPreview posts={featurePosts} />
+        {/* <ProjectsPreview /> */}
       </main>
     </>
   );
 };
+
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:3000/api/getFeaturePosts");
+  const featurePosts = await res.json();
+
+  return {
+    props: {
+      featurePosts: featurePosts.data,
+    },
+  };
+}
 
 export default App;
