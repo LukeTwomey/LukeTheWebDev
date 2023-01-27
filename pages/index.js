@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { server } from "../config";
 import Image from "next/image";
 import BlogPreview from "../components/BlogPreview";
 
@@ -41,7 +42,7 @@ export const App = ({ featurePosts }) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/getFeaturePosts");
+  const res = await fetch(`${server}/api/getFeaturePosts`);
   const featurePosts = await res.json();
 
   return {
