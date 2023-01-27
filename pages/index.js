@@ -1,5 +1,5 @@
+import clientPromise from "../lib/mongodb";
 import Head from "next/head";
-import { server } from "../config";
 import Image from "next/image";
 import BlogPreview from "../components/BlogPreview";
 
@@ -42,12 +42,16 @@ export const App = ({ featurePosts }) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}/api/getFeaturePosts`);
-  const featurePosts = await res.json();
+  const client = await clientPromise;
+  const db = client.db("production");
+  const featurePosts = await db
+    .collection("posts")
+    .find({ feature: true })
+    .toArray();
 
   return {
     props: {
-      featurePosts: featurePosts.data,
+      featurePosts: JSON.parse(JSON.stringify(featurePosts)),
     },
   };
 }
