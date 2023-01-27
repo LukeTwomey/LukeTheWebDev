@@ -928,7 +928,7 @@ main h1 {
 }
 
 main img {
-  height: 170px;
+  height: auto;
   max-width: 100%;
 }
 
