@@ -2,6 +2,7 @@ import clientPromise from "../lib/mongodb";
 import Head from "next/head";
 import Image from "next/image";
 import BlogPreview from "../components/BlogPreview";
+import ProjectsPreview from "../components/ProjectsPreview";
 
 export const App = ({ featurePosts }) => {
   return (
@@ -35,7 +36,7 @@ export const App = ({ featurePosts }) => {
         </section>
 
         <BlogPreview posts={featurePosts} />
-        {/* <ProjectsPreview /> */}
+        <ProjectsPreview />
       </main>
     </>
   );
