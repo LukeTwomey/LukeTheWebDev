@@ -18,9 +18,7 @@ export const Header = () => {
     document.body.classList.remove("no-scroll");
   };
 
-  // this isn't working - class isn't getting added to header on nav open/close
   return (
-    // <header className={navOpen ? styles.navOpen : ""}>
     <header className={navOpen ? "navOpen" : ""}>
       <section className={styles.title}>
         <a href="/" onClick={closeNav}>
