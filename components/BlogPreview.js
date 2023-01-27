@@ -18,6 +18,7 @@ export const BlogPreview = ({ posts }) => {
             width="358"
             height="170"
             className="full-width"
+            priority
           />
           <div className="preview">
             {/* <Link to={`blog/${post.id}`} onClick={scrollToTop}> */}
