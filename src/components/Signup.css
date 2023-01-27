@@ -1,0 +1,57 @@
+.signup {
+  background: #848fa5;
+  color: #f9f9f9;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.signup p {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.filter-dark-blue {
+  filter: invert(15%) sepia(6%) saturate(2558%) hue-rotate(182deg)
+    brightness(94%) contrast(84%);
+}
+
+.signup img {
+  position: relative;
+  display: inline-block;
+  float: left;
+  height: 50px;
+  width: 50px;
+  margin: 0 1em 0 0;
+}
+
+.signup .email {
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  height: 30px;
+  margin-right: 0.5em;
+  padding: 0 0.5em;
+  width: 62%;
+}
+
+.signup .submit {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #c14953;
+  transition: background-color 0.3s linear;
+  border: none;
+  border-radius: 3px;
+  color: #f9f9f9;
+  font-size: 1em;
+  height: 30px;
+  padding: 0 0.5em;
+  width: 30%;
+}
+
+.signup .submit.success {
+  background-color: #207a0c;
+  transition: background-color 0.3s linear;
+}

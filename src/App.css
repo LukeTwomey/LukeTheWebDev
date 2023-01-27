@@ -1,0 +1,65 @@
+main {
+  padding: 0 1em;
+}
+
+main h1 {
+  margin-bottom: 0.3em;
+}
+
+main img {
+  height: 170px;
+  max-width: 100%;
+}
+
+main a {
+  text-decoration: none;
+}
+
+.formkit-form [data-style="minimal"] {
+  padding: 2em 1.5em 1.5em 1.5em !important;
+}
+
+.formkit-header {
+  margin: 0 !important;
+}
+
+.formkit-subheader {
+  margin: 0.5em 0 !important;
+}
+
+.formkit-field input {
+  color: #343431 !important;
+}
+
+.formkit-modal h2,
+.formkit-modal p {
+  text-align: center !important;
+}
+
+.formkit-modal h2 {
+  font-size: 1em !important;
+  margin: 0 !important;
+}
+
+.formkit-guarantee {
+  margin: 0 !important;
+}
+
+.seva-modal .formkit-close,
+.formkit-modal .formkit-close {
+  background: transparent !important;
+  border: none !important;
+  color: #f7f7f7 !important;
+  cursor: pointer !important;
+  font: inherit !important;
+  font-size: 24px !important;
+  line-height: 48px !important;
+  outline: none !important;
+  padding: 0 !important;
+  position: absolute !important;
+  top: 0px !important;
+  right: -2px !important;
+  width: 48px !important;
+  text-align: center !important;
+  -webkit-appearance: none !important;
+}

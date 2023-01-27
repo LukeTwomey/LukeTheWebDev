@@ -1,0 +1,24 @@
+.title {
+  background-color: #848fa5;
+  border-left: 5px solid #c14953;
+  margin: 1.25em 5em 1.25em 0;
+  padding: 0.4em 1em;
+  z-index: 2;
+  position: relative;
+}
+
+.title a {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.title h1 {
+  font-size: 1.9em;
+  margin: 0;
+}
+
+.title h2 {
+  font-size: 1.3em;
+  font-style: italic;
+  margin: 0;
+}
