@@ -1,0 +1,13 @@
+main.projects {
+  background: #51514b;
+  color: #f7f7f7;
+  padding: 1em 1em 3em 1em;
+}
+
+main.projects article {
+  background: #343431;
+}
+
+main.projects .preview a {
+  color: #848fa5;
+}

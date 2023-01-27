@@ -1,17 +1,19 @@
-import styles from "./ProjectsPreview.module.css";
+import React from "react";
 import Image from "next/image";
+import styles from "../styles/projects.module.css";
 
 const scrollToTop = () => {
   window.scrollTo(0, 0);
 };
 
-export const ProjectsPreview = () => {
+export const Projects = () => {
   return (
-    <section className="projects blue">
-      <h2>Projects</h2>
-      <article className="project">
+    <main className={styles.projects}>
+      <h1>Projects</h1>
+
+      <article className={styles.project}>
         <Image
-          src="/images/meal-genie.webp"
+          src={`/images/meal-genie.webp`}
           alt="Meal Genie preview"
           width="358"
           height="170"
@@ -29,7 +31,8 @@ export const ProjectsPreview = () => {
           {/* </Link> */}
         </div>
       </article>
-      <article className="project">
+
+      <article className={styles.project}>
         <Image
           src="/images/sound-sniffer.webp"
           alt="Sound Sniffer preview"
@@ -49,11 +52,29 @@ export const ProjectsPreview = () => {
           {/* </Link> */}
         </div>
       </article>
-      {/* <Link to="projects" className="button" onClick={scrollToTop}> */}
-      View Projects
-      {/* </Link> */}
-    </section>
+
+      <article className={styles.project}>
+        <Image
+          src="/images/moneypots-1.webp"
+          alt="Moneypots preview"
+          width="358"
+          height="170"
+          className="full-width"
+          priority
+        />
+        <div className="preview">
+          <h3>Moneypots</h3>
+          <p>
+            Moneypots is an Angular app which lets you create pots to keep track
+            of your money across multiple bank accounts.
+          </p>
+          {/* <Link to={`/projects/moneypots`} onClick={scrollToTop}> */}
+          Read more...
+          {/* </Link> */}
+        </div>
+      </article>
+    </main>
   );
 };
 
-export default ProjectsPreview;
+export default Projects;
