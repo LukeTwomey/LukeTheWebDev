@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 const scrollToTop = () => {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 };
 
 export const BlogPreview = ({ posts }) => {
@@ -21,21 +21,21 @@ export const BlogPreview = ({ posts }) => {
             priority
           />
           <div className="preview">
-            {/* <Link to={`blog/${post.id}`} onClick={scrollToTop}> */}
-            <h3>{post.title}</h3>
-            {/* </Link> */}
+            <Link href={`blog/${post.id}`} onClick={scrollToTop}>
+              <h3>{post.title}</h3>
+            </Link>
             <h4>{post.dateCreated}</h4>
             <p>{post.preview}</p>
-            {/* <Link to={`blog/${post.id}`} onClick={scrollToTop}> */}
-            Read post
-            {/* </Link> */}
+            <Link href={`blog/${post.id}`} onClick={scrollToTop}>
+              Read post
+            </Link>
           </div>
         </article>
       ))}
-      {/* 
-      <Link to="blog" className="button" onClick={scrollToTop}>
+
+      <Link href="/blog" className="button" onClick={scrollToTop}>
         View Blog
-      </Link> */}
+      </Link>
     </section>
   );
 };

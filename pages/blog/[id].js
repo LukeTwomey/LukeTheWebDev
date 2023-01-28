@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nord } from "react-syntax-highlighter/dist/cjs/styles/prism";
