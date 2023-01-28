@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import clientPromise from "../lib/mongodb";
 import styles from "../styles/blog.module.css";
 
 const scrollToTop = () => {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 };
 
 export const Blog = ({ posts }) => {
@@ -28,14 +29,14 @@ export const Blog = ({ posts }) => {
               priority
             />
             <div className="preview">
-              {/* <Link to={`${post.id}`} onClick={scrollToTop}> */}
-              <h3>{post.title}</h3>
-              {/* </Link> */}
+              <Link href={`/blog/${post.id}`} onClick={scrollToTop}>
+                <h3>{post.title}</h3>
+              </Link>
               <h4>{post.dateCreated}</h4>
               <p>{post.preview}</p>
-              {/* <Link to={`${post.id}`} onClick={scrollToTop}> */}
-              Read post
-              {/* </Link> */}
+              <Link href={`/blog/${post.id}`} onClick={scrollToTop}>
+                Read post
+              </Link>
             </div>
           </article>
         ))}
