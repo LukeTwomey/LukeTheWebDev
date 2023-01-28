@@ -1,8 +1,9 @@
+import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/projects.module.css";
 
 const scrollToTop = () => {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 };
 
 export const Projects = () => {
@@ -12,7 +13,7 @@ export const Projects = () => {
 
       <article className={styles.project}>
         <Image
-          src={`/images/meal-genie.webp`}
+          src="/images/meal-genie.webp"
           alt="Meal Genie preview"
           width="358"
           height="170"
@@ -20,14 +21,16 @@ export const Projects = () => {
           priority
         />
         <div className="preview">
-          <h3>Meal Genie</h3>
+          <Link href="/projects/meal-genie" onClick={scrollToTop}>
+            <h3>Meal Genie</h3>
+          </Link>
           <p>
             Written in React and Redux, Meal Genie is a meal planning app to
             help you organise your recipes for the week.
           </p>
-          {/* <Link to={`/projects/meal-genie`} onClick={scrollToTop}> */}
-          Read more...
-          {/* </Link> */}
+          <Link href="/projects/meal-genie" onClick={scrollToTop}>
+            Read more...
+          </Link>
         </div>
       </article>
 
@@ -41,14 +44,16 @@ export const Projects = () => {
           priority
         />
         <div className="preview">
-          <h3>Sound Sniffer</h3>
+          <Link href="/projects/sound-sniffer" onClick={scrollToTop}>
+            <h3>Sound Sniffer</h3>
+          </Link>
           <p>
             A React app which tracks your favourite artists and uses the Spotify
             API to display their latest releases.
           </p>
-          {/* <Link to={`/projects/sound-sniffer`} onClick={scrollToTop}> */}
-          Read more...
-          {/* </Link> */}
+          <Link href="/projects/sound-sniffer" onClick={scrollToTop}>
+            Read more...
+          </Link>
         </div>
       </article>
 
@@ -62,14 +67,16 @@ export const Projects = () => {
           priority
         />
         <div className="preview">
-          <h3>Moneypots</h3>
+          <Link href="/projects/moneypots" onClick={scrollToTop}>
+            <h3>Moneypots</h3>
+          </Link>
           <p>
             Moneypots is an Angular app which lets you create pots to keep track
             of your money across multiple bank accounts.
           </p>
-          {/* <Link to={`/projects/moneypots`} onClick={scrollToTop}> */}
-          Read more...
-          {/* </Link> */}
+          <Link href="/projects/moneypots" onClick={scrollToTop}>
+            Read more...
+          </Link>
         </div>
       </article>
     </main>

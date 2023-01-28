@@ -9,5 +9,7 @@ main.projects article {
 }
 
 main.projects .preview a {
+  border-bottom: none;
   color: #848fa5;
+  font-style: italic;
 }

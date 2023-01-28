@@ -3,14 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 const scrollToTop = () => {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 };
 
 export const ProjectsPreview = () => {
   return (
     <section className="projects blue">
       <h2>Projects</h2>
-      <article className="project">
+      <article className={styles.project}>
         <Image
           src="/images/meal-genie.webp"
           alt="Meal Genie preview"
@@ -19,8 +19,10 @@ export const ProjectsPreview = () => {
           className="full-width"
           priority
         />
-        <div className="preview">
-          <h3>Meal Genie</h3>
+        <div className={styles.preview}>
+          <Link href="/projects/meal-genie" onClick={scrollToTop}>
+            <h3>Meal Genie</h3>
+          </Link>
           <p>
             Written in React and Redux, Meal Genie is a meal planning app to
             help you organise your recipes for the week.
@@ -30,7 +32,7 @@ export const ProjectsPreview = () => {
           </Link>
         </div>
       </article>
-      <article className="project">
+      <article className={styles.project}>
         <Image
           src="/images/sound-sniffer.webp"
           alt="Sound Sniffer preview"
@@ -40,7 +42,9 @@ export const ProjectsPreview = () => {
           priority
         />
         <div className="preview">
-          <h3>Sound Sniffer</h3>
+          <Link href="/projects/sound-sniffer" onClick={scrollToTop}>
+            <h3>Sound Sniffer</h3>
+          </Link>
           <p>
             A React app which tracks your favourite artists and uses the Spotify
             API to display their latest releases.

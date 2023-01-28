@@ -1,7 +1,17 @@
-.projects article {
+.project {
   background: #505a6d;
 }
 
-.projects .preview a {
+.preview {
+  padding: 0.5em 1em 1.5em 1.5em;
+}
+
+.preview a {
+  border-bottom: none;
   color: #222222;
+  font-style: italic;
+}
+
+.preview h3 {
+  color: #f7f7f7;
 }
