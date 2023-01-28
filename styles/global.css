@@ -984,3 +984,23 @@ main a {
   text-align: center !important;
   -webkit-appearance: none !important;
 }
+
+.signupSubmit {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #c14953;
+  transition: background-color 0.3s linear;
+  border: none;
+  border-radius: 3px;
+  color: #f9f9f9;
+  font-size: 1em;
+  height: 30px;
+  padding: 0 0.5em;
+  width: 30%;
+}
+
+.signupSubmit.success {
+  background-color: #207a0c;
+  transition: background-color 0.3s linear;
+}

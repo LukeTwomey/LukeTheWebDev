@@ -2,6 +2,7 @@ import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nord } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import remarkGfm from "remark-gfm";
+import Signup from "../../components/Signup";
 import fs from "fs";
 
 const Post = ({ content }) => {
@@ -27,11 +28,11 @@ const Post = ({ content }) => {
               </code>
             );
           },
-          //   h6({ node, inline, className, children, ...props }) {
-          //     return (
-          //       <Signup message="If you're enjoying the read, please consider signing up to my newsletter to receive notifications when new posts are added!" />
-          //     );
-          //   },
+          h6({ node, inline, className, children, ...props }) {
+            return (
+              <Signup message="If you're enjoying the read, please consider signing up to my newsletter to receive notifications when new posts are added!" />
+            );
+          },
         }}
       >
         {content}
@@ -50,7 +51,7 @@ export async function getStaticPaths() {
       id: files.replace(".md", ""),
     },
   }));
-  console.log("paths", paths);
+
   return {
     paths,
     fallback: false,
