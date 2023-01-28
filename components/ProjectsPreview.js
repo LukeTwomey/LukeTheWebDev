@@ -41,7 +41,7 @@ export const ProjectsPreview = () => {
           className="full-width"
           priority
         />
-        <div className="preview">
+        <div className={styles.preview}>
           <Link href="/projects/sound-sniffer" onClick={scrollToTop}>
             <h3>Sound Sniffer</h3>
           </Link>
