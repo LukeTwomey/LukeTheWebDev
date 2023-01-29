@@ -1,43 +1,69 @@
+import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nord } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import remarkGfm from "remark-gfm";
+import Giscus from "@giscus/react";
 import Signup from "../../components/Signup";
 import fs from "fs";
 
 const Post = ({ content }) => {
   return (
-    <main className="blogPost">
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
-        linkTarget="_blank"
-        components={{
-          code({ node, inline, className, children, ...props }) {
-            return !inline ? (
-              <SyntaxHighlighter
-                style={nord}
-                language="javascript"
-                PreTag="div"
-                {...props}
-              >
-                {String(children).replace(/\n$/, "")}
-              </SyntaxHighlighter>
-            ) : (
-              <code className="md-post-code" {...props}>
-                {children}
-              </code>
-            );
-          },
-          h6({ node, inline, className, children, ...props }) {
-            return (
-              <Signup message="If you're enjoying the read, please consider signing up to my newsletter to receive notifications when new posts are added!" />
-            );
-          },
-        }}
-      >
-        {content}
-      </ReactMarkdown>
-    </main>
+    <div>
+      <Head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Luke Twomey" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>How to Become a Web Developer</title>
+        <meta name="description" content="Here's my great about page!"></meta>
+      </Head>
+      <main className="blogPost">
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          linkTarget="_blank"
+          components={{
+            code({ node, inline, className, children, ...props }) {
+              return !inline ? (
+                <SyntaxHighlighter
+                  style={nord}
+                  language="javascript"
+                  PreTag="div"
+                  {...props}
+                >
+                  {String(children).replace(/\n$/, "")}
+                </SyntaxHighlighter>
+              ) : (
+                <code className="md-post-code" {...props}>
+                  {children}
+                </code>
+              );
+            },
+            h6({ node, inline, className, children, ...props }) {
+              return (
+                <Signup message="If you're enjoying the read, please consider signing up to my newsletter to receive notifications when new posts are added!" />
+              );
+            },
+          }}
+        >
+          {content}
+        </ReactMarkdown>
+        <Giscus
+          id="comments"
+          repo="LukeTwomey/LukeTheWebDev"
+          repoId="R_kgDOI2bJWw"
+          category="Announcements"
+          categoryId="DIC_kwDOI2bJW84CT4Cv"
+          mapping="title"
+          term="Welcome to @giscus/react component!"
+          reactionsEnabled="1"
+          emitMetadata="0"
+          inputPosition="top"
+          theme="light"
+          lang="en"
+          loading="lazy"
+        />
+      </main>
+    </div>
   );
 };
 
