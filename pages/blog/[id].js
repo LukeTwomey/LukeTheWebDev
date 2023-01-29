@@ -53,6 +53,7 @@ const Post = ({ content }) => {
           repoId="R_kgDOI2bJWw"
           category="Announcements"
           categoryId="DIC_kwDOI2bJW84CT4Cv"
+          defaultCommentOrder="newest"
           mapping="title"
           term="Welcome to @giscus/react component!"
           reactionsEnabled="1"
