@@ -15,7 +15,7 @@ export const Signup = ({ message }) => {
     const tags = [3601975];
 
     const subscribeResponse = await axios.post(
-      "https://portfolio2022-api-production-2eeb.up.railway.app/addSubscriber",
+      "https://lukethewebdev.api.up.railway.app/addSubscriber",
       null,
       { params: { email: emailAddress, tags: tags } }
     );
