@@ -23,7 +23,7 @@ export const Header = () => {
     <header className={navOpen ? "navOpen" : ""}>
       <section className={styles.title}>
         <Image
-          src="/images/logo.webp"
+          src="/images/logo4.webp"
           alt="Luke the Web Dev Logo"
           width="100"
           height="100"

@@ -693,7 +693,8 @@ header #nav {
   display: block;
   height: 3px;
   width: 100%;
-  background: #848fa5;
+  /* background: #848fa5; */
+  background: #51514b;
 }
 
 .navOpen .navContainer .hamburgerLines .line {
