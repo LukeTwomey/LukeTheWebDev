@@ -41,13 +41,22 @@ const Post = ({ frontmatter, content }) => {
             },
             h6({ node, inline, className, children, ...props }) {
               return (
-                <Signup message="If you're enjoying the read, please consider signing up to my newsletter to receive notifications when new posts are added!" />
+                <Signup
+                  message="If you're enjoying the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
+                  location="middleOfPost"
+                />
               );
             },
           }}
         >
           {content}
         </ReactMarkdown>
+
+        <Signup
+          message="If you enjoyed the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
+          location="endOfPost"
+        />
+
         <Giscus
           id="comments"
           repo="LukeTwomey/LukeTheWebDev"

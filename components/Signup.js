@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./Signup.module.css";
 import axios from "axios";
 
-export const Signup = ({ message }) => {
+export const Signup = ({ message, location }) => {
   const [emailAddress, setEmailAddress] = useState("");
 
   const handleInputChange = (event) => {
@@ -12,7 +12,18 @@ export const Signup = ({ message }) => {
 
   const signUpToNewsletter = async (e) => {
     e.preventDefault();
-    const tags = [3601975];
+
+    let tags = [];
+    switch (location) {
+      case "middleOfPost":
+        tags.push(3601975);
+        break;
+      case "endOfPost":
+        tags.push(3617774);
+        break;
+      default:
+        tags.push(3601975);
+    }
 
     const subscribeResponse = await axios.post(
       "https://lukethewebdev.api.up.railway.app/addSubscriber",
@@ -20,9 +31,7 @@ export const Signup = ({ message }) => {
       { params: { email: emailAddress, tags: tags } }
     );
 
-    console.log(subscribeResponse);
-
-    const submitButton = document.getElementById("submit");
+    const submitButton = e.target;
 
     if (subscribeResponse.status === 200) {
       submitButton.classList.add("success");

@@ -2,7 +2,7 @@
   background: #848fa5;
   color: #f9f9f9;
   padding: 1em;
-  margin-bottom: 1em;
+  margin: 1.5em 0;
   border-radius: 5px;
   text-align: center;
 }
@@ -35,23 +35,3 @@
   padding: 0 0.5em;
   width: 62%;
 }
-
-/* .signup .submit {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: #c14953;
-  transition: background-color 0.3s linear;
-  border: none;
-  border-radius: 3px;
-  color: #f9f9f9;
-  font-size: 1em;
-  height: 30px;
-  padding: 0 0.5em;
-  width: 30%;
-} */
-
-/* .signup .submit.success {
-  background-color: #207a0c;
-  transition: background-color 0.3s linear;
-} */
