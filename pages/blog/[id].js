@@ -60,7 +60,8 @@ const Post = ({ frontmatter, content }) => {
           reactionsEnabled="1"
           emitMetadata="0"
           inputPosition="top"
-          theme="light"
+          // theme="light"
+          theme="https://lukethewebdev.api.up.railway.app/giscusCss"
           lang="en"
           loading="lazy"
         />
