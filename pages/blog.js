@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "../styles/blog.module.css";
 import matter from "gray-matter";
 import fs from "fs";
-import { DateTime } from "Luxon";
+import { DateTime } from "luxon";
 
 const scrollToTop = () => {
   // window.scrollTo(0, 0);
