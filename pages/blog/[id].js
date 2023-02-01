@@ -9,7 +9,6 @@ import Signup from "../../components/Signup";
 import fs from "fs";
 
 const Post = ({ frontmatter, content }) => {
-  console.log(frontmatter);
   return (
     <div>
       <Head>
