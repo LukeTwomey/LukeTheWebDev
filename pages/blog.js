@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "../styles/blog.module.css";
 import matter from "gray-matter";
 import fs from "fs";
+import { DateTime } from "Luxon";
 
 const scrollToTop = () => {
   // window.scrollTo(0, 0);
@@ -10,6 +11,13 @@ const scrollToTop = () => {
 
 export const Blog = ({ posts }) => {
   console.log(posts);
+
+  const sortBlogPostsByDate = posts.sort((a, b) => {
+    const beforeDate = DateTime.fromFormat(a.data.date, "m-d-yyyy");
+    const afterDate = DateTime.fromFormat(b.data.date, "m-d-yyyy");
+    return afterDate - beforeDate;
+  });
+
   return (
     <main className={styles.blog}>
       <h1>Blog</h1>
@@ -20,7 +28,7 @@ export const Blog = ({ posts }) => {
       </p>
       <p></p>
       <section className={styles.posts}>
-        {posts.map((post) => (
+        {sortBlogPostsByDate.map((post) => (
           <article className={styles.post} key={post.data.title}>
             <Image
               src={`/images/${post.data.previewImage}`}
