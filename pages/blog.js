@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import clientPromise from "../lib/mongodb";
 import styles from "../styles/blog.module.css";
+import matter from "gray-matter";
+import fs from "fs";
 
 const scrollToTop = () => {
   // window.scrollTo(0, 0);
 };
 
 export const Blog = ({ posts }) => {
+  console.log(posts);
   return (
     <main className={styles.blog}>
       <h1>Blog</h1>
@@ -19,22 +21,22 @@ export const Blog = ({ posts }) => {
       <p></p>
       <section className={styles.posts}>
         {posts.map((post) => (
-          <article className={styles.post} key={post.id}>
+          <article className={styles.post} key={post.data.title}>
             <Image
-              src={`/images/${post.previewImage}`}
-              alt={post.title}
+              src={`/images/${post.data.previewImage}`}
+              alt={post.data.title}
               width="358"
               height="170"
               className="full-width"
               priority
             />
             <div className="preview">
-              <Link href={`/blog/${post.id}`} onClick={scrollToTop}>
-                <h3>{post.title}</h3>
+              <Link href={`/blog/${post.slug}`} onClick={scrollToTop}>
+                <h3>{post.data.title}</h3>
               </Link>
-              <h4>{post.dateCreated}</h4>
-              <p>{post.preview}</p>
-              <Link href={`/blog/${post.id}`} onClick={scrollToTop}>
+              <h4>{post.data.date}</h4>
+              <p>{post.data.preview}</p>
+              <Link href={`/blog/${post.slug}`} onClick={scrollToTop}>
                 Read post
               </Link>
             </div>
@@ -46,13 +48,22 @@ export const Blog = ({ posts }) => {
 };
 
 export async function getStaticProps() {
-  const client = await clientPromise;
-  const db = client.db("production");
-  const posts = await db.collection("posts").find().toArray();
+  const files = fs.readdirSync("posts");
+
+  const posts = files.map((file) => {
+    const slug = file.replace(".md", "");
+    const filecontent = fs.readFileSync(`posts/${file}`, "utf-8");
+    const parsedContent = matter(filecontent);
+    const { data } = parsedContent;
+    return {
+      slug,
+      data,
+    };
+  });
 
   return {
     props: {
-      posts: JSON.parse(JSON.stringify(posts)),
+      posts,
     },
   };
 }
