@@ -9,9 +9,10 @@ const scrollToTop = () => {
   // window.scrollTo(0, 0);
 };
 
-export const Blog = ({ posts }) => {
-  console.log(posts);
+const prettyDate = (date) =>
+  DateTime.fromISO(date).toLocaleString(DateTime.DATE_FULL);
 
+export const Blog = ({ posts }) => {
   const sortBlogPostsByDate = posts.sort((a, b) => {
     const beforeDate = DateTime.fromFormat(a.data.date, "m-d-yyyy");
     const afterDate = DateTime.fromFormat(b.data.date, "m-d-yyyy");
@@ -42,7 +43,7 @@ export const Blog = ({ posts }) => {
               <Link href={`/blog/${post.slug}`} onClick={scrollToTop}>
                 <h3>{post.data.title}</h3>
               </Link>
-              <h4>{post.data.date}</h4>
+              <h4>{prettyDate(post.data.date)}</h4>
               <p>{post.data.preview}</p>
               <Link href={`/blog/${post.slug}`} onClick={scrollToTop}>
                 Read post

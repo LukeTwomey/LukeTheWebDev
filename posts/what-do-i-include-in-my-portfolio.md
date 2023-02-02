@@ -1,6 +1,6 @@
 ---
 title: "What do I Include in my Portfolio?"
-date: "01-12-2000"
+date: "2000-12-01"
 feature: "false"
 previewImage: "developer-using-computer.webp"
 preview: "It can be confusing to know just what you should add to your portfolio. Here's what I would recommend."

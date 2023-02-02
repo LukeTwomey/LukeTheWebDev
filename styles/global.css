@@ -803,6 +803,7 @@ h2 {
 
 p {
   font-size: 1.1em;
+  font-weight: 300;
   line-height: 1.7em;
   margin-bottom: 0.75em;
 }
@@ -872,8 +873,9 @@ p {
 }
 
 .preview h4 {
-  margin: 0 0 1em 0;
   font-size: 0.8em;
+  font-weight: 300;
+  margin: 0 0 1em 0;
 }
 
 .projects,

@@ -1,6 +1,6 @@
 ---
 title: "How to Become A Web Developer"
-date: "05-07-1918"
+date: "1918-07-29"
 feature: "true"
 previewImage: "web-developer.webp"
 preview: "Learn the steps you need to take to become a web developer, from someone who has been through the very same process."
