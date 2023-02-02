@@ -6,7 +6,7 @@ import fs from "fs";
 import { DateTime } from "luxon";
 
 const prettyDate = (date) =>
-  DateTime.fromISO(date).toLocaleString(DateTime.DATE_FULL);
+  DateTime.fromISO(date).setLocale("en-GB").toLocaleString(DateTime.DATE_FULL);
 
 export const Blog = ({ posts }) => {
   const sortBlogPostsByDate = posts.sort((a, b) => {
