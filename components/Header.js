@@ -7,7 +7,6 @@ export const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   const toggleNav = () => {
-    console.log("Toggle Nav");
     setNavOpen(!navOpen);
     document.documentElement.classList.toggle("no-scroll");
     document.body.classList.toggle("no-scroll");
