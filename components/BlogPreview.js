@@ -9,7 +9,7 @@ export const BlogPreview = ({ posts, theme }) => {
   return (
     <>
       {posts.map((post) => (
-        <article className={`${styles.post} ${theme}`} key={post.slug}>
+        <article className={`post ${theme}`} key={post.slug}>
           <Image
             src={`/images/${post.data.previewImage}`}
             alt={post.data.title}
