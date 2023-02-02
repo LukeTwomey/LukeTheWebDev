@@ -2,29 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./Footer.module.css";
 
-const scrollToTop = () => {
-  // window.scrollTo(0, 0);
-};
-
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <nav>
-        <Link href="/" onClick={scrollToTop}>
-          Home
-        </Link>
-        <Link href="/about" onClick={scrollToTop}>
-          About
-        </Link>
-        <Link href="/blog" onClick={scrollToTop}>
-          Blog
-        </Link>
-        <Link href="/projects" onClick={scrollToTop}>
-          Projects
-        </Link>
-        <Link href="/contact" onClick={scrollToTop}>
-          Contact
-        </Link>
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/blog">Blog</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/contact">Contact</Link>
       </nav>
 
       <div className={styles.social}>

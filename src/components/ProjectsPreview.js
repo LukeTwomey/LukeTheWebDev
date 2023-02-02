@@ -3,10 +3,6 @@ import "./ProjectsPreview.css";
 import mealGenie from "../images/meal-genie.webp";
 import soundSniffer from "../images/sound-sniffer.webp";
 
-const scrollToTop = () => {
-  window.scrollTo(0, 0);
-};
-
 export const ProjectsPreview = () => {
   return (
     <section className="projects blue">
@@ -20,9 +16,7 @@ export const ProjectsPreview = () => {
             Written in React and Redux, Meal Genie is a meal planning app to
             help you organise your recipes for the week.
           </p>
-          <Link to={`/projects/meal-genie`} onClick={scrollToTop}>
-            Read more...
-          </Link>
+          <Link to={`/projects/meal-genie`}>Read more...</Link>
         </div>
       </article>
 
@@ -35,13 +29,11 @@ export const ProjectsPreview = () => {
             API to display their latest releases.
           </p>
 
-          <Link to={`/projects/sound-sniffer`} onClick={scrollToTop}>
-            Read more...
-          </Link>
+          <Link to={`/projects/sound-sniffer`}>Read more...</Link>
         </div>
       </article>
 
-      <Link to="projects" className="button" onClick={scrollToTop}>
+      <Link to="projects" className="button">
         View Projects
       </Link>
     </section>

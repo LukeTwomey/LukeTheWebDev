@@ -1,9 +1,5 @@
 import React from "react";
 
-const scrollToTop = () => {
-  // window.scrollTo(0, 0);
-};
-
 export const Nav = ({ toggleNav }) => {
   return (
     <nav id="nav">
@@ -20,7 +16,6 @@ export const Nav = ({ toggleNav }) => {
               href="/"
               onClick={() => {
                 toggleNav();
-                scrollToTop();
               }}
             >
               Home
@@ -29,7 +24,6 @@ export const Nav = ({ toggleNav }) => {
               href="/about"
               onClick={() => {
                 toggleNav();
-                scrollToTop();
               }}
             >
               About
@@ -38,7 +32,6 @@ export const Nav = ({ toggleNav }) => {
               href="/blog"
               onClick={() => {
                 toggleNav();
-                scrollToTop();
               }}
             >
               Blog
@@ -47,7 +40,6 @@ export const Nav = ({ toggleNav }) => {
               href="/projects"
               onClick={() => {
                 toggleNav();
-                scrollToTop();
               }}
             >
               Projects
@@ -56,7 +48,6 @@ export const Nav = ({ toggleNav }) => {
               href="/contact"
               onClick={() => {
                 toggleNav();
-                scrollToTop();
               }}
             >
               Contact

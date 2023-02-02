@@ -1,10 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const scrollToTop = () => {
-  // window.scrollTo(0, 0);
-};
-
 export const BlogPreview = ({ posts }) => {
   return (
     <section className="blogPreview grey">
@@ -21,19 +17,17 @@ export const BlogPreview = ({ posts }) => {
             priority
           />
           <div className="preview">
-            <Link href={`blog/${post.id}`} onClick={scrollToTop}>
+            <Link href={`blog/${post.id}`}>
               <h3>{post.title}</h3>
             </Link>
             <h4>{post.dateCreated}</h4>
             <p>{post.preview}</p>
-            <Link href={`blog/${post.id}`} onClick={scrollToTop}>
-              Read post
-            </Link>
+            <Link href={`blog/${post.id}`}>Read post</Link>
           </div>
         </article>
       ))}
 
-      <Link href="/blog" className="button" onClick={scrollToTop}>
+      <Link href="/blog" className="button">
         View Blog
       </Link>
     </section>

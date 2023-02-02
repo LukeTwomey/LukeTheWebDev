@@ -5,10 +5,6 @@ import soundSniffer from "../images/sound-sniffer.webp";
 import moneypots from "../images/moneypots-1.webp";
 import "./Projects.css";
 
-const scrollToTop = () => {
-  window.scrollTo(0, 0);
-};
-
 export const Projects = () => {
   return (
     <main className="projects">
@@ -22,9 +18,7 @@ export const Projects = () => {
             Written in React and Redux, Meal Genie is a meal planning app to
             help you organise your recipes for the week.
           </p>
-          <Link to={`/projects/meal-genie`} onClick={scrollToTop}>
-            Read more...
-          </Link>
+          <Link to={`/projects/meal-genie`}>Read more...</Link>
         </div>
       </article>
 
@@ -36,9 +30,7 @@ export const Projects = () => {
             A React app which tracks your favourite artists and uses the Spotify
             API to display their latest releases.
           </p>
-          <Link to={`/projects/sound-sniffer`} onClick={scrollToTop}>
-            Read more...
-          </Link>
+          <Link to={`/projects/sound-sniffer`}>Read more...</Link>
         </div>
       </article>
 
@@ -50,9 +42,7 @@ export const Projects = () => {
             Moneypots is an Angular app which lets you create pots to keep track
             of your money across multiple bank accounts.
           </p>
-          <Link to={`/projects/moneypots`} onClick={scrollToTop}>
-            Read more...
-          </Link>
+          <Link to={`/projects/moneypots`}>Read more...</Link>
         </div>
       </article>
     </main>

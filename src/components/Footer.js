@@ -7,29 +7,15 @@ import pinterest from "../images/pinterest.svg";
 import github from "../images/github.svg";
 import "./Footer.css";
 
-const scrollToTop = () => {
-  window.scrollTo(0, 0);
-};
-
 export const Footer = () => {
   return (
     <footer>
       <nav>
-        <Link to="/" onClick={scrollToTop}>
-          Home
-        </Link>
-        <Link to="/about" onClick={scrollToTop}>
-          About
-        </Link>
-        <Link to="/blog" onClick={scrollToTop}>
-          Blog
-        </Link>
-        <Link to="/projects" onClick={scrollToTop}>
-          Projects
-        </Link>
-        <Link to="/contact" onClick={scrollToTop}>
-          Contact
-        </Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/blog">Blog</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
 
       <div className="social">

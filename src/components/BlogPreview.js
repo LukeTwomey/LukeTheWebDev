@@ -2,10 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getFeaturePosts } from "../api";
 
-const scrollToTop = () => {
-  window.scrollTo(0, 0);
-};
-
 export const BlogPreview = () => {
   const [posts, setState] = useState([]);
 
@@ -25,19 +21,17 @@ export const BlogPreview = () => {
             alt={post.title}
           />
           <div className="preview">
-            <Link to={`blog/${post.id}`} onClick={scrollToTop}>
+            <Link to={`blog/${post.id}`}>
               <h3>{post.title}</h3>
             </Link>
             <h4>{post.dateCreated}</h4>
             <p>{post.preview}</p>
-            <Link to={`blog/${post.id}`} onClick={scrollToTop}>
-              Read post
-            </Link>
+            <Link to={`blog/${post.id}`}>Read post</Link>
           </div>
         </article>
       ))}
 
-      <Link to="blog" className="button" onClick={scrollToTop}>
+      <Link to="blog" className="button">
         View Blog
       </Link>
     </section>

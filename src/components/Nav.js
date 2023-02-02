@@ -2,10 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
 
-const scrollToTop = () => {
-  window.scrollTo(0, 0);
-};
-
 export const Nav = ({ toggleNav }) => {
   return (
     <nav>
@@ -22,7 +18,6 @@ export const Nav = ({ toggleNav }) => {
               to="/"
               onClick={() => {
                 toggleNav();
-                scrollToTop();
               }}
             >
               Home
@@ -31,7 +26,6 @@ export const Nav = ({ toggleNav }) => {
               to="/about"
               onClick={() => {
                 toggleNav();
-                scrollToTop();
               }}
             >
               About
@@ -40,7 +34,6 @@ export const Nav = ({ toggleNav }) => {
               to="/blog"
               onClick={() => {
                 toggleNav();
-                scrollToTop();
               }}
             >
               Blog
@@ -49,7 +42,6 @@ export const Nav = ({ toggleNav }) => {
               to="/projects"
               onClick={() => {
                 toggleNav();
-                scrollToTop();
               }}
             >
               Projects
@@ -58,7 +50,6 @@ export const Nav = ({ toggleNav }) => {
               to="/contact"
               onClick={() => {
                 toggleNav();
-                scrollToTop();
               }}
             >
               Contact

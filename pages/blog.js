@@ -5,19 +5,13 @@ import matter from "gray-matter";
 import fs from "fs";
 import { DateTime } from "luxon";
 
-const scrollToTop = () => {
-  // window.scrollTo(0, 0);
-};
-
 const prettyDate = (date) =>
   DateTime.fromISO(date).toLocaleString(DateTime.DATE_FULL);
 
 export const Blog = ({ posts }) => {
   const sortBlogPostsByDate = posts.sort((a, b) => {
     const beforeDate = DateTime.fromFormat(a.data.date, "yyyy-m-d");
-    console.log(beforeDate);
     const afterDate = DateTime.fromFormat(b.data.date, "yyyy-m-d");
-    console.log(afterDate);
     return afterDate - beforeDate;
   });
 
@@ -42,14 +36,12 @@ export const Blog = ({ posts }) => {
               priority
             />
             <div className="preview">
-              <Link href={`/blog/${post.slug}`} onClick={scrollToTop}>
+              <Link href={`/blog/${post.slug}`}>
                 <h3>{post.data.title}</h3>
               </Link>
               <h4>{prettyDate(post.data.date)}</h4>
               <p>{post.data.preview}</p>
-              <Link href={`/blog/${post.slug}`} onClick={scrollToTop}>
-                Read post
-              </Link>
+              <Link href={`/blog/${post.slug}`}>Read post</Link>
             </div>
           </article>
         ))}
