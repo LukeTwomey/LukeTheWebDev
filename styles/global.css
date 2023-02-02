@@ -1001,3 +1001,18 @@ main a {
   background-color: #207a0c;
   transition: background-color 0.3s linear;
 }
+
+#giscusComments {
+  margin-bottom: 1em;
+  display: block;
+}
+
+.light {
+  background: white;
+  border: 1px solid #adadad;
+  box-shadow: none;
+}
+
+.dark {
+  background: #343431;
+}

@@ -60,7 +60,7 @@ const Post = ({ frontmatter, content, otherPosts }) => {
         />
 
         <Giscus
-          id="comments"
+          id="giscusComments"
           repo="LukeTwomey/LukeTheWebDev"
           repoId="R_kgDOI2bJWw"
           category="Announcements"
@@ -75,7 +75,7 @@ const Post = ({ frontmatter, content, otherPosts }) => {
           loading="lazy"
         />
 
-        <BlogPreview posts={otherPosts} />
+        <BlogPreview posts={otherPosts} theme="light" />
       </main>
     </div>
   );

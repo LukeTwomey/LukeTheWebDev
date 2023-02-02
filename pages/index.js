@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import BlogPreview from "../components/BlogPreview";
 import ProjectsPreview from "../components/ProjectsPreview";
@@ -38,7 +39,10 @@ export const App = ({ featurePosts }) => {
 
         <section className="blogPreview grey">
           <h2>Blog</h2>
-          <BlogPreview posts={featurePosts} />
+          <BlogPreview posts={featurePosts} theme="dark" />
+          <Link href="/blog" className="button">
+            View Blog
+          </Link>
         </section>
         <ProjectsPreview />
       </main>

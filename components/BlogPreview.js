@@ -5,11 +5,11 @@ import { DateTime } from "luxon";
 const prettyDate = (date) =>
   DateTime.fromISO(date).setLocale("en-GB").toLocaleString(DateTime.DATE_FULL);
 
-export const BlogPreview = ({ posts }) => {
+export const BlogPreview = ({ posts, theme }) => {
   return (
     <>
       {posts.map((post) => (
-        <article className="post" key={post.slug}>
+        <article className={`${styles.post} ${theme}`} key={post.slug}>
           <Image
             src={`/images/${post.data.previewImage}`}
             alt={post.data.title}
@@ -28,10 +28,6 @@ export const BlogPreview = ({ posts }) => {
           </div>
         </article>
       ))}
-
-      <Link href="/blog" className="button">
-        View Blog
-      </Link>
     </>
   );
 };
