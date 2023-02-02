@@ -5,10 +5,12 @@ import { nord } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import remarkGfm from "remark-gfm";
 import Giscus from "@giscus/react";
 import matter from "gray-matter";
+import BlogPreview from "../../components/BlogPreview";
 import Signup from "../../components/Signup";
 import fs from "fs";
+import { DateTime } from "luxon";
 
-const Post = ({ frontmatter, content }) => {
+const Post = ({ frontmatter, content, otherPosts }) => {
   return (
     <div>
       <Head>
@@ -72,6 +74,8 @@ const Post = ({ frontmatter, content }) => {
           lang="en"
           loading="lazy"
         />
+
+        <BlogPreview posts={otherPosts} />
       </main>
     </div>
   );
@@ -95,17 +99,34 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { id } }) {
+  const files = fs.readdirSync("posts");
+
+  let posts = files.map((file) => {
+    const slug = file.replace(".md", "");
+    const filecontent = fs.readFileSync(`posts/${file}`, "utf-8");
+    const parsedContent = matter(filecontent);
+    const { data } = parsedContent;
+    return {
+      slug,
+      data,
+    };
+  });
+
+  posts.sort((a, b) => {
+    const beforeDate = DateTime.fromFormat(a.data.date, "yyyy-m-d");
+    const afterDate = DateTime.fromFormat(b.data.date, "yyyy-m-d");
+    return afterDate - beforeDate;
+  });
+
+  const otherPosts = posts.filter((post) => post.slug !== id);
+
   const fileName = fs.readFileSync(`posts/${id}.md`, "utf-8");
   const { data: frontmatter, content } = matter(fileName);
-  // console.log(matter(fileName));
-  // const content = fs.readFileSync(`posts/${id}.md`, "utf-8");
   return {
     props: {
       frontmatter,
       content,
+      otherPosts,
     },
-    // props: {
-    //   content,
-    // },
   };
 }

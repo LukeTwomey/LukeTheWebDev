@@ -36,7 +36,10 @@ export const App = ({ featurePosts }) => {
           </p>
         </section>
 
-        <BlogPreview posts={featurePosts} />
+        <section className="blogPreview grey">
+          <h2>Blog</h2>
+          <BlogPreview posts={featurePosts} />
+        </section>
         <ProjectsPreview />
       </main>
     </>

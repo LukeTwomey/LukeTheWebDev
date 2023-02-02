@@ -7,9 +7,7 @@ const prettyDate = (date) =>
 
 export const BlogPreview = ({ posts }) => {
   return (
-    <section className="blogPreview grey">
-      <h2>Blog</h2>
-
+    <>
       {posts.map((post) => (
         <article className="post" key={post.slug}>
           <Image
@@ -34,7 +32,7 @@ export const BlogPreview = ({ posts }) => {
       <Link href="/blog" className="button">
         View Blog
       </Link>
-    </section>
+    </>
   );
 };
 
