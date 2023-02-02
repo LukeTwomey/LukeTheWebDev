@@ -860,7 +860,8 @@ p {
 .full-width {
   border-radius: 7px 7px 0 0;
   margin-bottom: 1em;
-  width: 100%;
+  /* height: auto;
+  width: 100%; */
 }
 
 .preview {
@@ -924,7 +925,7 @@ main h1 {
 }
 
 main img {
-  height: auto;
+  /* height: auto; */
   max-width: 100%;
 }
 
