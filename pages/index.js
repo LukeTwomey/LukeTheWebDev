@@ -1,8 +1,9 @@
-import clientPromise from "../lib/mongodb";
 import Head from "next/head";
 import Image from "next/image";
 import BlogPreview from "../components/BlogPreview";
 import ProjectsPreview from "../components/ProjectsPreview";
+import matter from "gray-matter";
+import fs from "fs";
 
 export const App = ({ featurePosts }) => {
   return (
@@ -43,16 +44,24 @@ export const App = ({ featurePosts }) => {
 };
 
 export async function getStaticProps() {
-  const client = await clientPromise;
-  const db = client.db("production");
-  const featurePosts = await db
-    .collection("posts")
-    .find({ feature: true })
-    .toArray();
+  const files = fs.readdirSync("posts");
+
+  const featurePosts = files.reduce((acc, file) => {
+    const slug = file.replace(".md", "");
+    const filecontent = fs.readFileSync(`posts/${file}`, "utf-8");
+    const parsedContent = matter(filecontent);
+    const { data } = parsedContent;
+
+    if (data.feature === "true") {
+      return [...acc, { slug, data }];
+    }
+
+    return acc;
+  }, []);
 
   return {
     props: {
-      featurePosts: JSON.parse(JSON.stringify(featurePosts)),
+      featurePosts,
     },
   };
 }
