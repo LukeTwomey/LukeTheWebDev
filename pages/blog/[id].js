@@ -9,8 +9,14 @@ import BlogPreview from "../../components/BlogPreview";
 import Signup from "../../components/Signup";
 import fs from "fs";
 import { DateTime } from "luxon";
+// import Comments from "../../components/Comments";
+// import DynamicCommentsWithNoSSR from "../../components/DynamicComments";
+// import { useRouter } from "next/navigation";
 
 const Post = ({ frontmatter, content, otherPosts }) => {
+  // const router = useRouter();
+  // router.refresh();
+
   return (
     <div>
       <Head>
@@ -21,6 +27,20 @@ const Post = ({ frontmatter, content, otherPosts }) => {
         <meta name="description" content="Here's my great about page!"></meta>
       </Head>
       <main className="blogPost">
+        {/* <DynamicCommentsWithNoSSR /> */}
+        <Giscus
+          id="giscusComments"
+          repo="LukeTwomey/LukeTheWebDev"
+          repoId="R_kgDOI2bJWw"
+          category="Announcements"
+          categoryId="DIC_kwDOI2bJW84CT4Cv"
+          mapping="title"
+          reactionsEnabled="1"
+          emitMetadata="0"
+          inputPosition="top"
+          theme="https://lukethewebdev.api.up.railway.app/giscusCss"
+          lang="en"
+        />
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           linkTarget="_blank"
@@ -59,21 +79,21 @@ const Post = ({ frontmatter, content, otherPosts }) => {
           location="endOfPost"
         />
 
-        <Giscus
+        {/* <Comments /> */}
+        {/* <DynamicCommentsWithNoSSR /> */}
+        {/* <Giscus
           id="giscusComments"
           repo="LukeTwomey/LukeTheWebDev"
           repoId="R_kgDOI2bJWw"
           category="Announcements"
           categoryId="DIC_kwDOI2bJW84CT4Cv"
           mapping="title"
-          term="Welcome to @giscus/react component!"
           reactionsEnabled="1"
           emitMetadata="0"
           inputPosition="top"
           theme="https://lukethewebdev.api.up.railway.app/giscusCss"
           lang="en"
-          loading="lazy"
-        />
+        /> */}
 
         <BlogPreview posts={otherPosts} theme="light" />
       </main>
