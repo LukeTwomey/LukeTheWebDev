@@ -53,6 +53,29 @@ const Post = ({ frontmatter, content, otherPosts }) => {
         >
           {content}
         </ReactMarkdown>
+
+        <Signup
+          message="If you enjoyed the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
+          location="endOfPost"
+        />
+
+        <Giscus
+          id="giscusComments"
+          repo="LukeTwomey/LukeTheWebDev"
+          repoId="R_kgDOI2bJWw"
+          category="Announcements"
+          categoryId="DIC_kwDOI2bJW84CT4Cv"
+          mapping="title"
+          term="Welcome to @giscus/react component!"
+          reactionsEnabled="1"
+          emitMetadata="0"
+          inputPosition="top"
+          theme="https://lukethewebdev.api.up.railway.app/giscusCss"
+          lang="en"
+          loading="lazy"
+        />
+
+        <BlogPreview posts={otherPosts} theme="light" />
       </main>
     </div>
   );
