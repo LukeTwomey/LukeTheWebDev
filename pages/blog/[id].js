@@ -71,6 +71,7 @@ const Post = ({ frontmatter, content, otherPosts }) => {
           inputPosition="top"
           theme="https://lukethewebdev.api.up.railway.app/giscusCss"
           lang="en"
+          loading="lazy"
           key={frontmatter.title}
         />
 
