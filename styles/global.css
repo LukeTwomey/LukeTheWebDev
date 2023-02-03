@@ -871,6 +871,8 @@ p {
 .preview a {
   border-bottom: none;
   font-style: italic;
+  font-weight: 600;
+  margin: 0;
 }
 
 .preview h4 {
