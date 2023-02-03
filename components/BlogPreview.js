@@ -22,7 +22,7 @@ export const BlogPreview = ({ posts, theme }) => {
             <Link href={`blog/${post.slug}`}>
               <h3>{post.data.title}</h3>
             </Link>
-            <h4>{prettyDate(post.data.date)}</h4>
+            {/* <h4>{prettyDate(post.data.date)}</h4> */}
             <p>{post.data.preview}</p>
             <Link href={`blog/${post.slug}`}>Read post</Link>
           </div>
