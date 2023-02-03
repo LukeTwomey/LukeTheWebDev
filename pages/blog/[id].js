@@ -74,8 +74,6 @@ const Post = ({ frontmatter, content, otherPosts }) => {
           lang="en"
           loading="lazy"
         />
-
-        <BlogPreview posts={otherPosts} theme="light" />
       </main>
     </div>
   );
