@@ -16,8 +16,6 @@ Also, `const hey = new Date()` this line gives you great blah and whatever you n
 
 Great! You didn't leave in disgust. now let me explain...
 
-I also explain this in my post on [what to include in your portfolio](what-do-i-include-in-my-portfolio)
-
 ```
 const testing = await getPosts();
 console.log(testing[0]);
@@ -56,45 +54,6 @@ I don't claim to be some all-seeing development God, dishing out commandments yo
 
 I was in a completely different career when I decided I wanted to make a change. From knowing little more than how to make a basic "hello world" webpage, I was able to teach myself everything I needed to know in order to land that first, satisfying web development job. If I can do it, so can you.
 
-It would be arrogant as hell for me to start telling you "this is exactly what you have to do to become a web developer" with only five months' experience in the job. But what I <em>can</em> do is share with you the process I went through personally. If it's beneficial to you, then fantastic.
-
 ## Is It The Right Job For Me?
 
 It would be remiss of me to blindly go on explaining how to become a web developer, without at least a brief mention of the type of individual this job would typically suit. Chances are, if you're reading this you already have a good idea that development is for you. If on the other hand, you're not quite sure, hopefully this will help you in making your decision. You can also find out exactly what a web developer does on a day to day basis.
-
-To start with, the most obvious advantage for any potential developer would be an interest in computing in general. If you already struggle to use a mouse, the development learning curve may simply be too steep. But of course, anything is possible if you're determined enough.
-
-A methodical, well organised person will likely have an advantage when it comes to development. The ability to problem-solve until you overcome a particularly headache-inducing issue will also benefit you greatly. If you know the computer would be rapidly flying out the window long before you manage to squash a bug in your code, development may not be for you!
-
-## Enough Already! What Do I Need To Learn?
-
-HTML and CSS. I started with HTML first which is the most logical way to go. Basically everything you see on a website is written in HTML, from the text to the cute images of cats. The style of the content (text colour, size, image width etc) is determined by CSS. You can make it bright pink with neon green highlights if you want. Yes really.
-
-[Codecademy](https://www.codecademy.com/learn) is a fantastic resource, not just for HTML and CSS but loads more besides. I highly recommend checking it out - it's a great place to at least make a start.
-
-In terms of the very basics of what it takes to create a website, there you have it. Chances are though, you'll need a bit more knowledge before you become an attractive proposition to an employer.
-
-From HTML and CSS, I moved onto JavaScript. This is really where things start to get interesting. With JavaScript you can start to interact with the content on the page. For example, you could make it so a section of the page disappears and reappears at the touch of a button. You can pop up messages on screen which a user must read before closing (but please don't!).
-
-I used [this comprehensive resource](http://javascriptissexy.com/how-to-learn-javascript-properly/) when I was learning, and it's great for advising the best order in which to do things. JavaScript is such a huge subject it's hard to know where to start. This helps a lot with that.
-
-After you have a solid understanding of JavaScript, you can move onto jQuery. This is a library which makes it easier to use JavaScript, which is why you should learn it afterwards. I'm sure there are probably people who skipped JavaScript and moved immediately to jQuery - but in my opinion it's best to learn the foundations of something before you begin to build on top of it.
-
-[Try jQuery](http://try.jquery.com/) is one of the sites I found very helpful when learning this useful library.
-
-Next up, an area you will never be able to escape as a web developer - responsive design and media queries. You know how your favourite website somehow manages to look great on a desktop monitor, but also amazing on your phone too - cleverly resizing and reordering things into a single column to make it easy to use? You have responsive design to thank for that. By adding media queries into your CSS, you can change the style of your website based on clever things like how wide the screen is. Indispensable knowledge for any decent web developer.
-
-This is a code snippet coming up...
-
-```
-const testing = await getPosts();
-console.log(testing[0]);
-```
-
-## I Brilliantly Learnt All That - What's Next?
-
-Next you can put your newly acquired skills into practice. It's one thing knowing you can do the job, but is an employer just supposed to take your word for it? It's fair to say that's pretty unlikely. You need to show them what you can do and wow them into giving you a job!
-
-## Produce A Portfolio Website
-
-Put your skills to good use. In hindsight, my portfolio site wasn't substantial enough. In my opinion you probably need at least five nice sites up and running in addition to your actual portfolio site to really market yourself appropriately. Try and make each one unique and demonstrate a different design flare or technical skill. Link to each one from your main portfolio - you want this site to gather together all of the amazing stuff you can do.
