@@ -20,7 +20,40 @@ const Post = ({ frontmatter, content, otherPosts }) => {
         <title>{frontmatter.title}</title>
         <meta name="description" content="Here's my great about page!"></meta>
       </Head>
-      <h1>Well this is sad</h1>
+      <main className="blogPost">
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          linkTarget="_blank"
+          components={{
+            code({ node, inline, className, children, ...props }) {
+              return !inline ? (
+                <SyntaxHighlighter
+                  style={nord}
+                  language="javascript"
+                  PreTag="div"
+                  {...props}
+                >
+                  {String(children).replace(/\n$/, "")}
+                </SyntaxHighlighter>
+              ) : (
+                <code className="md-post-code" {...props}>
+                  {children}
+                </code>
+              );
+            },
+            h6({ node, inline, className, children, ...props }) {
+              return (
+                <Signup
+                  message="If you're enjoying the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
+                  location="middleOfPost"
+                />
+              );
+            },
+          }}
+        >
+          {content}
+        </ReactMarkdown>
+      </main>
     </div>
   );
 };
