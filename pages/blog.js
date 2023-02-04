@@ -44,7 +44,7 @@ export const Blog = ({ posts }) => {
               className={styles.post}
               key={post.data.title}
               itemscope=""
-              itemprop="blogPost"
+              itemtype="blogPost"
             >
               <Image
                 src={`/images/${post.data.previewImage}`}
@@ -53,6 +53,7 @@ export const Blog = ({ posts }) => {
                 height="170"
                 className="full-width"
                 priority
+                itemprop="image"
               />
               <div className="preview">
                 <Link href={`/blog/${post.slug}`}>
@@ -66,7 +67,6 @@ export const Blog = ({ posts }) => {
                     height="40"
                     priority
                     className="authorImage"
-                    itemprop="image"
                   />
                   <h4 className="authorName" itemprop="author">
                     Luke Twomey
