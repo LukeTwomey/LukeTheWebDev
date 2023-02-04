@@ -792,7 +792,7 @@ h3 {
   border-left: 5px solid #c14953;
   font-style: italic;
   font-size: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.4em;
   padding-left: 10px;
 }
 
@@ -865,7 +865,7 @@ p {
 }
 
 .preview {
-  padding: 0.5em 1em 1.5em 1.5em;
+  padding: 0.3em 1em 1.5em 1.5em;
 }
 
 .preview a {
@@ -878,7 +878,7 @@ p {
 .preview h4 {
   font-size: 0.8em;
   font-weight: 300;
-  margin: 0 0 1em 0;
+  margin: 0;
 }
 
 .projects,
@@ -1026,4 +1026,21 @@ code {
   font-size: 1em;
   padding: 4px 6px 6px;
   white-space: nowrap;
+}
+
+.postDetails {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  margin-bottom: 1em;
+  align-items: center;
+  margin-top: 0.3em;
+}
+
+.postDetails h4 {
+  margin: 0;
+}
+
+.postAuthor {
+  border-radius: 50%;
+  margin-right: 0.75em;
 }

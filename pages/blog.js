@@ -39,7 +39,17 @@ export const Blog = ({ posts }) => {
               <Link href={`/blog/${post.slug}`}>
                 <h3>{post.data.title}</h3>
               </Link>
-              <h4>{prettyDate(post.data.date)}</h4>
+              <div className="postDetails">
+                <Image
+                  src="/images/luke-twomey.webp"
+                  alt="Luke Twomey"
+                  width="40"
+                  height="40"
+                  priority
+                  className="postAuthor"
+                />
+                <h4>{prettyDate(post.data.date)}</h4>
+              </div>
               <p>{post.data.preview}</p>
               <Link href={`/blog/${post.slug}`}>Read post</Link>
             </div>

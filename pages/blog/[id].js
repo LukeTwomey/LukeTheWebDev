@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nord } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -9,6 +10,9 @@ import BlogPreview from "../../components/BlogPreview";
 import Signup from "../../components/Signup";
 import fs from "fs";
 import { DateTime } from "luxon";
+
+const prettyDate = (date) =>
+  DateTime.fromISO(date).setLocale("en-GB").toLocaleString(DateTime.DATE_FULL);
 
 const Post = ({ frontmatter, content, otherPosts }) => {
   return (
@@ -21,6 +25,18 @@ const Post = ({ frontmatter, content, otherPosts }) => {
         <meta name="description" content="Here's my great about page!"></meta>
       </Head>
       <main className="blogPost">
+        <h1>{frontmatter.title}</h1>
+        <div className="postDetails">
+          <Image
+            src="/images/luke-twomey.webp"
+            alt="Luke Twomey"
+            width="40"
+            height="40"
+            priority
+            className="postAuthor"
+          />
+          <h4>{prettyDate(frontmatter.date)}</h4>
+        </div>
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           linkTarget="_blank"

@@ -6,8 +6,6 @@ previewImage: "web-developer.webp"
 preview: "Learn the steps you need to take to become a web developer, from someone who has been through the very same process."
 ---
 
-# How to Become a Web Developer
-
 Let me put this out there right from the start: I'm no expert.
 
 _But_ I do know you can use the `<span>` tag to do various great things!
