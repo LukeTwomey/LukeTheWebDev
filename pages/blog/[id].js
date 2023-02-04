@@ -42,6 +42,14 @@ const Post = ({ frontmatter, content, otherPosts }) => {
           <h4 className="authorName">Luke Twomey</h4>
           <h4 className="publishedDate">{prettyDate(frontmatter.date)}</h4>
         </div>
+        <Image
+          src={`/images/${frontmatter.previewImage}`}
+          alt={frontmatter.title}
+          width="358"
+          height="170"
+          priority
+          className="featureImage"
+        />
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           linkTarget="_blank"
