@@ -44,7 +44,7 @@ export const Blog = ({ posts }) => {
               className={styles.post}
               key={post.data.title}
               itemscope=""
-              itemtype="blogPost"
+              itemtype="http://schema.org/BlogPosting"
             >
               <Image
                 src={`/images/${post.data.previewImage}`}
