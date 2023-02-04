@@ -24,13 +24,15 @@ export const App = ({ featurePosts }) => {
           height="390"
           priority
           className="portrait"
+          itemprop="image"
         />
 
         <section className="blue">
           <p>
             Hey guys! My name's <span itemprop="givenName">Luke</span>{" "}
-            <span itemprop="familyName">Twomey</span> and I'm a mid-level web
-            engineer at ASOS, before which I was working at Sky.
+            <span itemprop="familyName">Twomey</span> and I'm a{" "}
+            <span itemprop="jobTitle">Mid-level Web Engineer</span> at ASOS,
+            before which I was working at Sky.
           </p>
           <p>
             I have been programming since 2015, and I just love the process of
