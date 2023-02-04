@@ -43,6 +43,7 @@ export const Blog = ({ posts }) => {
             <article
               className={styles.post}
               key={post.data.title}
+              itemscope=""
               itemprop="blogPost"
             >
               <Image
