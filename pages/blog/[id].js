@@ -39,7 +39,7 @@ const Post = ({ frontmatter, content, otherPosts }) => {
             priority
             className="authorImage"
           />
-          <h4 className="authorName" itemprop="name">
+          <h4 className="authorName" itemprop="author">
             Luke Twomey
           </h4>
           <h4 className="publishedDate" itemprop="datePublished">
