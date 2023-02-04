@@ -84,7 +84,7 @@ const Post = ({ frontmatter, content, otherPosts }) => {
           mapping="title"
           reactionsEnabled="1"
           emitMetadata="0"
-          inputPosition="top"
+          inputPosition="bottom"
           theme="https://lukethewebdev.api.up.railway.app/giscusCss"
           lang="en"
           loading="lazy"
