@@ -24,11 +24,7 @@ const Post = ({ frontmatter, content, otherPosts }) => {
         <title>{frontmatter.title}</title>
         <meta name="description" content={frontmatter.preview}></meta>
       </Head>
-      <main
-        className="blogPost"
-        itemscope
-        itemtype="http://schema.org/BlogPosting"
-      >
+      <main className="blogPost" itemscope itemtype="http://schema.org/Article">
         <h1 itemprop="headline name">{frontmatter.title}</h1>
         <div className="postDetails">
           <Image
