@@ -1038,10 +1038,25 @@ code {
 
 .postDetails h4 {
   font-weight: 300;
+}
+
+.authorImage {
+  border-radius: 7px;
+  margin-right: 0.75em;
+}
+
+.authorName,
+.publishedDate {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 0.9em;
   margin: 0;
 }
 
-.postAuthor {
-  border-radius: 7px;
-  margin-right: 0.75em;
+.authorName {
+  align-self: start;
+}
+
+.publishedDate {
+  align-self: end;
 }

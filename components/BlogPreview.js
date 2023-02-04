@@ -29,9 +29,10 @@ export const BlogPreview = ({ posts, theme }) => {
                 width="40"
                 height="40"
                 priority
-                className="postAuthor"
+                className="authorImage"
               />
-              <h4>{prettyDate(post.data.date)}</h4>
+              <h4 className="authorName">Luke Twomey</h4>
+              <h4 className="publishedDate">{prettyDate(post.data.date)}</h4>
             </div>
             <p>{post.data.preview}</p>
             <Link href={`/blog/${post.slug}`}>Read post</Link>
