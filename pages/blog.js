@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/blog.module.css";
@@ -16,47 +17,57 @@ export const Blog = ({ posts }) => {
   });
 
   return (
-    <main className={styles.blog}>
-      <h1>Blog</h1>
-      <p>
-        Welcome to my blog! I'll be covering a range of development topics here,
-        at various different experience levels. You can filter using the toggles
-        below.
-      </p>
-      <p></p>
-      <section className={styles.posts}>
-        {sortBlogPostsByDate.map((post) => (
-          <article className={styles.post} key={post.data.title}>
-            <Image
-              src={`/images/${post.data.previewImage}`}
-              alt={post.data.title}
-              width="358"
-              height="170"
-              className="full-width"
-              priority
-            />
-            <div className="preview">
-              <Link href={`/blog/${post.slug}`}>
-                <h3>{post.data.title}</h3>
-              </Link>
-              <div className="postDetails">
-                <Image
-                  src="/images/luke-twomey.webp"
-                  alt="Luke Twomey"
-                  width="40"
-                  height="40"
-                  priority
-                  className="postAuthor"
-                />
-                <h4>{prettyDate(post.data.date)}</h4>
+    <div>
+      <Head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Luke Twomey" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Blog</title>
+        <meta name="description" content="Blog page here"></meta>
+      </Head>
+
+      <main className={styles.blog}>
+        <h1>Blog</h1>
+        <p>
+          Welcome to my blog! I'll be covering a range of development topics
+          here, at various different experience levels. You can filter using the
+          toggles below.
+        </p>
+        <p></p>
+        <section className={styles.posts}>
+          {sortBlogPostsByDate.map((post) => (
+            <article className={styles.post} key={post.data.title}>
+              <Image
+                src={`/images/${post.data.previewImage}`}
+                alt={post.data.title}
+                width="358"
+                height="170"
+                className="full-width"
+                priority
+              />
+              <div className="preview">
+                <Link href={`/blog/${post.slug}`}>
+                  <h3>{post.data.title}</h3>
+                </Link>
+                <div className="postDetails">
+                  <Image
+                    src="/images/luke-twomey.webp"
+                    alt="Luke Twomey"
+                    width="40"
+                    height="40"
+                    priority
+                    className="postAuthor"
+                  />
+                  <h4>{prettyDate(post.data.date)}</h4>
+                </div>
+                <p>{post.data.preview}</p>
+                <Link href={`/blog/${post.slug}`}>Read post</Link>
               </div>
-              <p>{post.data.preview}</p>
-              <Link href={`/blog/${post.slug}`}>Read post</Link>
-            </div>
-          </article>
-        ))}
-      </section>
-    </main>
+            </article>
+          ))}
+        </section>
+      </main>
+    </div>
   );
 };
 

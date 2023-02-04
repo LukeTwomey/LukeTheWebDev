@@ -1,3 +1,8 @@
+---
+title: "Meal Genie"
+description: "Meal Genie is a meal planning app to help you decide on your recipes for the week."
+---
+
 # Meal Genie
 
 Meal Genie is a meal planning app to help you decide on your recipes for the week. Easily add your own favourites, and Meal Genie will generate a random meal plan for the week at the touch of a button. Takes the hassle out of thinking of meals, now all you need to do is cook!

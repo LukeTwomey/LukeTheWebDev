@@ -1,75 +1,86 @@
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/projects.module.css";
 
 export const Projects = () => {
   return (
-    <main className={styles.projects}>
-      <h1>Projects</h1>
+    <div>
+      <Head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Luke Twomey" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Projects</title>
+        <meta name="description" content="Projects page here"></meta>
+      </Head>
 
-      <article className={styles.project}>
-        <Image
-          src="/images/meal-genie.webp"
-          alt="Meal Genie preview"
-          width="358"
-          height="170"
-          className="full-width"
-          priority
-        />
-        <div className="preview">
-          <Link href="/projects/meal-genie">
-            <h3>Meal Genie</h3>
-          </Link>
-          <p>
-            Written in React and Redux, Meal Genie is a meal planning app to
-            help you organise your recipes for the week.
-          </p>
-          <Link href="/projects/meal-genie">Read more...</Link>
-        </div>
-      </article>
+      <main className={styles.projects}>
+        <h1>Projects</h1>
 
-      <article className={styles.project}>
-        <Image
-          src="/images/sound-sniffer.webp"
-          alt="Sound Sniffer preview"
-          width="358"
-          height="170"
-          className="full-width"
-          priority
-        />
-        <div className="preview">
-          <Link href="/projects/sound-sniffer">
-            <h3>Sound Sniffer</h3>
-          </Link>
-          <p>
-            A React app which tracks your favourite artists and uses the Spotify
-            API to display their latest releases.
-          </p>
-          <Link href="/projects/sound-sniffer">Read more...</Link>
-        </div>
-      </article>
+        <article className={styles.project}>
+          <Image
+            src="/images/meal-genie.webp"
+            alt="Meal Genie preview"
+            width="358"
+            height="170"
+            className="full-width"
+            priority
+          />
+          <div className="preview">
+            <Link href="/projects/meal-genie">
+              <h3>Meal Genie</h3>
+            </Link>
+            <p>
+              Written in React and Redux, Meal Genie is a meal planning app to
+              help you organise your recipes for the week.
+            </p>
+            <Link href="/projects/meal-genie">Read more...</Link>
+          </div>
+        </article>
 
-      <article className={styles.project}>
-        <Image
-          src="/images/moneypots-1.webp"
-          alt="Moneypots preview"
-          width="358"
-          height="170"
-          className="full-width"
-          priority
-        />
-        <div className="preview">
-          <Link href="/projects/moneypots">
-            <h3>Moneypots</h3>
-          </Link>
-          <p>
-            Moneypots is an Angular app which lets you create pots to keep track
-            of your money across multiple bank accounts.
-          </p>
-          <Link href="/projects/moneypots">Read more...</Link>
-        </div>
-      </article>
-    </main>
+        <article className={styles.project}>
+          <Image
+            src="/images/sound-sniffer.webp"
+            alt="Sound Sniffer preview"
+            width="358"
+            height="170"
+            className="full-width"
+            priority
+          />
+          <div className="preview">
+            <Link href="/projects/sound-sniffer">
+              <h3>Sound Sniffer</h3>
+            </Link>
+            <p>
+              A React app which tracks your favourite artists and uses the
+              Spotify API to display their latest releases.
+            </p>
+            <Link href="/projects/sound-sniffer">Read more...</Link>
+          </div>
+        </article>
+
+        <article className={styles.project}>
+          <Image
+            src="/images/moneypots-1.webp"
+            alt="Moneypots preview"
+            width="358"
+            height="170"
+            className="full-width"
+            priority
+          />
+          <div className="preview">
+            <Link href="/projects/moneypots">
+              <h3>Moneypots</h3>
+            </Link>
+            <p>
+              Moneypots is an Angular app which lets you create pots to keep
+              track of your money across multiple bank accounts.
+            </p>
+            <Link href="/projects/moneypots">Read more...</Link>
+          </div>
+        </article>
+      </main>
+    </div>
   );
 };
 

@@ -22,7 +22,7 @@ const Post = ({ frontmatter, content, otherPosts }) => {
         <meta name="author" content="Luke Twomey" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{frontmatter.title}</title>
-        <meta name="description" content="Here's my great about page!"></meta>
+        <meta name="description" content={frontmatter.preview}></meta>
       </Head>
       <main className="blogPost">
         <h1>{frontmatter.title}</h1>

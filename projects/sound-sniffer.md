@@ -1,3 +1,8 @@
+---
+title: "Sound Sniffer"
+description: "Sound Sniffer is a React app which tracks your favourite artists and displays their latest music releases by using the Spotify API."
+---
+
 # Sound Sniffer
 
 Sound Sniffer is a React app which tracks your favourite artists and displays their latest music releases by using the Spotify API. You can remove old favourites, and search for and add new ones. Your new releases feed will automatically refresh and show you the latest and greatest new music from your personal artist list.

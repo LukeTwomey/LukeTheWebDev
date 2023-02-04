@@ -5,7 +5,6 @@ export default function Document() {
     <Html>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="description" content="Here's the meta description" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"

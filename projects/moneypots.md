@@ -1,3 +1,8 @@
+---
+title: "Moneypots"
+description: "Moneypots is an Angular app which allows you to keep track of your money across multiple bank accounts."
+---
+
 # Moneypots
 
 Moneypots is an Angular app which allows you to keep track of your money across multiple bank accounts. For users who open separate accounts for different purposes (E.G. Halifax for Christmas, Lloyds for that holiday to New York!), Moneypots keeps a record of the total in each, enabling you to conveniently view all of your savings pots in one place.

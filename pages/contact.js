@@ -11,7 +11,7 @@ export const Contact = () => {
         <title>Contact</title>
         <meta
           name="description"
-          content="Content page description here..."
+          content="Contact page description here..."
         ></meta>
       </Head>
       <main>
