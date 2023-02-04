@@ -847,6 +847,11 @@ article {
   box-shadow: 5px 5px 5px #272725;
 }
 
+.blogPost article {
+  background: none;
+  box-shadow: none;
+}
+
 article:not(:last-child) {
   margin-bottom: 1.5em;
 }
