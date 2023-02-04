@@ -26,9 +26,13 @@ export const Blog = ({ posts }) => {
         <meta name="description" content="Blog page here"></meta>
       </Head>
 
-      <main className={styles.blog}>
+      <main
+        className={styles.blog}
+        itemscope=""
+        itemtype="http://schema.org/Blog"
+      >
         <h1>Blog</h1>
-        <p>
+        <p itemprop="about">
           Welcome to my blog! I'll be covering a range of development topics
           here, at various different experience levels. You can filter using the
           toggles below.
@@ -36,7 +40,11 @@ export const Blog = ({ posts }) => {
         <p></p>
         <section className={styles.posts}>
           {sortBlogPostsByDate.map((post) => (
-            <article className={styles.post} key={post.data.title}>
+            <article
+              className={styles.post}
+              key={post.data.title}
+              itemprop="blogPost"
+            >
               <Image
                 src={`/images/${post.data.previewImage}`}
                 alt={post.data.title}
@@ -47,7 +55,7 @@ export const Blog = ({ posts }) => {
               />
               <div className="preview">
                 <Link href={`/blog/${post.slug}`}>
-                  <h3>{post.data.title}</h3>
+                  <h3 itemprop="headline name">{post.data.title}</h3>
                 </Link>
                 <div className="postDetails">
                   <Image
@@ -57,14 +65,19 @@ export const Blog = ({ posts }) => {
                     height="40"
                     priority
                     className="authorImage"
+                    itemprop="image"
                   />
-                  <h4 className="authorName">Luke Twomey</h4>
-                  <h4 className="publishedDate">
+                  <h4 className="authorName" itemprop="author">
+                    Luke Twomey
+                  </h4>
+                  <h4 className="publishedDate" itemprop="datePublished">
                     {prettyDate(post.data.date)}
                   </h4>
                 </div>
-                <p>{post.data.preview}</p>
-                <Link href={`/blog/${post.slug}`}>Read post</Link>
+                <p itempro="description">{post.data.preview}</p>
+                <Link href={`/blog/${post.slug}`} itemprop="url">
+                  Read post
+                </Link>
               </div>
             </article>
           ))}
