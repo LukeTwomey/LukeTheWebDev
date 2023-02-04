@@ -57,7 +57,7 @@ export const Blog = ({ posts }) => {
               />
               <div className="preview">
                 <Link href={`/blog/${post.slug}`}>
-                  <h3 itemprop="name">{post.data.title}</h3>
+                  <h3 itemprop="headline name">{post.data.title}</h3>
                 </Link>
                 <div className="postDetails">
                   <Image
