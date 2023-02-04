@@ -27,7 +27,7 @@ const Post = ({ frontmatter, content, otherPosts }) => {
       <main
         className="blogPost"
         itemscope=""
-        itemtype="http://schema.org/Article"
+        itemtype="http://schema.org/BlogPosting"
       >
         <h1 itemprop="headline name">{frontmatter.title}</h1>
         <div className="postDetails">
