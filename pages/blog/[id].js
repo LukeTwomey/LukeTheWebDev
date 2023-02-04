@@ -39,8 +39,12 @@ const Post = ({ frontmatter, content, otherPosts }) => {
             priority
             className="authorImage"
           />
-          <h4 className="authorName">Luke Twomey</h4>
-          <h4 className="publishedDate">{prettyDate(frontmatter.date)}</h4>
+          <h4 className="authorName" itemprop="name">
+            Luke Twomey
+          </h4>
+          <h4 className="publishedDate" itemprop="datePublished">
+            {prettyDate(frontmatter.date)}
+          </h4>
         </div>
         <Image
           src={`/images/${frontmatter.previewImage}`}
@@ -49,39 +53,43 @@ const Post = ({ frontmatter, content, otherPosts }) => {
           height="170"
           priority
           className="featureImage"
+          itemprop="image"
         />
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          linkTarget="_blank"
-          components={{
-            code({ node, inline, className, children, ...props }) {
-              return !inline ? (
-                <SyntaxHighlighter
-                  style={nord}
-                  language="javascript"
-                  PreTag="div"
-                  {...props}
-                >
-                  {String(children).replace(/\n$/, "")}
-                </SyntaxHighlighter>
-              ) : (
-                <code className="md-post-code" {...props}>
-                  {children}
-                </code>
-              );
-            },
-            h6({ node, inline, className, children, ...props }) {
-              return (
-                <Signup
-                  message="If you're enjoying the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
-                  location="middleOfPost"
-                />
-              );
-            },
-          }}
-        >
-          {content}
-        </ReactMarkdown>
+
+        <article itemprop="articleBody">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            linkTarget="_blank"
+            components={{
+              code({ node, inline, className, children, ...props }) {
+                return !inline ? (
+                  <SyntaxHighlighter
+                    style={nord}
+                    language="javascript"
+                    PreTag="div"
+                    {...props}
+                  >
+                    {String(children).replace(/\n$/, "")}
+                  </SyntaxHighlighter>
+                ) : (
+                  <code className="md-post-code" {...props}>
+                    {children}
+                  </code>
+                );
+              },
+              h6({ node, inline, className, children, ...props }) {
+                return (
+                  <Signup
+                    message="If you're enjoying the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
+                    location="middleOfPost"
+                  />
+                );
+              },
+            }}
+          >
+            {content}
+          </ReactMarkdown>
+        </article>
 
         <Signup
           message="If you enjoyed the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
