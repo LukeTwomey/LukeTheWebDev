@@ -908,12 +908,12 @@ main a.button {
   color: #f7f7f7;
   display: block;
   border-radius: 5px;
-  margin: 0 auto 0.5em auto;
+  margin: 1.3em auto 0.5em auto;
   padding: 0.3em 1em;
   text-align: center;
   width: 50%;
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .postPreview h4 {
@@ -1070,4 +1070,14 @@ code {
 .featureImage {
   margin-bottom: 1em;
   border-radius: 7px;
+}
+
+.aboutLink {
+  color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  margin: 1.5em 0 0 0;
 }

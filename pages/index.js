@@ -38,7 +38,9 @@ export const App = ({ featurePosts }) => {
             I have been programming since 2015, and I just love the process of
             bringing something to life through code.
           </p>
-          {/* <ADD LINK TO ABOUT></ADD> */}
+          <Link href="/about" className="aboutLink button">
+            Read More
+          </Link>
         </section>
 
         <section className="blogPreview grey">

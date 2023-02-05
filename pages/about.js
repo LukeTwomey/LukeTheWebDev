@@ -91,7 +91,7 @@ export const About = () => {
         </p>
 
         <Signup
-          message="Subscribe to receive an alert for every new post I make!"
+          message="Subscribe to receive an alert for each new post!"
           location="aboutPage"
         />
 
@@ -99,7 +99,7 @@ export const About = () => {
 
         <p>
           For a preview of what the blog will contain, check out
-          <Link href={"/blog/how-to-become-a-web-developer"} className="link">
+          <Link href={"/blog/how-to-become-a-web-developer"}>
             How to Become a Web Developer
           </Link>
           or "such and such a post here"
