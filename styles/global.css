@@ -797,7 +797,8 @@ h3 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.7em;
+  font-weight: 600;
   margin: 0 0 0.4em 0;
 }
 
@@ -896,7 +897,6 @@ main a {
   color: #848fa5;
   text-decoration: none;
   border-bottom: 1px solid #848fa5;
-  font-size: 1.1em;
   margin-top: 0.5em;
   display: inline-block;
 }

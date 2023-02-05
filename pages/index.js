@@ -31,18 +31,20 @@ export const App = ({ featurePosts }) => {
           <p>
             Hey guys! My name's <span itemProp="givenName">Luke</span>{" "}
             <span itemProp="familyName">Twomey</span> and I'm a{" "}
-            <span itemProp="jobTitle">Mid-level Web Engineer</span> at ASOS,
-            before which I was working at Sky.
+            <span itemProp="jobTitle">Web Engineer</span> at ASOS, before which
+            I was working at Sky.
           </p>
           <p>
             I have been programming since 2015, and I just love the process of
             bringing something to life through code.
           </p>
+          {/* <ADD LINK TO ABOUT></ADD> */}
         </section>
 
         <section className="blogPreview grey">
           <h2>Blog</h2>
           <BlogPreview posts={featurePosts} theme="dark" />
+          {/* <ADD SIGNUP HERE TOO></ADD> */}
           <Link href="/blog" className="button">
             View Blog
           </Link>

@@ -21,6 +21,9 @@ export const Signup = ({ message, location }) => {
       case "endOfPost":
         tags.push(3617774);
         break;
+      case "aboutPage":
+        tags.push(3626182);
+        break;
       default:
         tags.push(3601975);
     }

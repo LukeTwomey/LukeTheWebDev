@@ -26,7 +26,7 @@ export const Nav = ({ toggleNav }) => {
                 toggleNav();
               }}
             >
-              About
+              About Me
             </a>
             <a
               href="/blog"
