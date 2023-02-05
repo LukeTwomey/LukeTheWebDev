@@ -13,10 +13,12 @@ export const About = () => {
         <meta name="description" content="Here's my great about page!"></meta>
       </Head>
 
-      <main className="about">
+      <main className="about" itemScope="" itemType="http://schema.org/Person">
         <h1>About</h1>
         <p>
-          Hello and welcome! My name's Luke Twomey and I'm a web developer
+          Hello and welcome! My name's <span itemProp="givenName">Luke</span>{" "}
+          <span itemProp="familyName">Twomey</span> and I'm a{" "}
+          <span itemProp="jobTitle">Mid-level Web Engineer</span>
           currently working for ASOS in sunny London, before which I was at Sky.
         </p>
         <Image

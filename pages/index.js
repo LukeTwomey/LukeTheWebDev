@@ -16,7 +16,7 @@ export const App = ({ featurePosts }) => {
           content="The home of Luke the Web Dev! Great blog, you'll love it."
         ></meta>
       </Head>
-      <main className="home" itemscope="" itemtype="http://schema.org/Person">
+      <main className="home" itemScope="" itemType="http://schema.org/Person">
         <Image
           src="/images/luke-twomey.webp"
           alt="Luke Twomey"
@@ -29,9 +29,9 @@ export const App = ({ featurePosts }) => {
 
         <section className="blue">
           <p>
-            Hey guys! My name's <span itemprop="givenName">Luke</span>{" "}
-            <span itemprop="familyName">Twomey</span> and I'm a{" "}
-            <span itemprop="jobTitle">Mid-level Web Engineer</span> at ASOS,
+            Hey guys! My name's <span itemProp="givenName">Luke</span>{" "}
+            <span itemProp="familyName">Twomey</span> and I'm a{" "}
+            <span itemProp="jobTitle">Mid-level Web Engineer</span> at ASOS,
             before which I was working at Sky.
           </p>
           <p>

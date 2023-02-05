@@ -28,11 +28,11 @@ export const Blog = ({ posts }) => {
 
       <main
         className={styles.blog}
-        itemscope=""
-        itemtype="http://schema.org/Blog"
+        itemScope=""
+        itemType="http://schema.org/Blog"
       >
         <h1>Blog</h1>
-        <p itemprop="about">
+        <p itemProp="about">
           Welcome to my blog! I'll be covering a range of development topics
           here, at various different experience levels. You can filter using the
           toggles below.
@@ -43,8 +43,8 @@ export const Blog = ({ posts }) => {
             <article
               className={styles.post}
               key={post.data.title}
-              itemscope=""
-              itemtype="http://schema.org/BlogPosting"
+              itemScope=""
+              itemType="http://schema.org/BlogPosting"
             >
               <Image
                 src={`/images/${post.data.previewImage}`}
@@ -57,7 +57,7 @@ export const Blog = ({ posts }) => {
               />
               <div className="preview">
                 <Link href={`/blog/${post.slug}`}>
-                  <h3 itemprop="headline name">{post.data.title}</h3>
+                  <h3 itemProp="headline name">{post.data.title}</h3>
                 </Link>
                 <div className="postDetails">
                   <Image
@@ -68,15 +68,15 @@ export const Blog = ({ posts }) => {
                     priority
                     className="authorImage"
                   />
-                  <h4 className="authorName" itemprop="author">
+                  <h4 className="authorName" itemProp="author">
                     Luke Twomey
                   </h4>
-                  <h4 className="publishedDate" itemprop="datePublished">
+                  <h4 className="publishedDate" itemProp="datePublished">
                     {prettyDate(post.data.date)}
                   </h4>
                 </div>
                 <p itempro="description">{post.data.preview}</p>
-                <Link href={`/blog/${post.slug}`} itemprop="url">
+                <Link href={`/blog/${post.slug}`} itemProp="url">
                   Read post
                 </Link>
               </div>

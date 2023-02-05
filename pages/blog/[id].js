@@ -26,10 +26,10 @@ const Post = ({ frontmatter, content, otherPosts }) => {
       </Head>
       <main
         className="blogPost"
-        itemscope=""
-        itemtype="http://schema.org/BlogPosting"
+        itemScope=""
+        itemType="http://schema.org/BlogPosting"
       >
-        <h1 itemprop="headline name">{frontmatter.title}</h1>
+        <h1 itemProp="headline name">{frontmatter.title}</h1>
         <div className="postDetails">
           <Image
             src="/images/luke-twomey.webp"
@@ -39,10 +39,10 @@ const Post = ({ frontmatter, content, otherPosts }) => {
             priority
             className="authorImage"
           />
-          <h4 className="authorName" itemprop="author">
+          <h4 className="authorName" itemProp="author">
             Luke Twomey
           </h4>
-          <h4 className="publishedDate" itemprop="datePublished">
+          <h4 className="publishedDate" itemProp="datePublished">
             {prettyDate(frontmatter.date)}
           </h4>
         </div>
@@ -56,7 +56,7 @@ const Post = ({ frontmatter, content, otherPosts }) => {
           itemProp="image"
         />
 
-        <article itemprop="articleBody">
+        <article itemProp="articleBody">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             linkTarget="_blank"
