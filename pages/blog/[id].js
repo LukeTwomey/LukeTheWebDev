@@ -53,7 +53,7 @@ const Post = ({ frontmatter, content, otherPosts }) => {
           height="170"
           priority
           className="featureImage"
-          itemprop="image"
+          itemProp="image"
         />
 
         <article itemprop="articleBody">

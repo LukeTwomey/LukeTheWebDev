@@ -17,8 +17,7 @@ export const About = () => {
         <h1>About</h1>
         <p>
           Hello and welcome! My name's Luke Twomey and I'm a web developer
-          currently working for ASOS in sunny Camden. Before that I was working
-          at Sky.
+          currently working for ASOS in sunny London, before which I was at Sky.
         </p>
         <Image
           src="/images/me-in-new-york.webp"
@@ -27,7 +26,7 @@ export const About = () => {
           height="266"
           priority
           className={styles.portrait}
-          itemprop="image"
+          itemProp="image"
         />
         <p>
           I’ve made a career out of coding since 2015, and I also like to work

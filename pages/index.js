@@ -24,7 +24,7 @@ export const App = ({ featurePosts }) => {
           height="390"
           priority
           className="portrait"
-          itemprop="image"
+          itemProp="image"
         />
 
         <section className="blue">
