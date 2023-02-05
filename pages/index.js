@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import BlogPreview from "../components/BlogPreview";
 import ProjectsPreview from "../components/ProjectsPreview";
+import Signup from "../components/Signup";
 import matter from "gray-matter";
 import fs from "fs";
 
@@ -46,7 +47,10 @@ export const App = ({ featurePosts }) => {
         <section className="blogPreview grey">
           <h2>Blog</h2>
           <BlogPreview posts={featurePosts} theme="dark" />
-          {/* <ADD SIGNUP HERE TOO></ADD> */}
+          <Signup
+            message="Subscribe to receive an alert for each new post!"
+            location="homePage"
+          />
           <Link href="/blog" className="button">
             View Blog
           </Link>
