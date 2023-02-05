@@ -46,15 +46,9 @@ export const About = () => {
         </p>
 
         <p>
-          I have always been a very logical person, methodical and well
-          organised, with a talent for problem solving and a high attention to
-          detail. I had always known I enjoyed development - right from when I
-          first started programming in university.
-        </p>
-
-        <p>
           I currently live in Walthamstow with my fiancée Fi and Twiglet the
-          cat. Obligatory cat tax below!
+          cat. Obligatory cat pic below! (he loves to play fetch with the ball
+          by his tail. He thinks he's a dog.)
         </p>
 
         <Image
@@ -66,33 +60,49 @@ export const About = () => {
           className={styles.image}
           itemProp="image"
         />
+
+        <p>
+          I have always been a very logical person, methodical and well
+          organised, with a talent for problem solving and a high attention to
+          detail. I had always known I enjoyed development - right from when I
+          first started programming in university.
+        </p>
+
         <p>
           You'll often find me working on personal projects outside of work, the
           latest being the current iteration of this very website. It is written
-          in React, and uses Next.js to benefit from server-side rendering.
+          in React, and uses Next.js to benefit from server-side rendering. This
+          means blazing fast page load times!
         </p>
+
         <p>
           The main focus of this site is <Link href={"/blog"}>my new blog</Link>
           , which I will be updating each week. I found sites like this
           invaluable to me when I was learning to code, and I would love to
           share my knowledge with you and help you on your web development
-          journey, whatever stage you're at.
+          journey.
+        </p>
+
+        <p>
+          The whole point of the blog is to write something I would like to read
+          myself (and I will definitely be referring back to to it myself in
+          future!). You will hopefully gain lots of valuable information which
+          will help you, as it helped me.
         </p>
 
         <Signup
-          message="Subscribe to receive an alert for every new post!"
+          message="Subscribe to receive an alert for every new post I make!"
           location="aboutPage"
         />
 
+        <p></p>
+
         <p>
-          add signup component (I usually post once a week, and always aim to
-          make my posts as useful as possible and something I would like to find
-          myself. Indeed, using it as a resoirce myself to come back to -
-          emphasize that and how it will help people learn. Believe I am able to
-          explain things as clearly as possible. If you dont want to miss any
-          tips, sign up below.). 300-500 words. Main focus is the signup page,
-          but can also put a cta at the end to move them elsewhere in the site.
-          blog obvous choice.
+          For a preview of what the blog will contain, check out
+          <Link href={"/blog/how-to-become-a-web-developer"} className="link">
+            How to Become a Web Developer
+          </Link>
+          or "such and such a post here"
         </p>
       </main>
     </div>
