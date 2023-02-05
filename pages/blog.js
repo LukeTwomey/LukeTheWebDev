@@ -33,9 +33,8 @@ export const Blog = ({ posts }) => {
       >
         <h1>Blog</h1>
         <p itemProp="about">
-          Welcome to my blog! I'll be covering a range of development topics
-          here, at various different experience levels. You can filter using the
-          toggles below.
+          Welcome to my blog! I'll be covering a range of development topics,
+          always with the aim of making things as understandable as possible.
         </p>
         <p></p>
         <section className={styles.posts}>
