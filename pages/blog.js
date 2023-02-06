@@ -33,8 +33,8 @@ export const Blog = ({ posts }) => {
       >
         <h1>Blog</h1>
         <p itemProp="about">
-          Welcome to my blog! I'll be covering a range of development topics,
-          always with the aim of making things as understandable as possible.
+          Welcome to my blog! I'll be covering a range of topics for all levels
+          of experience.
         </p>
         <p></p>
         <section className={styles.posts}>
