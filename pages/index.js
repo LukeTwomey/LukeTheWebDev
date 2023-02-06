@@ -40,7 +40,7 @@ export const App = ({ featurePosts }) => {
             bringing something to life through code.
           </p>
           <Link href="/about" className="aboutLink button">
-            Read More
+            About Me
           </Link>
         </section>
 
