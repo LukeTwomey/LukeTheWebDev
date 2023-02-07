@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
+import styles from "../styles/contact.module.css";
 
 export const Contact = () => {
+  const [formDetails, updateFormDetails] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const onChange = (e) => {
+    e.preventDefault();
+    updateFormDetails((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(formDetails);
+  };
+
   return (
     <div>
       <Head>
@@ -16,26 +36,53 @@ export const Contact = () => {
       </Head>
       <main>
         <h1>Contact</h1>
-        <p>Lorem ipsum and all that jazz...</p>
-        <p>A whole big list of great projects to show off</p>
         <p>
-          Five genuinely enjoyable years later, I jumped at the opportunity to
-          explore more of the world, backpacking for a year. Aside from
-          countless incredible experiences, this gave me ample opportunity to
-          choose an exciting new career path.
+          Please don't hesitate to get in touch, I look forward to hearing from
+          you!
         </p>
-        <p>
-          Five genuinely enjoyable years later, I jumped at the opportunity to
-          explore more of the world, backpacking for a year. Aside from
-          countless incredible experiences, this gave me ample opportunity to
-          choose an exciting new career path.
-        </p>
-        <p>
-          Five genuinely enjoyable years later, I jumped at the opportunity to
-          explore more of the world, backpacking for a year. Aside from
-          countless incredible experiences, this gave me ample opportunity to
-          choose an exciting new career path.
-        </p>
+        <form>
+          <label htmlFor="name" className={styles.label}>
+            Name:{" "}
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            className={styles.input}
+            onChange={onChange}
+            value={formDetails.name}
+          />
+          <label htmlFor="email" className={styles.label}>
+            Email:{" "}
+          </label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            className={styles.input}
+            onChange={onChange}
+            value={formDetails.email}
+          />
+          <label htmlFor="message" className={styles.label}>
+            Message:{" "}
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="10"
+            className={styles.textarea}
+            onChange={onChange}
+            value={formDetails.message}
+          />
+          <input
+            type="submit"
+            id="submit"
+            name="submit"
+            value="Submit"
+            className={styles.submit}
+            onClick={onSubmit}
+          />
+        </form>
       </main>
     </div>
   );

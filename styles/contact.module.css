@@ -1,0 +1,39 @@
+.input,
+.label,
+.textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+.label {
+  margin-bottom: 0.4em;
+}
+
+.input,
+.textarea {
+  border: 1px solid #898981;
+  border-radius: 7px;
+  color: #51514b;
+  margin-bottom: 1em;
+}
+
+.textarea,
+.input[type="text"] {
+  padding: 0.75em 1em;
+}
+
+.submit {
+  background: #c14953;
+  border: none;
+  box-shadow: 5px 5px 5px #272725;
+  color: #f7f7f7;
+  display: block;
+  border-radius: 5px;
+  margin: 1.3em auto 0.5em auto;
+  padding: 0.3em 1em;
+  text-align: center;
+  width: 50%;
+  font-style: normal;
+  font-size: 1.2em;
+}
