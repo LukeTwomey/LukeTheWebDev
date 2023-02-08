@@ -11,8 +11,8 @@ const prettyDate = (date) =>
 
 export const Blog = ({ posts }) => {
   const sortBlogPostsByDate = posts.sort((a, b) => {
-    const beforeDate = DateTime.fromFormat(a.data.date, "yyyy-m-d");
-    const afterDate = DateTime.fromFormat(b.data.date, "yyyy-m-d");
+    const beforeDate = DateTime.fromFormat(a.data.date, "yyyy-MM-dd");
+    const afterDate = DateTime.fromFormat(b.data.date, "yyyy-MM-dd");
     return afterDate - beforeDate;
   });
 

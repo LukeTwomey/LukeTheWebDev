@@ -6,8 +6,15 @@ import ProjectsPreview from "../components/ProjectsPreview";
 import Signup from "../components/Signup";
 import matter from "gray-matter";
 import fs from "fs";
+import { DateTime } from "luxon";
 
 export const App = ({ featurePosts }) => {
+  const sortBlogPostsByDate = featurePosts.sort((a, b) => {
+    const beforeDate = DateTime.fromFormat(a.data.date, "yyyy-MM-dd");
+    const afterDate = DateTime.fromFormat(b.data.date, "yyyy-MM-dd");
+    return afterDate - beforeDate;
+  });
+
   return (
     <>
       <Head>
@@ -46,7 +53,7 @@ export const App = ({ featurePosts }) => {
 
         <section className="blogPreview grey">
           <h2>Blog</h2>
-          <BlogPreview posts={featurePosts} theme="dark" />
+          <BlogPreview posts={sortBlogPostsByDate} theme="dark" />
           <Signup
             message="Subscribe to receive an alert for each new post!"
             location="homePage"
