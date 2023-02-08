@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import styles from "../styles/contact.module.css";
+import axios from "axios";
 
 export const Contact = () => {
   const [formDetails, updateFormDetails] = useState({
@@ -8,6 +9,7 @@ export const Contact = () => {
     email: "",
     message: "",
   });
+  const [submitButtonValue, setSubmitButtonValue] = useState("Send");
 
   const onChange = (e) => {
     e.preventDefault();
@@ -17,9 +19,22 @@ export const Contact = () => {
     }));
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(formDetails);
+    const contactResponse = await axios.post("/api/contact", formDetails);
+    const submitButton = e.target;
+
+    if (contactResponse.status === 200) {
+      setSubmitButtonValue("Sent!");
+      updateFormDetails({
+        name: "",
+        email: "",
+        message: "",
+      });
+      submitButton.classList.add("success");
+    } else {
+      submitButton.value = "Try again";
+    }
   };
 
   return (
@@ -78,8 +93,8 @@ export const Contact = () => {
             type="submit"
             id="submit"
             name="submit"
-            value="Submit"
-            className={styles.submit}
+            value={submitButtonValue}
+            className="contactSubmit"
             onClick={onSubmit}
           />
         </form>
