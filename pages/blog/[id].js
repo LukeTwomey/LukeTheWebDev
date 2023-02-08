@@ -39,6 +39,12 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
         <meta property="og:site_name" content="Luke the Web Dev" />
 
         {/* Twitter OpenGraph*/}
+        <meta name="twitter:title" content={frontmatter.title} />
+        <meta name="twitter:description" content={frontmatter.preview} />
+        <meta
+          name="twitter:image"
+          content={`https://luketheweb.dev/images/${frontmatter.previewImage}`}
+        />
         <meta property="twitter:card" content="summary" />
         <meta name="twitter:site" content="@luke_the_webdev" />
         <meta name="twitter:creator" content="@luke_the_webdev" />
