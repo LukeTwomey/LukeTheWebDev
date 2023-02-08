@@ -12,7 +12,7 @@ export default async function (req, res) {
   });
 
   const mailDataToMe = {
-    from: process.env.NAMECHEAP_EMAIL_USER,
+    from: `Luke the Web Dev <${process.env.NAMECHEAP_EMAIL_USER}>`,
     to: process.env.NAMECHEAP_EMAIL_USER,
     subject: `Message From ${req.body.name}`,
     text: req.body.message,
@@ -20,7 +20,7 @@ export default async function (req, res) {
   };
 
   const mailDataToCustomer = {
-    from: process.env.NAMECHEAP_EMAIL_USER,
+    from: `Luke the Web Dev <${process.env.NAMECHEAP_EMAIL_USER}>`,
     to: req.body.email,
     subject: "Message Received",
     text: "Thanks for your enquiry! I will get back to you very soon. Regards, Luke",
