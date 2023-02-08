@@ -84,7 +84,7 @@ export const Contact = () => {
           <textarea
             id="message"
             name="message"
-            rows="10"
+            rows="6"
             className={styles.textarea}
             onChange={onChange}
             value={formDetails.message}
