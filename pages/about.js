@@ -14,7 +14,7 @@ export const About = () => {
         <title>About Luke Twomey | Luke the Web Dev</title>
         <meta
           name="description"
-          content="I'm a web developer from London, currently working for ASOS. I have been programming since 2015, and I just love the process of
+          content="I'm a web dev from London, currently working for ASOS. I have been programming since 2015, and love the process of
           bringing something to life through code."
         ></meta>
       </Head>
@@ -46,9 +46,9 @@ export const About = () => {
         </p>
 
         <p>
-          I currently live in Walthamstow with my fiancée Fi and Twiglet the
-          cat. Obligatory cat pic below! (he loves to play fetch with the ball
-          by his tail. He thinks he's a dog.)
+          I currently live in Walthamstow with my fiancée Fi and Twiglet the cat
+          (obligatory cat pic below!). He loves to play fetch with the ball by
+          his tail. He thinks he's a dog.
         </p>
 
         <Image
@@ -62,48 +62,37 @@ export const About = () => {
         />
 
         <p>
-          I have always been a very logical person, methodical and well
-          organised, with a talent for problem solving and a high attention to
-          detail. I had always known I enjoyed development - right from when I
-          first started programming in university.
-        </p>
-
-        <p>
           You'll often find me working on personal projects outside of work, the
-          latest being the current iteration of this very website. It is written
-          in React, and uses Next.js to benefit from server-side rendering. This
-          means blazing fast page load times!
+          latest being the current iteration of this website. It is written in
+          React, and uses Next.js to benefit from server-side rendering. Among
+          other benefits, this means blazing fast page load times!
         </p>
 
         <p>
-          The main focus of this site is <Link href={"/blog"}>my new blog</Link>
-          , which I will be updating each week. I found sites like this
-          invaluable to me when I was learning to code, and I would love to
-          share my knowledge with you and help you on your web development
-          journey.
-        </p>
-
-        <p>
-          The whole point of the blog is to write something I would like to read
-          myself (and I will definitely be referring back to to it myself in
-          future!). You will hopefully gain lots of valuable information which
-          will help you, as it helped me.
+          The main focus of this site is <Link href={"/blog"}>my blog</Link>,
+          which is updated each week. I found blogs invaluable when I was
+          learning to code, and I would love to share my knowledge with you and
+          help you along your web development journey.
         </p>
 
         <Signup
-          message="Subscribe to receive an alert for each new post!"
+          message="Subscribe to get notified when a new post drops!"
           location="aboutPage"
         />
 
-        <p></p>
+        <p>
+          I only write content that I would appreciate reading myself. All too
+          often I come across confusing, inaccurate or outdated posts, which is
+          really frustrating when you're trying to overcome a problem!
+        </p>
 
         <p>
-          For a preview of what the blog will contain, check out
-          <Link href={"/blog/how-to-become-a-web-developer"}>
-            How to Become a Web Developer
-          </Link>
-          or "such and such a post here"
+          Why not <Link href={"/blog"}>see what all the fuss is about</Link>?
         </p>
+
+        <Link href="/blog" className="button">
+          View Blog
+        </Link>
       </main>
     </div>
   );

@@ -176,10 +176,7 @@ export async function getStaticProps({ params: { id } }) {
 
   posts.sort((a, b) => {
     const beforeDate = DateTime.fromFormat(a.data.date, "yyyy-MM-dd");
-    console.log(beforeDate);
     const afterDate = DateTime.fromFormat(b.data.date, "yyyy-MM-dd");
-    console.log(afterDate);
-    console.log(afterDate - beforeDate);
     return afterDate - beforeDate;
   });
 
