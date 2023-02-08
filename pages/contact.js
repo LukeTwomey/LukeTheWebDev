@@ -21,6 +21,7 @@ export const Contact = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setSubmitButtonValue("Sending...");
     const contactResponse = await axios.post("/api/contact", formDetails);
     const submitButton = e.target;
 
