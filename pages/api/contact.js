@@ -11,7 +11,7 @@ export default async function (req, res) {
     secure: true,
   });
 
-  const mailData = {
+  const mailDataToMe = {
     from: process.env.NAMECHEAP_EMAIL_USER,
     to: process.env.NAMECHEAP_EMAIL_USER,
     subject: `Message From ${req.body.name}`,
@@ -19,6 +19,14 @@ export default async function (req, res) {
     replyTo: req.body.email,
   };
 
-  const mailsend = await transporter.sendMail(mailData);
+  const mailDataToCustomer = {
+    from: process.env.NAMECHEAP_EMAIL_USER,
+    to: req.body.email,
+    subject: "Message Received",
+    text: "Thanks for your enquiry! I will get back to you very soon. Regards, Luke",
+  };
+
+  const mailSendToMe = await transporter.sendMail(mailDataToMe);
+  const mailSendToCustomer = await transporter.sendMail(mailDataToCustomer);
   res.send(200);
 }
