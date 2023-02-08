@@ -14,7 +14,7 @@ import { DateTime } from "luxon";
 const prettyDate = (date) =>
   DateTime.fromISO(date).setLocale("en-GB").toLocaleString(DateTime.DATE_FULL);
 
-const Post = ({ frontmatter, content, otherPosts }) => {
+const Post = ({ id, frontmatter, content, otherPosts }) => {
   return (
     <div>
       <Head>
@@ -23,6 +23,25 @@ const Post = ({ frontmatter, content, otherPosts }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{frontmatter.title}</title>
         <meta name="description" content={frontmatter.preview}></meta>
+        {/* Basic OpenGraph*/}
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:description" content={frontmatter.preview} />
+        <meta property="og:url" content={`https://luketheweb.dev/blog/${id}`} />
+        <meta
+          property="og:image"
+          content={`https://luketheweb.dev/images/${frontmatter.previewImage}`}
+        />
+
+        {/* Additional OpenGraph*/}
+        <meta property="og:type" content="article" />
+        <meta property="article:published_time" content={frontmatter.date} />
+        <meta property="article:author" content="Luke Twomey" />
+        <meta property="og:site_name" content="Luke the Web Dev" />
+
+        {/* Twitter OpenGraph*/}
+        <meta property="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@luke_the_webdev" />
+        <meta name="twitter:creator" content="@luke_the_webdev" />
       </Head>
       <main
         className="blogPost"
@@ -161,6 +180,7 @@ export async function getStaticProps({ params: { id } }) {
   const { data: frontmatter, content } = matter(fileName);
   return {
     props: {
+      id,
       frontmatter,
       content,
       otherPosts,
