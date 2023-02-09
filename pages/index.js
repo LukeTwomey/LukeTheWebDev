@@ -18,10 +18,10 @@ export const App = ({ featurePosts }) => {
   return (
     <>
       <Head>
-        <title>Luke the Web Dev</title>
+        <title>Luke the Web Dev | Web Development Blog and Portfolio</title>
         <meta
           name="description"
-          content="The home of Luke the Web Dev! Great blog, you'll love it."
+          content="Welcome to Luke the Web Dev! My name is Luke Twomey and by day I'm a web engineer at ASOS. By night (or weekend) I write blog posts and code cool stuff."
         ></meta>
       </Head>
       <main className="home" itemScope="" itemType="http://schema.org/Person">
