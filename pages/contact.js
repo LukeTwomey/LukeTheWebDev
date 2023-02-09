@@ -44,14 +44,14 @@ export const Contact = () => {
         <meta charset="utf-8" />
         <meta name="author" content="Luke Twomey" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Contact</title>
+        <title>Contact Me | Luke the Web Dev</title>
         <meta
           name="description"
           content="Contact page description here..."
         ></meta>
       </Head>
-      <main>
-        <h1>Contact</h1>
+      <main itemScope="" itemType="http://schema.org/ContactPage">
+        <h1>Contact Me</h1>
         <p>
           Please don't hesitate to get in touch, I look forward to hearing from
           you!
@@ -64,6 +64,7 @@ export const Contact = () => {
             type="text"
             id="name"
             name="name"
+            placeholder="What's your name?"
             className={styles.input}
             onChange={onChange}
             value={formDetails.name}
@@ -75,6 +76,7 @@ export const Contact = () => {
             type="text"
             id="email"
             name="email"
+            placeholder="you@example.com"
             className={styles.input}
             onChange={onChange}
             value={formDetails.email}
@@ -86,6 +88,7 @@ export const Contact = () => {
             id="message"
             name="message"
             rows="6"
+            placeholder="Your message here"
             className={styles.textarea}
             onChange={onChange}
             value={formDetails.message}
