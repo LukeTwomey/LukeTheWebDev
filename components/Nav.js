@@ -50,7 +50,7 @@ export const Nav = ({ toggleNav }) => {
                 toggleNav();
               }}
             >
-              Contact
+              Contact Me
             </a>
           </div>
         </div>
