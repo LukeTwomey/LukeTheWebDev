@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Socials from "../components/Socials";
 import styles from "../styles/contact.module.css";
 import axios from "axios";
 
@@ -69,7 +70,12 @@ export const Contact = () => {
           <Link href={"/blog"}>blog posts</Link>! Please do contact me, I would
           love to hear from you.
         </p>
-        <form>
+
+        <div className={styles.socials}>
+          <Socials />
+        </div>
+
+        <form className={styles.form}>
           <label htmlFor="name" className={styles.label}>
             Name:{" "}
           </label>
