@@ -1,0 +1,10 @@
+.filterBlue {
+  filter: invert(57%) sepia(9%) saturate(696%) hue-rotate(182deg)
+    brightness(98%) contrast(89%);
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+  margin: 0 0.2em;
+}
