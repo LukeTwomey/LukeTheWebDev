@@ -10,8 +10,11 @@ export const Projects = () => {
         <meta charset="utf-8" />
         <meta name="author" content="Luke Twomey" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Projects</title>
-        <meta name="description" content="Projects page here"></meta>
+        <title>Projects | Luke the Web Dev</title>
+        <meta
+          name="description"
+          content="I code lots of fun stuff in my spare time. Websites, apps, api's, you name it. Here's a collection of some of the projects that have kept me busy recently."
+        ></meta>
       </Head>
 
       <main className={styles.projects}>
