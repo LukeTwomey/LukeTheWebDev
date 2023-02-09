@@ -22,8 +22,11 @@ export const Blog = ({ posts }) => {
         <meta charset="utf-8" />
         <meta name="author" content="Luke Twomey" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Blog</title>
-        <meta name="description" content="Blog page here"></meta>
+        <title>Web Development Blog | Luke the Web Dev</title>
+        <meta
+          name="description"
+          content="Welcome to Luke the Web Dev blog! Here I'll share my top tips and general ramblings on all things web development. Join me and we can learn cool stuff together! "
+        ></meta>
       </Head>
 
       <main
