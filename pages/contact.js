@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/contact.module.css";
 import axios from "axios";
 
@@ -47,14 +49,25 @@ export const Contact = () => {
         <title>Contact Me | Luke the Web Dev</title>
         <meta
           name="description"
-          content="Contact page description here..."
+          content="Have a great idea you'd like to discuss? Perhaps you'd like some help after reading one of my blog posts! Please do contact me, I would love to hear from you."
         ></meta>
       </Head>
       <main itemScope="" itemType="http://schema.org/ContactPage">
         <h1>Contact Me</h1>
+        <Image
+          src="/images/luke-twomey-contact.webp"
+          alt="Luke Twomey"
+          width="358"
+          height="176"
+          priority
+          className={styles.image}
+          itemProp="image"
+        />
         <p>
-          Please don't hesitate to get in touch, I look forward to hearing from
-          you!
+          Do you have a great business idea you'd like to discuss? Perhaps you'd
+          like some help after reading one of my{" "}
+          <Link href={"/blog"}>blog posts</Link>! Please do contact me, I would
+          love to hear from you.
         </p>
         <form>
           <label htmlFor="name" className={styles.label}>
