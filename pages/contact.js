@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Socials from "../components/Socials";
 import ContactForm from "../components/ContactForm";
 import styles from "../styles/contact.module.css";
-import axios from "axios";
 
 export const Contact = () => {
   return (

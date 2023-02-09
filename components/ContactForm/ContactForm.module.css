@@ -6,6 +6,10 @@
   box-shadow: 5px 5px 5px #272725;
 }
 
+.formField {
+  margin-bottom: 1em;
+}
+
 .input,
 .label,
 .textarea {
@@ -23,7 +27,6 @@
   border: 1px solid #898981;
   border-radius: 7px;
   color: #51514b;
-  margin-bottom: 1em;
 }
 
 .textarea,
@@ -35,4 +38,19 @@
 .textarea::placeholder {
   color: #afafaf;
   opacity: 1;
+}
+
+.formFieldError {
+  border: 2px solid #c14953;
+}
+
+.formFieldErrorMessage {
+  color: white;
+  font-size: 0.9em;
+  font-weight: 400;
+  background: #c14953;
+  padding: 0.2em 1em;
+  text-align: center;
+  border-radius: 7px;
+  margin-top: 0.3em;
 }
