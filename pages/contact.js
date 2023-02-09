@@ -52,7 +52,7 @@ export const Contact = () => {
           content="Have a great idea you'd like to discuss? Perhaps you'd like some help after reading one of my blog posts! Please do contact me, I would love to hear from you."
         ></meta>
       </Head>
-      <main itemScope="" itemType="http://schema.org/ContactPage">
+      <main>
         <h1>Contact Me</h1>
         <Image
           src="/images/luke-twomey-contact.webp"
