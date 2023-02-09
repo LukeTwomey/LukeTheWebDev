@@ -35,10 +35,7 @@ export const Blog = ({ posts }) => {
         itemType="http://schema.org/Blog"
       >
         <h1>Blog</h1>
-        <p itemProp="about">
-          Welcome to my blog! I'll be covering a range of topics for all levels
-          of experience.
-        </p>
+        <h2 itemProp="about">Welcome! Let's learn cool stuff together.</h2>
         <p></p>
         <section className={styles.posts}>
           {sortBlogPostsByDate.map((post) => (
