@@ -19,6 +19,7 @@ export const Projects = () => {
 
       <main className={styles.projects}>
         <h1>Projects</h1>
+        <h2>Things that have kept me busy recently</h2>
 
         <article className={styles.project}>
           <Image
