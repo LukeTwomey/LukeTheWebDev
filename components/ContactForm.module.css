@@ -1,0 +1,38 @@
+.form {
+  background: #848fa5;
+  padding: 1em;
+  color: #f7f7f7;
+  border-radius: 7px;
+  box-shadow: 5px 5px 5px #272725;
+}
+
+.input,
+.label,
+.textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+.label {
+  margin-bottom: 0.4em;
+}
+
+.input,
+.textarea {
+  border: 1px solid #898981;
+  border-radius: 7px;
+  color: #51514b;
+  margin-bottom: 1em;
+}
+
+.textarea,
+.input[type="text"] {
+  padding: 0.75em 1em;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #afafaf;
+  opacity: 1;
+}
