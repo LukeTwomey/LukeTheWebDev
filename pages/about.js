@@ -34,7 +34,7 @@ export const About = () => {
           src="/images/me-in-new-york.webp"
           alt="Luke Twomey"
           width="358"
-          height="266"
+          height="200"
           priority
           className={styles.image}
           itemProp="image"
@@ -55,7 +55,7 @@ export const About = () => {
           src="/images/twigs.webp"
           alt="Twiglet the cat"
           width="358"
-          height="221"
+          height="216"
           priority
           className={styles.image}
           itemProp="image"

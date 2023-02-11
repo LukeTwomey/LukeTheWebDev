@@ -14,7 +14,7 @@ export const BlogPreview = ({ posts, theme }) => {
             src={`/images/${post.data.previewImage}`}
             alt={post.data.title}
             width="358"
-            height="170"
+            height="188"
             className="full-width"
             priority
           />

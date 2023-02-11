@@ -26,7 +26,7 @@ export const Projects = () => {
             src="/images/meal-genie.webp"
             alt="Meal Genie preview"
             width="358"
-            height="170"
+            height="188"
             className="full-width"
             priority
           />
@@ -47,7 +47,7 @@ export const Projects = () => {
             src="/images/sound-sniffer.webp"
             alt="Sound Sniffer preview"
             width="358"
-            height="170"
+            height="188"
             className="full-width"
             priority
           />
@@ -65,10 +65,10 @@ export const Projects = () => {
 
         <article className={styles.project}>
           <Image
-            src="/images/moneypots-1.webp"
+            src="/images/moneypots.webp"
             alt="Moneypots preview"
             width="358"
-            height="170"
+            height="188"
             className="full-width"
             priority
           />

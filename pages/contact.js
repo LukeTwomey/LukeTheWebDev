@@ -22,10 +22,10 @@ export const Contact = () => {
       <main>
         <h1>Contact Me</h1>
         <Image
-          src="/images/luke-twomey-contact.webp"
+          src="/images/me-in-india.webp"
           alt="Luke Twomey"
           width="358"
-          height="176"
+          height="166"
           priority
           className={styles.image}
           itemProp="image"
