@@ -14,6 +14,7 @@ export const Nav = ({ toggleNav }) => {
           <div className="menuItems">
             <a
               href="/"
+              title="Home"
               onClick={() => {
                 toggleNav();
               }}
@@ -22,6 +23,7 @@ export const Nav = ({ toggleNav }) => {
             </a>
             <a
               href="/about"
+              title="About Me"
               onClick={() => {
                 toggleNav();
               }}
@@ -30,6 +32,7 @@ export const Nav = ({ toggleNav }) => {
             </a>
             <a
               href="/blog"
+              title="Blog"
               onClick={() => {
                 toggleNav();
               }}
@@ -38,6 +41,7 @@ export const Nav = ({ toggleNav }) => {
             </a>
             <a
               href="/projects"
+              title="Projects"
               onClick={() => {
                 toggleNav();
               }}
@@ -46,6 +50,7 @@ export const Nav = ({ toggleNav }) => {
             </a>
             <a
               href="/contact"
+              title="Contact Me"
               onClick={() => {
                 toggleNav();
               }}

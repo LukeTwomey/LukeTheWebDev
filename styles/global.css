@@ -634,6 +634,7 @@ header #nav {
 }
 
 .navbar .navContainer a {
+  display: block;
   text-decoration: none;
   color: #848fa5;
   font-weight: 500;
@@ -642,7 +643,16 @@ header #nav {
 }
 
 .navbar .navContainer a:hover {
-  font-weight: bolder;
+  font-weight: bold;
+}
+
+.navbar .navContainer a::before {
+  display: block;
+  content: attr(title);
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  font-weight: bold;
 }
 
 .navContainer {
