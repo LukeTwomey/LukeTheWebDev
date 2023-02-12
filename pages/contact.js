@@ -26,6 +26,13 @@ export const Contact = () => {
           alt="Luke Twomey"
           width="358"
           height="166"
+          style={{
+            height: "auto",
+            width: "100%",
+          }}
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
           priority
           className={styles.image}
           itemProp="image"

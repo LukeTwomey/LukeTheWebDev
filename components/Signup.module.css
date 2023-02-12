@@ -34,5 +34,22 @@
   height: 30px;
   margin-right: 0.5em;
   padding: 0 0.5em;
-  width: 62%;
+  width: 60%;
+}
+
+.formFieldsContainer {
+  display: flex;
+}
+
+@media (min-width: 600px) {
+  .signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .right p {
+    margin: 0 0 0.5em 0;
+  }
 }

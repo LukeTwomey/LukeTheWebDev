@@ -50,6 +50,13 @@ export const Blog = ({ posts }) => {
                 alt={post.data.title}
                 width="358"
                 height="170"
+                style={{
+                  height: "auto",
+                  width: "100%",
+                }}
+                sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
                 className="full-width"
                 priority
                 itemProp="image"

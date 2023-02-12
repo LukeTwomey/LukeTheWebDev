@@ -25,35 +25,47 @@ export const App = ({ featurePosts }) => {
         ></meta>
       </Head>
       <main className="home" itemScope="" itemType="http://schema.org/Person">
-        <Image
-          src="/images/luke-twomey.webp"
-          alt="Luke Twomey"
-          width="390"
-          height="390"
-          priority
-          className="portrait"
-          itemProp="image"
-        />
+        <section className="first">
+          <Image
+            src="/images/luke-twomey.webp"
+            alt="Luke Twomey"
+            width="390"
+            height="390"
+            style={{
+              height: "auto",
+              maxWidth: "500px",
+              width: "100%",
+            }}
+            sizes="(max-width: 500px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+            priority
+            className="portrait"
+            itemProp="image"
+          />
 
-        <section className="blue">
-          <p>
-            Hey guys! My name's <span itemProp="givenName">Luke</span>{" "}
-            <span itemProp="familyName">Twomey</span> and I'm a{" "}
-            <span itemProp="jobTitle">Web Engineer</span> at ASOS, before which
-            I was working at Sky.
-          </p>
-          <p>
-            I have been programming since 2015, and I just love the process of
-            bringing something to life through code.
-          </p>
-          <Link href="/about" className="aboutLink button">
-            About Me
-          </Link>
+          <section className="blue">
+            <p>
+              Hey guys! My name's <span itemProp="givenName">Luke</span>{" "}
+              <span itemProp="familyName">Twomey</span> and I'm a{" "}
+              <span itemProp="jobTitle">Web Engineer</span> at ASOS, before
+              which I was working at Sky.
+            </p>
+            <p>
+              I have been programming since 2015, and I just love the process of
+              bringing something to life through code.
+            </p>
+            <Link href="/about" className="aboutLink button">
+              About Me
+            </Link>
+          </section>
         </section>
 
         <section className="blogPreview grey">
           <h2>Blog</h2>
-          <BlogPreview posts={sortBlogPostsByDate} theme="dark" />
+          <section className="previews">
+            <BlogPreview posts={sortBlogPostsByDate} theme="dark" />
+          </section>
           <Signup
             message="Subscribe to receive an alert for each new post!"
             location="homePage"
@@ -62,7 +74,9 @@ export const App = ({ featurePosts }) => {
             View Blog
           </Link>
         </section>
+        {/* <section className="previews"> */}
         <ProjectsPreview />
+        {/* </section> */}
       </main>
     </>
   );

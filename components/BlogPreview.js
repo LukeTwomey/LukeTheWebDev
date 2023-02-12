@@ -15,6 +15,13 @@ export const BlogPreview = ({ posts, theme }) => {
             alt={post.data.title}
             width="358"
             height="188"
+            style={{
+              height: "auto",
+              width: "100%",
+            }}
+            sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
             className="full-width"
             priority
           />

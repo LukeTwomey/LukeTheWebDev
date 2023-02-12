@@ -16,3 +16,9 @@
 .preview h3 {
   color: #f7f7f7;
 }
+
+@media (min-width: 600px) {
+  article.project {
+    margin-bottom: 0;
+  }
+}

@@ -35,6 +35,13 @@ export const About = () => {
           alt="Luke Twomey"
           width="358"
           height="200"
+          style={{
+            height: "auto",
+            width: "100%",
+          }}
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
           priority
           className={styles.image}
           itemProp="image"
@@ -56,6 +63,13 @@ export const About = () => {
           alt="Twiglet the cat"
           width="358"
           height="216"
+          style={{
+            height: "auto",
+            width: "100%",
+          }}
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
           priority
           className={styles.image}
           itemProp="image"

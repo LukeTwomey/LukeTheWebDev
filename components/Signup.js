@@ -57,22 +57,26 @@ export const Signup = ({ message, location }) => {
         height="50"
         className={styles.filterDarkBlue}
       />
-      <p>{message}</p>
-      <input
-        type="text"
-        placeholder="Email address"
-        name="email"
-        className={styles.email}
-        onChange={handleInputChange}
-        value={emailAddress}
-      />
-      <input
-        id="submit"
-        type="submit"
-        value="Subscribe"
-        className="signupSubmit"
-        onClick={signUpToNewsletter}
-      />
+      <div className={styles.right}>
+        <p>{message}</p>
+        <div className={styles.formFieldsContainer}>
+          <input
+            type="text"
+            placeholder="Email address"
+            name="email"
+            className={styles.email}
+            onChange={handleInputChange}
+            value={emailAddress}
+          />
+          <input
+            id="submit"
+            type="submit"
+            value="Subscribe"
+            className="signupSubmit"
+            onClick={signUpToNewsletter}
+          />
+        </div>
+      </div>
     </form>
   );
 };

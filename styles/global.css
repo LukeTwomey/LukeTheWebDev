@@ -772,11 +772,6 @@ main.home {
   overflow-y: hidden;
 }
 
-.portrait {
-  height: auto;
-  width: 100%;
-}
-
 section {
   padding: 2em;
 }
@@ -853,8 +848,20 @@ article {
   box-shadow: none;
 }
 
-article:not(:last-child) {
-  margin-bottom: 1.5em;
+.blogPost {
+  position: relative;
+}
+
+.blogPost img {
+  height: auto;
+}
+
+.blogPost .imageContainer {
+  position: relative;
+}
+
+article {
+  margin-bottom: 2em;
 }
 
 h2,
@@ -866,8 +873,6 @@ p {
 .full-width {
   border-radius: 7px 7px 0 0;
   margin-bottom: 1em;
-  /* height: auto;
-  width: 100%; */
 }
 
 .preview {
@@ -889,7 +894,7 @@ p {
 
 .projects,
 .blogPreview {
-  padding: 1.5em 1em 1.5em 1em;
+  padding: 2em;
   text-align: left;
 }
 
@@ -1003,7 +1008,7 @@ main a {
   font-size: 1em;
   height: 30px;
   padding: 0 0.5em;
-  width: 30%;
+  width: 40%;
 }
 
 .contactSubmit {
@@ -1096,4 +1101,51 @@ code {
 
 main.project img {
   margin: 0.5em 0;
+}
+
+section.first {
+  background-color: #848fa5;
+  padding: 0;
+}
+
+.previews {
+  padding: 0;
+}
+
+@media (min-width: 500px) {
+  section.first {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 2em;
+  }
+
+  section.first section {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 1.2em;
+  }
+
+  section.first {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  section.first section {
+    font-size: 1em;
+  }
+
+  .blogPreview {
+    padding: 2em;
+  }
+
+  .previews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5em;
+  }
 }
