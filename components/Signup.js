@@ -25,7 +25,7 @@ export const Signup = ({ message, location }) => {
         3626894;
         tags.push(3626182);
         break;
-      case "homePost":
+      case "homePage":
         tags.push(3626894);
         break;
       default:
