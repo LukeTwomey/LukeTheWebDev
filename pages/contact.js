@@ -8,7 +8,7 @@ import styles from "../styles/contact.module.css";
 
 export const Contact = () => {
   return (
-    <div>
+    <div class="background">
       <Head>
         <meta charset="utf-8" />
         <meta name="author" content="Luke Twomey" />
@@ -19,36 +19,44 @@ export const Contact = () => {
           content="Have a great idea you'd like to discuss? Perhaps you'd like some help after reading one of my blog posts! Please do contact me, I would love to hear from you."
         ></meta>
       </Head>
-      <main>
-        <h1>Contact Me</h1>
-        <Image
-          src="/images/me-in-india.webp"
-          alt="Luke Twomey"
-          width="358"
-          height="166"
-          style={{
-            height: "auto",
-            width: "100%",
-          }}
-          sizes="(max-width: 768px) 100vw,
+      <main className="contact">
+        <div className="content">
+          <h1>Contact Me</h1>
+          <div className="flex">
+            <div>
+              <Image
+                src="/images/me-in-india.webp"
+                alt="Luke Twomey"
+                width="358"
+                height="166"
+                style={{
+                  height: "auto",
+                  width: "100%",
+                }}
+                sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
-          priority
-          className={styles.image}
-          itemProp="image"
-        />
-        <p>
-          Do you have a great business idea you'd like to discuss? Perhaps you'd
-          like some help after reading one of my{" "}
-          <Link href={"/blog"}>blog posts</Link>! Please do contact me, I would
-          love to hear from you.
-        </p>
+                priority
+                className={styles.image}
+                itemProp="image"
+              />
+              <p>
+                Do you have a great business idea you'd like to discuss? Perhaps
+                you'd like some help after reading one of my{" "}
+                <Link href={"/blog"}>blog posts</Link>! Please do contact me, I
+                would love to hear from you.
+              </p>
 
-        <div className={styles.socials}>
-          <Socials />
+              <div className={styles.socials}>
+                <Socials />
+              </div>
+            </div>
+
+            <div>
+              <ContactForm />
+            </div>
+          </div>
         </div>
-
-        <ContactForm />
       </main>
     </div>
   );

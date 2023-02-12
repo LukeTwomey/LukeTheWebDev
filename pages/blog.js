@@ -34,61 +34,64 @@ export const Blog = ({ posts }) => {
         itemScope=""
         itemType="http://schema.org/Blog"
       >
-        <h1>Blog</h1>
-        <h2 itemProp="about">Welcome! Let's learn cool stuff together</h2>
-        <p></p>
-        <section className={styles.posts}>
-          {sortBlogPostsByDate.map((post) => (
-            <article
-              className={styles.post}
-              key={post.data.title}
-              itemScope=""
-              itemType="http://schema.org/BlogPosting"
-            >
-              <Image
-                src={`/images/${post.data.previewImage}`}
-                alt={post.data.title}
-                width="358"
-                height="170"
-                style={{
-                  height: "auto",
-                  width: "100%",
-                }}
-                sizes="(max-width: 768px) 100vw,
+        <div className="content">
+          <h1>Blog</h1>
+          <h2 itemProp="about">Welcome! Let's learn cool stuff together</h2>
+          <p></p>
+
+          <section className={styles.posts}>
+            {sortBlogPostsByDate.map((post) => (
+              <article
+                className={styles.post}
+                key={post.data.title}
+                itemScope=""
+                itemType="http://schema.org/BlogPosting"
+              >
+                <Image
+                  src={`/images/${post.data.previewImage}`}
+                  alt={post.data.title}
+                  width="358"
+                  height="170"
+                  style={{
+                    height: "auto",
+                    width: "100%",
+                  }}
+                  sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 50vw,
                     33vw"
-                className="full-width"
-                priority
-                itemProp="image"
-              />
-              <div className="preview">
-                <Link href={`/blog/${post.slug}`}>
-                  <h3 itemProp="headline name">{post.data.title}</h3>
-                </Link>
-                <div className="postDetails">
-                  <Image
-                    src="/images/luke-twomey.webp"
-                    alt="Luke Twomey"
-                    width="40"
-                    height="40"
-                    priority
-                    className="authorImage"
-                  />
-                  <h4 className="authorName" itemProp="author">
-                    Luke Twomey
-                  </h4>
-                  <h4 className="publishedDate" itemProp="datePublished">
-                    {prettyDate(post.data.date)}
-                  </h4>
+                  className="full-width"
+                  priority
+                  itemProp="image"
+                />
+                <div className="preview">
+                  <Link href={`/blog/${post.slug}`}>
+                    <h3 itemProp="headline name">{post.data.title}</h3>
+                  </Link>
+                  <div className="postDetails">
+                    <Image
+                      src="/images/luke-twomey.webp"
+                      alt="Luke Twomey"
+                      width="40"
+                      height="40"
+                      priority
+                      className="authorImage"
+                    />
+                    <h4 className="authorName" itemProp="author">
+                      Luke Twomey
+                    </h4>
+                    <h4 className="publishedDate" itemProp="datePublished">
+                      {prettyDate(post.data.date)}
+                    </h4>
+                  </div>
+                  <p itempro="description">{post.data.preview}</p>
+                  <Link href={`/blog/${post.slug}`} itemProp="url">
+                    Read post
+                  </Link>
                 </div>
-                <p itempro="description">{post.data.preview}</p>
-                <Link href={`/blog/${post.slug}`} itemProp="url">
-                  Read post
-                </Link>
-              </div>
-            </article>
-          ))}
-        </section>
+              </article>
+            ))}
+          </section>
+        </div>
       </main>
     </div>
   );

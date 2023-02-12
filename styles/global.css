@@ -864,6 +864,23 @@ article {
 
 .blogPost img {
   height: auto;
+  display: block;
+}
+
+.blogPost .content,
+.project .content {
+  max-width: 800px;
+}
+
+.project img[title="feature"] {
+  border-radius: 7px;
+}
+
+.project img[title="mockup"] {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .blogPost .imageContainer {
@@ -1114,7 +1131,6 @@ main.project img {
 }
 
 section.first {
-  background-color: #848fa5;
   padding: 0;
 }
 
@@ -1133,7 +1149,25 @@ header {
   box-shadow: 5px 5px 5px #b5b5b4;
 }
 
+main.about,
+main.contact,
+main.blogPost,
+main.project {
+  background-color: #f9f9f9;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+}
+
+.background {
+  background-color: #848fa5;
+}
+
 @media (min-width: 501px) {
+  section.first {
+    background-color: #848fa5;
+  }
+
   section.first .content {
     display: flex;
     align-items: center;
@@ -1170,6 +1204,28 @@ header {
   section.first {
     padding-top: 2em;
     padding-bottom: 2em;
+  }
+}
+
+@media (min-width: 850px) {
+  .flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5em;
+  }
+}
+
+@media (min-width: 950px) {
+  main.about,
+  main.contact,
+  main.blogPost,
+  main.project {
+    border-radius: 7px;
+    padding: 2em;
+  }
+
+  .background {
+    padding: 2em;
   }
 }
 

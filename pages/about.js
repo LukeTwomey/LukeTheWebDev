@@ -6,7 +6,7 @@ import styles from "../styles/about.module.css";
 
 export const About = () => {
   return (
-    <div>
+    <div class="background">
       <Head>
         <meta charset="utf-8" />
         <meta name="author" content="Luke Twomey" />

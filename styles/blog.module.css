@@ -7,3 +7,11 @@
 .blog section {
   padding: 0;
 }
+
+@media (min-width: 600px) {
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5em;
+  }
+}

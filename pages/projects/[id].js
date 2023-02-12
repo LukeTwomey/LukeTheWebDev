@@ -8,7 +8,7 @@ import fs from "fs";
 
 const Project = ({ frontmatter, content }) => {
   return (
-    <div>
+    <div class="background">
       <Head>
         <meta charset="utf-8" />
         <meta name="author" content="Luke Twomey" />
@@ -17,7 +17,9 @@ const Project = ({ frontmatter, content }) => {
         <meta name="description" content={frontmatter.description}></meta>
       </Head>
       <main className="project">
-        <ReactMarkdown linkTarget="_blank">{content}</ReactMarkdown>
+        <div className="content">
+          <ReactMarkdown linkTarget="_blank">{content}</ReactMarkdown>
+        </div>
       </main>
     </div>
   );

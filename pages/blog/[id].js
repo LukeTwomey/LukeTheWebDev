@@ -16,7 +16,7 @@ const prettyDate = (date) =>
 
 const Post = ({ id, frontmatter, content, otherPosts }) => {
   return (
-    <div>
+    <div class="background">
       <Head>
         <meta charset="utf-8" />
         <meta name="author" content="Luke Twomey" />
@@ -54,97 +54,101 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
         itemScope=""
         itemType="http://schema.org/BlogPosting"
       >
-        <h1 itemProp="headline name">{frontmatter.title}</h1>
-        <div className="postDetails">
+        <div className="content">
+          <h1 itemProp="headline name">{frontmatter.title}</h1>
+          <div className="postDetails">
+            <Image
+              src="/images/luke-twomey.webp"
+              alt="Luke Twomey"
+              width="40"
+              height="40"
+              priority
+              className="authorImage"
+            />
+            <h4 className="authorName" itemProp="author">
+              Luke Twomey
+            </h4>
+            <h4 className="publishedDate" itemProp="datePublished">
+              {prettyDate(frontmatter.date)}
+            </h4>
+          </div>
           <Image
-            src="/images/luke-twomey.webp"
-            alt="Luke Twomey"
-            width="40"
-            height="40"
-            priority
-            className="authorImage"
-          />
-          <h4 className="authorName" itemProp="author">
-            Luke Twomey
-          </h4>
-          <h4 className="publishedDate" itemProp="datePublished">
-            {prettyDate(frontmatter.date)}
-          </h4>
-        </div>
-        <Image
-          src={`/images/${frontmatter.previewImage}`}
-          alt={frontmatter.title}
-          width="358"
-          height="170"
-          style={{
-            height: "auto",
-            width: "100%",
-          }}
-          sizes="(max-width: 768px) 100vw,
+            src={`/images/${frontmatter.previewImage}`}
+            alt={frontmatter.title}
+            width="358"
+            height="170"
+            style={{
+              height: "auto",
+              width: "100%",
+            }}
+            sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
-          priority
-          className="featureImage"
-          itemProp="image"
-        />
+            priority
+            className="featureImage"
+            itemProp="image"
+          />
 
-        <article itemProp="articleBody">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            linkTarget="_blank"
-            components={{
-              code({ node, inline, className, children, ...props }) {
-                return !inline ? (
-                  <SyntaxHighlighter
-                    style={nord}
-                    language="javascript"
-                    PreTag="div"
-                    {...props}
-                  >
-                    {String(children).replace(/\n$/, "")}
-                  </SyntaxHighlighter>
-                ) : (
-                  <code className="md-post-code" {...props}>
-                    {children}
-                  </code>
-                );
-              },
-              h6({ node, inline, className, children, ...props }) {
-                return (
-                  <Signup
-                    message="If you're enjoying the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
-                    location="middleOfPost"
-                  />
-                );
-              },
-            }}
-          >
-            {content}
-          </ReactMarkdown>
-        </article>
+          <article itemProp="articleBody">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              linkTarget="_blank"
+              components={{
+                code({ node, inline, className, children, ...props }) {
+                  return !inline ? (
+                    <SyntaxHighlighter
+                      style={nord}
+                      language="javascript"
+                      PreTag="div"
+                      {...props}
+                    >
+                      {String(children).replace(/\n$/, "")}
+                    </SyntaxHighlighter>
+                  ) : (
+                    <code className="md-post-code" {...props}>
+                      {children}
+                    </code>
+                  );
+                },
+                h6({ node, inline, className, children, ...props }) {
+                  return (
+                    <Signup
+                      message="If you're enjoying the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
+                      location="middleOfPost"
+                    />
+                  );
+                },
+              }}
+            >
+              {content}
+            </ReactMarkdown>
+          </article>
 
-        <Signup
-          message="If you enjoyed the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
-          location="endOfPost"
-        />
+          <Signup
+            message="If you enjoyed the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
+            location="endOfPost"
+          />
 
-        <Giscus
-          id="giscusComments"
-          repo="LukeTwomey/LukeTheWebDev"
-          repoId="R_kgDOI2bJWw"
-          category="Announcements"
-          categoryId="DIC_kwDOI2bJW84CT4Cv"
-          mapping="title"
-          reactionsEnabled="1"
-          emitMetadata="0"
-          inputPosition="bottom"
-          theme="https://lukethewebdev.api.up.railway.app/giscusCss"
-          lang="en"
-          loading="lazy"
-          key={frontmatter.title}
-        />
+          <Giscus
+            id="giscusComments"
+            repo="LukeTwomey/LukeTheWebDev"
+            repoId="R_kgDOI2bJWw"
+            category="Announcements"
+            categoryId="DIC_kwDOI2bJW84CT4Cv"
+            mapping="title"
+            reactionsEnabled="1"
+            emitMetadata="0"
+            inputPosition="bottom"
+            theme="https://lukethewebdev.api.up.railway.app/giscusCss"
+            lang="en"
+            loading="lazy"
+            key={frontmatter.title}
+          />
 
-        <BlogPreview posts={otherPosts} theme="light" />
+          <section className="previews">
+            <BlogPreview posts={otherPosts} theme="light" />
+          </section>
+        </div>
       </main>
     </div>
   );

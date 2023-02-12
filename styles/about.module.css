@@ -1,7 +1,21 @@
 .image {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 1em;
+  max-width: 600px;
 }
 
 .link {
   margin: 0;
+}
+
+@media (min-width: 850px) {
+  .image {
+    float: right;
+    max-width: 450px;
+    margin-left: 2em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
 }
