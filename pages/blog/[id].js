@@ -81,9 +81,8 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
               height: "auto",
               width: "100%",
             }}
-            sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+            sizes="(max-width: 1200px) 100vw,
+              70vw"
             priority
             className="featureImage"
             itemProp="image"

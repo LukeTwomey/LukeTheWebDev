@@ -38,8 +38,8 @@ export const App = ({ featurePosts }) => {
                 width: "100%",
               }}
               sizes="(max-width: 500px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+              (max-width: 1400px) 50vw,
+              25vw"
               priority
               className="portrait"
               itemProp="image"

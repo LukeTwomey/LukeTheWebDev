@@ -56,8 +56,8 @@ export const Blog = ({ posts }) => {
                     height: "auto",
                     width: "100%",
                   }}
-                  sizes="(max-width: 768px) 100vw,
-                    (max-width: 1200px) 50vw,
+                  sizes="(max-width: 600px) 100vw,
+                    (max-width: 1400px) 50vw,
                     33vw"
                   className="full-width"
                   priority

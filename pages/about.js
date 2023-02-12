@@ -39,8 +39,8 @@ export const About = () => {
             height: "auto",
             width: "100%",
           }}
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
+          sizes="(max-width: 850px) 100vw,
+              (max-width: 1400px) 50vw,
               33vw"
           priority
           className={styles.image}
@@ -67,8 +67,8 @@ export const About = () => {
             height: "auto",
             width: "100%",
           }}
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
+          sizes="(max-width: 850px) 100vw,
+              (max-width: 1400px) 50vw,
               33vw"
           priority
           className={styles.image}
