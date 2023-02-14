@@ -36,20 +36,27 @@ export const ContactForm = () => {
     const { isValid } = validateForm({ form, errors, forceTouchErrors: true });
     if (!isValid) return;
 
-    setSubmitButtonValue("Sending...");
-    const contactResponse = await axios.post("/api/contact", form);
     const submitButton = e.target;
 
-    if (contactResponse.status === 200) {
-      setSubmitButtonValue("Sent!");
-      updateForm({
-        name: "",
-        email: "",
-        message: "",
-      });
-      submitButton.classList.add("success");
-    } else {
-      submitButton.value = "Try again";
+    submitButton.classList.remove("success");
+    setSubmitButtonValue("Sending...");
+
+    try {
+      const contactResponse = await axios.post("/api/contact", form);
+
+      if (contactResponse.status === 200) {
+        updateForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+        submitButton.classList.add("success");
+        setSubmitButtonValue("Sent!");
+      } else {
+        setSubmitButtonValue("Try again");
+      }
+    } catch (e) {
+      setSubmitButtonValue("Try again");
     }
   };
 
