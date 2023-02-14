@@ -15,4 +15,4 @@ Moneypots settings screen. Update an existing pot to re-purpose it for a new goa
 
 The app is built in Angular, and communicates with a Node.js, Express and MongoDB back-end API to retrieve and update the pot data displayed in the client. You can view the API here.
 
-[View App](/moneypots/index.html)
+[View App](https://luketheweb.dev/moneypots/index.html)
