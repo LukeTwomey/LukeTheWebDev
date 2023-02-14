@@ -36,7 +36,6 @@ export const ContactForm = () => {
     const { isValid } = validateForm({ form, errors, forceTouchErrors: true });
     if (!isValid) return;
 
-    e.preventDefault();
     setSubmitButtonValue("Sending...");
     const contactResponse = await axios.post("/api/contact", form);
     const submitButton = e.target;

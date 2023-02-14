@@ -1160,11 +1160,8 @@ main.project {
   max-width: 900px;
 }
 
-.background {
-  background-color: #848fa5;
-}
-
 @media (min-width: 501px) {
+  .background,
   section.first {
     background-color: #848fa5;
   }

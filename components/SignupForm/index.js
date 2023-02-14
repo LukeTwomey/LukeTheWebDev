@@ -1,18 +1,40 @@
 import { useState } from "react";
+import { useSignupFormValidator } from "./hooks/useSignupFormValidator";
 import Image from "next/image";
+import clsx from "clsx";
 import styles from "./SignupForm.module.css";
 import axios from "axios";
 
 export const SignupForm = ({ message, location }) => {
-  const [emailAddress, setEmailAddress] = useState("");
+  const [form, updateForm] = useState({
+    email: "",
+  });
+
   const [submitButtonValue, setSubmitButtonValue] = useState("Subscribe");
 
-  const handleInputChange = (event) => {
-    setEmailAddress(event.target.value);
+  const { errors, validateForm, onBlurField } = useSignupFormValidator(form);
+
+  const onChange = (e) => {
+    e.preventDefault();
+    const field = e.target.name;
+    const nextFormState = {
+      ...form,
+      [field]: e.target.value,
+    };
+    updateForm(nextFormState);
+    if (errors[field].dirty)
+      validateForm({
+        form: nextFormState,
+        errors,
+        field,
+      });
   };
 
   const signUpToNewsletter = async (e) => {
     e.preventDefault();
+    const { isValid } = validateForm({ form, errors, forceTouchErrors: true });
+    if (!isValid) return;
+
     setSubmitButtonValue("Sending...");
 
     let tags = [];
@@ -37,7 +59,7 @@ export const SignupForm = ({ message, location }) => {
     const subscribeResponse = await axios.post(
       "https://lukethewebdev.api.up.railway.app/addSubscriber",
       null,
-      { params: { email: emailAddress, tags: tags } }
+      { params: { email: form.email, tags: tags } }
     );
 
     const submitButton = e.target;
@@ -60,16 +82,30 @@ export const SignupForm = ({ message, location }) => {
         className={styles.filterDarkBlue}
       />
       <div className={styles.right}>
-        <p>{message}</p>
+        <p className={styles.text}>{message}</p>
         <div className={styles.formFieldsContainer}>
-          <input
-            type="text"
-            placeholder="Email address"
-            name="email"
-            className={styles.email}
-            onChange={handleInputChange}
-            value={emailAddress}
-          />
+          <div className={styles.inputContainer}>
+            <input
+              type="text"
+              placeholder="Email address"
+              name="email"
+              className={clsx(
+                styles.input,
+                errors.email.dirty &&
+                  errors.email.error &&
+                  styles.formFieldError
+              )}
+              onChange={onChange}
+              onBlur={onBlurField}
+              value={form.email}
+              noValidate
+            />
+            {errors.email.dirty && errors.email.error ? (
+              <p className={styles.formFieldErrorMessage}>
+                {errors.email.message}
+              </p>
+            ) : null}
+          </div>
           <input
             id="submit"
             type="submit"
