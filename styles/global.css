@@ -1028,6 +1028,7 @@ main a {
   -moz-appearance: none;
   appearance: none;
   background-color: #c14953;
+  cursor: pointer;
   transition: background-color 0.3s linear;
   border: none;
   border-radius: 3px;
