@@ -1,6 +1,7 @@
 ---
 title: "Meal Genie"
-description: "Meal Genie is a meal planning app to help you decide on your recipes for the week."
+description: "Written in React and Redux, Meal Genie is a meal planning app to
+  help you organise your recipes for the week."
 ---
 
 # Meal Genie
@@ -9,17 +10,17 @@ description: "Meal Genie is a meal planning app to help you decide on your recip
 
 ![Flat lay meal](../images/meal-genie.webp "feature")
 
-Meal Genie is a meal planning app to help you decide on your recipes for the week. Easily add your own favourites, and Meal Genie will generate a random meal plan for the week at the touch of a button. Takes the hassle out of thinking of meals, now all you need to do is cook!
+Meal Genie is a meal planning app to help you decide on your recipes for the week. Easily add your own favourites, and Meal Genie will generate a random meal plan for the week at the touch of a button. Take the hassle out of thinking of meals, now all you need to do is cook!
 
 ![Meal Genie mockup 1](../images/meal-genie-mockup-1.webp "mockup")
 
-The Recipes tab displays all of the recipes that you have already saved in the app. You can browse this like a specially curated list of your favourite meals! Not sure what you fancy for dinner tonight? Just peruse the Recipes tab and you'll soon come across a recipe you just can't resist.
+The Recipes tab displays all of the recipes that you have already saved in the app. You can browse this like a specially curated list of your favourite meals. Not sure what you fancy for dinner tonight? Just peruse the Recipes tab and you'll soon come across a recipe you just can't resist.
 
-The Meal Plan tab is where the magic really happens. Feeling overwhelmed by the prospect of planning out your meals for the entire week? Meal Genie will come to your rescue by automatically generating a plan from a random selection of the whole of the recipe list.
+The Meal Plan tab is where the magic really happens. Feeling overwhelmed by the prospect of planning out your meals for the entire week? Meal Genie will come to your rescue by automatically generating a plan from a random selection of the recipe list.
 
 ![Meal Genie mockup 1](../images/meal-genie-mockup-2.webp "mockup")
 
-Things get extra clever when you really want to start customising your meal plan further. Touching the padlock icon will lock in that meal for that day. In the example above we lock in Monday, Thursday and Friday, then hit the Genie button to generate another meal plan. Meal Genie will keep the meals you locked in for those days and generate you a new selection for the rest. As you can see, Tuesday, Wednesday and Saturday have changed!
+Things get extra clever when you really want to start customising your meal plan further. Touching the padlock icon will lock in that meal for the day. In the example above we lock in Monday, Thursday and Friday, then hit the Genie button to generate another meal plan. Meal Genie will keep the meals you locked in for those days and generate you a new selection for the rest. Tuesday, Wednesday and Saturday have had a brand new meal selected for that week!
 
 ![Meal Genie mockup 1](../images/meal-genie-mockup-3.webp "mockup")
 

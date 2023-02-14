@@ -20,7 +20,7 @@ export const Projects = () => {
       <main className={styles.projects}>
         <div className="content">
           <h1>Projects</h1>
-          <h2>Things that have kept me busy recently</h2>
+          <h2>Things that have kept me busy recently.</h2>
 
           <div className="previews">
             <article className={styles.project}>
@@ -72,8 +72,9 @@ export const Projects = () => {
                   <h3>Sound Sniffer</h3>
                 </Link>
                 <p>
-                  A React app which tracks your favourite artists and uses the
-                  Spotify API to display their latest releases.
+                  Sound Sniffer is a React app which tracks your favourite
+                  artists and displays their latest music releases by using the
+                  Spotify API.
                 </p>
                 <Link href="/projects/sound-sniffer">Read more...</Link>
               </div>

@@ -36,7 +36,7 @@ export const Blog = ({ posts }) => {
       >
         <div className="content">
           <h1>Blog</h1>
-          <h2 itemProp="about">Welcome! Let's learn cool stuff together</h2>
+          <h2 itemProp="about">Welcome! Let's learn cool stuff together.</h2>
           <p></p>
 
           <section className={styles.posts}>
