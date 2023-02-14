@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import BlogPreview from "../components/BlogPreview";
 import ProjectsPreview from "../components/ProjectsPreview";
-import Signup from "../components/Signup";
+import SignupForm from "../components/SignupForm";
 import matter from "gray-matter";
 import fs from "fs";
 import { DateTime } from "luxon";
@@ -69,7 +69,7 @@ export const App = ({ featurePosts }) => {
             <section className="previews">
               <BlogPreview posts={sortBlogPostsByDate} theme="dark" />
             </section>
-            <Signup
+            <SignupForm
               message="Subscribe to receive an alert for each new post!"
               location="homePage"
             />

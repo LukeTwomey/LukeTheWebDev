@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Signup from "../components/Signup";
+import SignupForm from "../components/SignupForm";
 import styles from "../styles/about.module.css";
 
 export const About = () => {
   return (
-    <div class="background">
+    <div className="background">
       <Head>
         <meta charset="utf-8" />
         <meta name="author" content="Luke Twomey" />
@@ -89,7 +89,7 @@ export const About = () => {
           help you along your web development journey.
         </p>
 
-        <Signup
+        <SignupForm
           message="Subscribe to get notified when a new post drops!"
           location="aboutPage"
         />

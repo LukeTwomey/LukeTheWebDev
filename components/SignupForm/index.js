@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Image from "next/image";
-import styles from "./Signup.module.css";
+import styles from "./SignupForm.module.css";
 import axios from "axios";
 
-export const Signup = ({ message, location }) => {
+export const SignupForm = ({ message, location }) => {
   const [emailAddress, setEmailAddress] = useState("");
+  const [submitButtonValue, setSubmitButtonValue] = useState("Subscribe");
 
   const handleInputChange = (event) => {
     setEmailAddress(event.target.value);
@@ -12,6 +13,7 @@ export const Signup = ({ message, location }) => {
 
   const signUpToNewsletter = async (e) => {
     e.preventDefault();
+    setSubmitButtonValue("Sending...");
 
     let tags = [];
     switch (location) {
@@ -42,9 +44,9 @@ export const Signup = ({ message, location }) => {
 
     if (subscribeResponse.status === 200) {
       submitButton.classList.add("success");
-      submitButton.value = "Success!";
+      setSubmitButtonValue("Subscribed!");
     } else {
-      submitButton.value = "Try later";
+      setSubmitButtonValue("Try again");
     }
   };
 
@@ -71,7 +73,7 @@ export const Signup = ({ message, location }) => {
           <input
             id="submit"
             type="submit"
-            value="Subscribe"
+            value={submitButtonValue}
             className="signupSubmit"
             onClick={signUpToNewsletter}
           />
@@ -81,4 +83,4 @@ export const Signup = ({ message, location }) => {
   );
 };
 
-export default Signup;
+export default SignupForm;

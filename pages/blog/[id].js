@@ -7,7 +7,7 @@ import remarkGfm from "remark-gfm";
 import Giscus from "@giscus/react";
 import matter from "gray-matter";
 import BlogPreview from "../../components/BlogPreview";
-import Signup from "../../components/Signup";
+import SignupForm from "../../components/SignupForm";
 import fs from "fs";
 import { DateTime } from "luxon";
 
@@ -16,7 +16,7 @@ const prettyDate = (date) =>
 
 const Post = ({ id, frontmatter, content, otherPosts }) => {
   return (
-    <div class="background">
+    <div className="background">
       <Head>
         <meta charset="utf-8" />
         <meta name="author" content="Luke Twomey" />
@@ -111,7 +111,7 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
                 },
                 h6({ node, inline, className, children, ...props }) {
                   return (
-                    <Signup
+                    <SignupForm
                       message="If you're enjoying the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
                       location="middleOfPost"
                     />
@@ -123,7 +123,7 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
             </ReactMarkdown>
           </article>
 
-          <Signup
+          <SignupForm
             message="If you enjoyed the read, please consider signing up to my newsletter to receive notifications when new posts are added!"
             location="endOfPost"
           />

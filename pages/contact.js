@@ -8,7 +8,7 @@ import styles from "../styles/contact.module.css";
 
 export const Contact = () => {
   return (
-    <div class="background">
+    <div className="background">
       <Head>
         <meta charset="utf-8" />
         <meta name="author" content="Luke Twomey" />
