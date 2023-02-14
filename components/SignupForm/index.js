@@ -35,6 +35,9 @@ export const SignupForm = ({ message, location }) => {
     const { isValid } = validateForm({ form, errors, forceTouchErrors: true });
     if (!isValid) return;
 
+    const submitButton = e.target;
+
+    submitButton.classList.remove("success");
     setSubmitButtonValue("Sending...");
 
     let tags = [];
@@ -56,18 +59,20 @@ export const SignupForm = ({ message, location }) => {
         tags.push(3601975);
     }
 
-    const subscribeResponse = await axios.post(
-      "https://lukethewebdev.api.up.railway.app/addSubscriber",
-      null,
-      { params: { email: form.email, tags: tags } }
-    );
+    try {
+      const subscribeResponse = await axios.post(
+        "https://lukethewebdev.api.up.railway.app/addSubscriber",
+        null,
+        { params: { email: form.email, tags: tags } }
+      );
 
-    const submitButton = e.target;
-
-    if (subscribeResponse.status === 200) {
-      submitButton.classList.add("success");
-      setSubmitButtonValue("Subscribed!");
-    } else {
+      if (subscribeResponse.status === 200) {
+        submitButton.classList.add("success");
+        setSubmitButtonValue("Subscribed!");
+      } else {
+        setSubmitButtonValue("Try again");
+      }
+    } catch (e) {
       setSubmitButtonValue("Try again");
     }
   };
