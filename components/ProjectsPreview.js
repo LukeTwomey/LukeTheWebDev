@@ -22,7 +22,6 @@ export const ProjectsPreview = () => {
                 (max-width: 1400px) 50vw,
                 33vw"
               className="full-width"
-              priority
             />
             <div className={styles.preview}>
               <Link href="/projects/meal-genie">
@@ -49,7 +48,6 @@ export const ProjectsPreview = () => {
                 (max-width: 1400px) 50vw,
                 33vw"
               className="full-width"
-              priority
             />
             <div className={styles.preview}>
               <Link href="/projects/sound-sniffer">
