@@ -47,22 +47,24 @@ export const Blog = ({ posts }) => {
                 itemScope=""
                 itemType="http://schema.org/BlogPosting"
               >
-                <Image
-                  src={`/images/${post.data.previewImage}`}
-                  alt={post.data.title}
-                  width="358"
-                  height="170"
-                  style={{
-                    height: "auto",
-                    width: "100%",
-                  }}
-                  sizes="(max-width: 600px) 100vw,
+                <Link href={`/blog/${post.slug}`}>
+                  <Image
+                    src={`/images/${post.data.previewImage}`}
+                    alt={post.data.title}
+                    width="358"
+                    height="170"
+                    style={{
+                      height: "auto",
+                      width: "100%",
+                    }}
+                    sizes="(max-width: 600px) 100vw,
                     (max-width: 1400px) 50vw,
                     33vw"
-                  className="full-width"
-                  priority
-                  itemProp="image"
-                />
+                    className="full-width"
+                    priority
+                    itemProp="image"
+                  />
+                </Link>
                 <div className="preview">
                   <Link href={`/blog/${post.slug}`}>
                     <h3 itemProp="headline name">{post.data.title}</h3>

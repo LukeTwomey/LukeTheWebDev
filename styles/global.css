@@ -933,6 +933,10 @@ main a {
   display: inline-block;
 }
 
+main article a {
+  border-bottom: none;
+}
+
 main a.button,
 main.project a {
   background: #c14953;

@@ -24,21 +24,23 @@ export const Projects = () => {
 
           <div className="previews">
             <article className={styles.project}>
-              <Image
-                src="/images/meal-genie.webp"
-                alt="Meal Genie preview"
-                width="358"
-                height="188"
-                style={{
-                  height: "auto",
-                  width: "100%",
-                }}
-                sizes="(max-width: 768px) 100vw,
+              <Link href="/projects/meal-genie">
+                <Image
+                  src="/images/meal-genie.webp"
+                  alt="Meal Genie preview"
+                  width="358"
+                  height="188"
+                  style={{
+                    height: "auto",
+                    width: "100%",
+                  }}
+                  sizes="(max-width: 768px) 100vw,
                 (max-width: 1200px) 50vw,
                 33vw"
-                className="full-width"
-                priority
-              />
+                  className="full-width"
+                  priority
+                />
+              </Link>
               <div className="preview">
                 <Link href="/projects/meal-genie">
                   <h3>Meal Genie</h3>
@@ -52,21 +54,23 @@ export const Projects = () => {
             </article>
 
             <article className={styles.project}>
-              <Image
-                src="/images/sound-sniffer.webp"
-                alt="Sound Sniffer preview"
-                width="358"
-                height="188"
-                style={{
-                  height: "auto",
-                  width: "100%",
-                }}
-                sizes="(max-width: 768px) 100vw,
+              <Link href="/projects/sound-sniffer">
+                <Image
+                  src="/images/sound-sniffer.webp"
+                  alt="Sound Sniffer preview"
+                  width="358"
+                  height="188"
+                  style={{
+                    height: "auto",
+                    width: "100%",
+                  }}
+                  sizes="(max-width: 768px) 100vw,
                 (max-width: 1200px) 50vw,
                 33vw"
-                className="full-width"
-                priority
-              />
+                  className="full-width"
+                  priority
+                />
+              </Link>
               <div className="preview">
                 <Link href="/projects/sound-sniffer">
                   <h3>Sound Sniffer</h3>
@@ -81,21 +85,23 @@ export const Projects = () => {
             </article>
 
             <article className={styles.project}>
-              <Image
-                src="/images/moneypots.webp"
-                alt="Moneypots preview"
-                width="358"
-                height="188"
-                style={{
-                  height: "auto",
-                  width: "100%",
-                }}
-                sizes="(max-width: 600px) 100vw,
+              <Link href="/projects/moneypots">
+                <Image
+                  src="/images/moneypots.webp"
+                  alt="Moneypots preview"
+                  width="358"
+                  height="188"
+                  style={{
+                    height: "auto",
+                    width: "100%",
+                  }}
+                  sizes="(max-width: 600px) 100vw,
                     (max-width: 1400px) 50vw,
                     33vw"
-                className="full-width"
-                priority
-              />
+                  className="full-width"
+                  priority
+                />
+              </Link>
               <div className="preview">
                 <Link href="/projects/moneypots">
                   <h3>Moneypots</h3>

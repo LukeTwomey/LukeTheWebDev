@@ -10,21 +10,23 @@ export const BlogPreview = ({ posts, theme }) => {
     <>
       {posts.map((post) => (
         <article className={`post ${theme}`} key={post.slug}>
-          <Image
-            src={`/images/${post.data.previewImage}`}
-            alt={post.data.title}
-            width="358"
-            height="188"
-            style={{
-              height: "auto",
-              width: "100%",
-            }}
-            sizes="(max-width: 600px) 100vw,
+          <Link href={`/blog/${post.slug}`}>
+            <Image
+              src={`/images/${post.data.previewImage}`}
+              alt={post.data.title}
+              width="358"
+              height="188"
+              style={{
+                height: "auto",
+                width: "100%",
+              }}
+              sizes="(max-width: 600px) 100vw,
                 (max-width: 1400px) 50vw,
                 33vw"
-            className="full-width"
-            priority
-          />
+              className="full-width"
+              priority
+            />
+          </Link>
           <div className="preview">
             <Link href={`/blog/${post.slug}`}>
               <h3>{post.data.title}</h3>
