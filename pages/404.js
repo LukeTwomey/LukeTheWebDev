@@ -19,7 +19,6 @@ export const errorPage = () => {
             height="667"
             style={{
               height: "auto",
-              maxWidth: "500px",
               width: "100%",
             }}
           />
