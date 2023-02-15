@@ -6,15 +6,24 @@ export const errorPage = () => {
   return (
     <>
       <main className={styles.error}>
-        <h1>Oops!</h1>
-        <p>Sorry, an unexpected error has occurred.</p>
-        <Link href="/">Go back to the homepage...</Link>
-        <Image
-          src="/images/404.jpg"
-          alt="Page not found"
-          width="500"
-          height="333"
-        />
+        <div className="content">
+          <div>
+            <h1>Oops!</h1>
+            <p>Sorry, an unexpected error has occurred.</p>
+            <Link href="/">Go back to the homepage...</Link>
+          </div>
+          <Image
+            src="/images/404.webp"
+            alt="Page not found"
+            width="1000"
+            height="667"
+            style={{
+              height: "auto",
+              maxWidth: "500px",
+              width: "100%",
+            }}
+          />
+        </div>
       </main>
     </>
   );
