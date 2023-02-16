@@ -801,6 +801,14 @@ h3 {
   padding-left: 10px;
 }
 
+.blogPost h3 {
+  border-left: none;
+  padding-left: 0;
+  font-style: normal;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
 h2 {
   font-size: 1.7em;
   font-weight: 600;
@@ -872,6 +880,7 @@ article {
   max-width: 800px;
 }
 
+.blogPost img[title="inline"],
 .project img[title="feature"] {
   border-radius: 7px;
 }
