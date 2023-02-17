@@ -944,7 +944,12 @@ main a {
 
 main article a {
   border-bottom: none;
-  width: 100%;
+  width: 100a;
+}
+
+main.blogPost article a {
+  border-bottom: 1px solid #848fa5;
+  display: inline;
 }
 
 main a.button,
