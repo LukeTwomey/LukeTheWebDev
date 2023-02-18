@@ -944,7 +944,7 @@ main a {
 
 main article a {
   border-bottom: none;
-  width: 100a;
+  width: 100%;
 }
 
 main.blogPost article a {
