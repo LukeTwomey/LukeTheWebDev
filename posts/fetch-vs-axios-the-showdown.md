@@ -1,7 +1,7 @@
 ---
 title: "Fetch vs Axios - The Showdown"
 date: "2023-02-08"
-feature: "true"
+feature: "false"
 previewImage: "default.webp"
 preview: "Learn the differences between Axios and Fetch, and why you should choose one over the other."
 ---
