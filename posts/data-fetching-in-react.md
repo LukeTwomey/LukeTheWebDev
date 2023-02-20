@@ -1,7 +1,7 @@
 ---
 title: "Data Fetching in React"
 date: "2023-01-31"
-feature: "true"
+feature: "false"
 previewImage: "default.webp"
 preview: "There are many different ways to fetch data in React, I discuss them here."
 ---

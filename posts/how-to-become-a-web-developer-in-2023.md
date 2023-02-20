@@ -3,7 +3,7 @@ title: "How to Become A Web Developer in 2023"
 date: "2023-02-18"
 feature: "true"
 previewImage: "developer.webp"
-preview: "I'll share the steps you need to follow to become a web developer in 2023."
+preview: "Want to Learn How to Become a Web Developer? I'll share the steps you need to follow to undertake this exciting new career path."
 ---
 
 I have been a web developer since 2015, and I can honestly say I still immensely enjoy what I do. I consider that a very fortunate position to be in, and as such I would absolutely recommend this career to you.

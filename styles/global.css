@@ -807,6 +807,11 @@ h3 {
   font-style: normal;
   font-size: 1.4em;
   font-weight: 600;
+  margin-top: 1em;
+}
+
+.blogPost h2 {
+  margin-top: 1em;
 }
 
 h2 {
@@ -815,11 +820,17 @@ h2 {
   margin: 0 0 0.4em 0;
 }
 
-p {
+p,
+ul,
+ol {
   font-size: 1.1em;
   font-weight: 400;
   line-height: 1.7em;
   margin-bottom: 0.75em;
+}
+
+li {
+  margin-bottom: 0.2em;
 }
 
 .blue {
@@ -883,6 +894,7 @@ article {
 .blogPost img[title="inline"],
 .project img[title="feature"] {
   border-radius: 7px;
+  margin: 1.5em 0;
 }
 
 .project img[title="mockup"] {
@@ -1097,6 +1109,10 @@ code {
   font-size: 1em;
   padding: 4px 6px 6px;
   white-space: nowrap;
+}
+
+pre code {
+  padding: 0;
 }
 
 .postDetails {

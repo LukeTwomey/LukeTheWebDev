@@ -16,7 +16,7 @@ My first problem was believing that becoming a developer meant you would join a 
 
 I know, it sounds ridiculous. I can’t quite believe that I thought that either, but there we go. I think perhaps my lack of confidence at the time led me to think I just wouldn’t be good enough if I chose that particular career.
 
-## Imposter Syndrome
+### Imposter Syndrome
 
 This is genuinely a thing, and devs with much more experience than me [still get this](https://www.reddit.com/r/learnprogramming/comments/s5zuxn/started_new_job_and_have_some_real_imposter/).
 
