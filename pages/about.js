@@ -53,8 +53,8 @@ export const About = () => {
         </p>
 
         <p>
-          I currently live in Walthamstow with my fiancée Fi and Twiglet the cat
-          - obligatory pic below! He loves to play fetch with the ball by his
+          I currently live in London with my fiancée Fi and Twiglet the cat -
+          obligatory pic below! He loves to play fetch with the ball by his
           tail. He thinks he's a dog.
         </p>
 

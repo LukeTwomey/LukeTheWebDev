@@ -81,14 +81,14 @@ The result after converting the app to use Vite is quite astonishing! Vite was r
 
 ```
 cypress-realworld-app git:(develop) ✗ yarn start:react | gnomon
-   0.0813s   yarn run v1.22.19
-   1.1845s   $ vite
-   0.0001s
-   0.0002s     VITE v4.1.3  ready in 876 ms
-   0.0004s
-   0.0002s     ➜  Local:   http://127.0.0.1:5173/
-   0.0025s     ➜  Network: use --host to expose
-  38.2790s     ➜  press h to show help
+   yarn run v1.22.19
+   $ vite
+
+    VITE v4.1.3  ready in 876 ms
+
+    ➜  Local:   http://127.0.0.1:5173/
+    ➜  Network: use --host to expose
+    ➜  press h to show help
 ```
 
 Not quite believing my eyes, I went on the hunt for another open source app to test.
@@ -112,16 +112,14 @@ write-with-me git:(master) yarn start | gnomon
 Again, Vite blew this out of the water, starting up after just 991 ms. Pretty mind-blowing.
 
 ```
-write-with-me git:(master) ✗ yarn start | gnomon
-   0.0574s   yarn run v1.22.19
-   1.0051s   $ vite
-Failed to resolve dependency: react/jsx-runtime, present in 'optimizeDeps.include'
-   1.2914s   $ viteependency: react/jsx-dev-runtime, present in 'optimizeDeps.include'
-   0.0001s
-   0.0003s     VITE v4.1.3  ready in 991 ms
-   0.0000s
-   0.0001s     ➜  Local:   http://127.0.0.1:5173/
-   0.0001s     ➜  Network: use --host to expose
+write-with-me git:(master) ✗ yarn start
+  yarn run v1.22.19
+  $ vite
+
+    VITE v4.1.3  ready in 991 ms
+
+    ➜  Local:   http://127.0.0.1:5173/
+    ➜  Network: use --host to expose
 ```
 
 ## I'm Convinced! How Do I Use Vite?
@@ -285,7 +283,7 @@ export default ({ mode }) => {
 <script type="module" src="/src/index.jsx"></script> // Add this line
 ```
 
-9. If you hava any `.env` files, replace REACT_APP with VITE:
+9. If you have any `.env` files, replace REACT_APP with VITE:
 
 ```
 // From

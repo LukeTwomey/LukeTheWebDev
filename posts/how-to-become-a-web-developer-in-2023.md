@@ -42,7 +42,7 @@ Not strictly an essential, although arguably it would be deemed so in today’s 
 
 ### Version Control (Git)
 
-This is a big one when it comes to what you need to know as a web developer. When I started my first job as the only developer at a small design business I had no clue about version control or what it entailed. I was uploading new index.html files and renaming old ones to “index’old.html” all over the place! Such was my fear of irretrievably losing something vitally important and causing my company to go under! Little did I know that Git was the answer to all my problems.
+This is a big one when it comes to what you need to know as a web developer. When I started my first job as the only developer at a small design business I had no clue about version control or what it entailed. I was uploading new index.html files and renaming old ones to “index.old.html” all over the place! Such was my fear of irretrievably losing something vitally important and causing my company to go under! Little did I know that Git was the answer to all my problems.
 
 ## I Brilliantly Learnt All That, What Next?
 
@@ -77,6 +77,8 @@ Ignore the ads that are looking for a "junior" dev with 20 years experience in b
 If you’re struggling to find something, be prepared to start at a lower salary if at all possible. At my first job I agreed with my employer that I would start on a slightly reduced salary for the first few months, increasing to the advertised amount once I’d proven my skills.
 
 This can be a good strategy for your very first job, as it allows you to get a foot in the door! Anything you apply for after that you’ll have the benefit of your existing employer to provide references and vouch for your mad skills.
+
+Try standing out from the crowd to your potential employer. Before my interview with my first company, I did my research and discovered their site wasn't responsive! So, I recreated the homepage mobile first, and made it responsive so I could demo what I'd done in the interview. This definitely gave me an advantage over any other potential candidates.
 
 ## Is a Computing Degree Necessary?
 

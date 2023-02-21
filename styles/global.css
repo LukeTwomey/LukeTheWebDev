@@ -924,6 +924,14 @@ p {
   margin-bottom: 1em;
 }
 
+.previews .post img {
+  margin-bottom: 0;
+}
+
+.previews .post h3 {
+  margin-top: 0.5em;
+}
+
 .preview {
   padding: 0.3em 1em 1.5em 1.5em;
 }
