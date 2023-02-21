@@ -1,6 +1,6 @@
 ---
 title: "What is Vite and Why Should You Use It Instead of Create React App?"
-date: "2023-02-20"
+date: "2023-02-21"
 feature: "true"
 previewImage: "vite.webp"
 preview: "Vite is the new kid on the block. Creat React App has lost its crown! Find out why you should be using Vite over Create React App in 2023."
@@ -8,7 +8,7 @@ preview: "Vite is the new kid on the block. Creat React App has lost its crown! 
 
 ## What Exactly Is Create React App? And Vite, For That Matter?
 
-Very simply, Create React App (hereafter referred to as CRA) and Vite (pronounced _veet_, rhymes with _feet!_, means _fast_ in French) are tools that help you create new React applications.
+Very simply, Create React App (hereafter referred to as CRA) and Vite (pronounced _veet_, means _fast_ in French) are tools that help you create new React applications.
 
 Any new app will have a lot of boilerplate things that you will want to set up every time:
 
@@ -317,12 +317,24 @@ npm start
 
 Congratulations! Your CRA app should now be successfully migrated to Vite.
 
-## Disadvantages??????
+## Disadvantages Of Vite
+
+In the interest of making this a fair comparison, we should also consider any potential downsides of using Vite over CRA.
+
+### Package Compatibility Issues
+
+In the process of finding open source projects to make the speed comparisons presented earlier in this post, I did struggle in a few cases to convert the apps to use Vite.
+
+Just following the instructions provided above were not sufficient and I encountered errors with [packages that were incompatible with Vite](https://github.com/vitejs/vite/issues/1315).
+
+For converting an older project to Vite, you’ll need to judge this on a case by case basis, but for a new project you will obviously not have this problem.
+
+### Different Tools For Bundling Development And Production Code
+
+As we have discussed, during development esbuild is used for ultra fast speeds. For production, Rollup is instead used to bundle the code. In rare cases, this mismatch could _potentially_ lead to issues manifesting themselves in production that were not present in development.
 
 ## Summary
 
 Create React App has been a fantastic tool for developers wanting a quick, easy way to generate a new React application. Inevitably, as with anything, technology has evolved and an exciting new prospect has arrived, in Vite.
-
-In web development, things never stand still. As a web developer you need to constantly keep up with new tools and technologies. Read about that in more detail in my [is web development right for me](/blog/is-web-development-right-for-me) post.
 
 Vite has established a completely new way to generate React applications, with speed at the forefront of its mind. The results from my testing speak for themselves. I am blown away by just how much of an improvement Vite has provided. I will definitely be adopting Vite in my projects from now on, and if you value productivity in your development process, I recommend you do the same.
