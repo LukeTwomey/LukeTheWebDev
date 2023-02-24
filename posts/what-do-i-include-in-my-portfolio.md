@@ -1,7 +1,7 @@
 ---
 title: "What do I Include in my Portfolio?"
 date: "2023-01-17"
-feature: "true"
+feature: "false"
 previewImage: "default.webp"
 preview: "It can be confusing to know just what you should add to your portfolio. Here's what I would recommend."
 ---
