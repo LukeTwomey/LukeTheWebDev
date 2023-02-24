@@ -9,6 +9,7 @@ import matter from "gray-matter";
 import BlogPreview from "../../components/BlogPreview";
 import SignupForm from "../../components/SignupForm";
 import fs from "fs";
+import rangeParser from "parse-numeric-range";
 import { DateTime } from "luxon";
 
 const prettyDate = (date) =>
@@ -97,8 +98,29 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
                   return !inline ? (
                     <SyntaxHighlighter
                       style={nord}
+                      wrapLines={true}
                       language="javascript"
                       PreTag="div"
+                      showLineNumbers={true}
+                      useInlineStyles={true}
+                      lineProps={(lineNumber) => {
+                        const hasMeta = node?.data?.meta;
+                        if (hasMeta) {
+                          const RE = /{([\d,-]+)}/;
+                          const metadata = node.data.meta?.replace(/\s/g, "");
+                          const strlineNumbers = RE?.test(metadata)
+                            ? RE?.exec(metadata)[1]
+                            : "0";
+                          const highlightLines = rangeParser(strlineNumbers);
+                          const highlight = highlightLines;
+                          const data = highlight.includes(lineNumber)
+                            ? "highlight"
+                            : null;
+                          return { data };
+                        } else {
+                          return {};
+                        }
+                      }}
                       {...props}
                     >
                       {String(children).replace(/\n$/, "")}

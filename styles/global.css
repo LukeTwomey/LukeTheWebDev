@@ -1123,6 +1123,16 @@ pre code {
   padding: 0;
 }
 
+pre code .linenumber {
+  display: none !important;
+}
+
+pre code [data="highlight"] {
+  background: #525b6b;
+  width: 100%;
+  display: block;
+}
+
 .postDetails {
   display: grid;
   grid-template-columns: 50px 1fr;
