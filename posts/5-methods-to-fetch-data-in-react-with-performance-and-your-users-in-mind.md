@@ -1,6 +1,6 @@
 ---
 title: "5 Methods to Fetch Data in React, With Performance and Your Users in Mind"
-date: "2023-02-24"
+date: "2023-02-25"
 feature: "true"
 previewImage: "data.webp"
 preview: "There are many different ways to fetch data in React, with important factors to take into consideration. I discuss them in more detail here."
@@ -12,9 +12,11 @@ What may seem like a simple task on the face of it, can quickly become quite com
 
 ## 1 - Fetch With Async/Await
 
-From personal experience reading articles like this, I know that I often just want to quickly see the best solution, in it's entirety. With that in mind, I'll first provide a complete, working component below:
+This implementation is what I believe is currently the best option for fetching data in your application.
 
-**Fear not! I'll explain _every single_ part of this component separately and go into far more detail on this whole subject in the rest of the post.**
+From personal experience reading articles like this, I know that I often just want to quickly see the solution, in it's entirety. With that in mind, I'll first provide a complete, working component for you to use.
+
+**Fear not! I'll explain every part of this component in more detail below.**
 
 ```js
 import { useState, useEffect } from "react";
@@ -65,8 +67,6 @@ const App = () => {
 export default App;
 ```
 
-This implementation is what I believe is currently the best option for fetching data in your application.
-
 In this component, I am retrieving a list of blog posts to display on the page.
 
 Let's break it down step by step.
@@ -77,7 +77,7 @@ import { useState, useEffect } from "react";
 
 It's one thing fetching your data, but what do you do with it once you've got it? In this line, we import [useState](https://reactjs.org/docs/hooks-state.html) from React. This hook is what we will use to store our fetched data.
 
-We also import [useEffect](https://reactjs.org/docs/hooks-effect.html). This hook lets us perform side effects in function components. A side effect is something that can generate different outcomes (e.g. a success or failure of a data fetch). It is what we will use to actually fetch our posts.
+We also import [useEffect](https://reactjs.org/docs/hooks-effect.html). This hook lets us perform side-effects in function components. A side effect is something that can generate different outcomes (e.g. a success or failure of a data fetch). It is what we will use to actually fetch our posts.
 
 ```js
 const [posts, setPosts] = useState(null);
@@ -97,7 +97,7 @@ useEffect(() => {
 }, []);
 ```
 
-The [`useEffect`](https://reactjs.org/docs/hooks-effect.html) hook is the place where we will actually be fetching our data. As mentioned before, it allows us to manage side-effects in our functional components. These can include things like data fetching, manipulating the DOM, using timer functions etc. It is important that we do not perform these types of actions in the function body, but inside `useEffect`.
+The [`useEffect`](https://reactjs.org/docs/hooks-effect.html) hook is the place where we will actually be fetching our data. It allows us to manage side-effects in our functional components. These can include things like data fetching, manipulating the DOM, using timer functions etc. It is important that we do not perform these types of actions in the function body, but inside `useEffect`.
 
 It accepts two arguments. The first is a callback (which is where we fetch our data). The second is an optional array of dependencies. `useEffect` will only execute the callback if the dependencies specified in the array have changed between renders. By using an empty array like we have here, the callback will execute only once, when first rendered.
 
@@ -129,21 +129,23 @@ useEffect(() => {
 
 The highlighted lines are something you may not see in other articles on this subject. I am including them here because they are a very useful addition to help [prevent race conditions](https://beta.reactjs.org/learn/synchronizing-with-effects#fetching-data).
 
-Dan Abramov himself has highlighted this as [one of the issues faced when fetching data](https://www.reddit.com/r/reactjs/comments/vi6q6f/comment/iddrjue), and you will be avoiding potential bugs by using this method.
+Dan Abramov himself has [highlighted this](https://www.reddit.com/r/reactjs/comments/vi6q6f/comment/iddrjue) as one of the issues faced when fetching data, and you will be avoiding potential bugs by using this method.
 
 ### Data Fetching Race Conditions Explained
 
-Imagine a situation where you have a component which has rendered once, and fires off a fetch request to get data for your app. Before it has time to return, the component is re-rendered and another fetch request is made. You now have 2 fetch requests, potentially returning different data.
+Imagine a situation where you have a component which has rendered once, and fires off a fetch request to get data for your app. Before the request completes, the component is re-rendered and another request is made. You now have two requests, potentially returning different data, and no idea which one will complete first.
 
 ######
 
-You always want to use the most recent, so it would cause a problem if for some reason the _first_ request came back last, and stored old data in your app.
+To prevent this, we use the useEffect cleanup function, which is called before executing the next effect.
 
-To prevent this, we use the useEffect cleanup function to set the `ignore` flag to true. This will happen when the component re-renders. The first version of it will be cleared down (and have its `ignore` flag set to true), and the newly rendered component will have a new `ignore` flag of its own created.
+When the old effect is cleaned up, we set the `ignore` flag to `true`. This ensures that when the first request returns with stale data, it does not update state.
 
-When the first request comes back, because `ignore` is now set to `false` (by the cleanup function), it will not call `setPosts(data)`.
+When the second request returns with the most recent data, because `ignore` for that version is set to `true`, it will be allowed to add the data to state.
 
-When the second request comes back, because `ignore` for that version is set to `true`, it will be allowed to add the data to state.
+### Abortcontroller - Another Solution to Race Conditions
+
+I wanted to just include this as another option for preventing race conditions, which you can use if you do not need to support Internet Explorer. I won't go into detail on it here, to avoid bloating this section, but [here is a useful post](https://maxrozen.com/race-conditions-fetching-data-react-with-useeffect#:~:text=useEffect%20Clean%2Dup%20Function%20with%20AbortController) providing details on how to use it.
 
 ```js
 const fetchPosts = async () => {
@@ -159,7 +161,7 @@ Once it's defined, we call it using `fetchPosts()`.
 
 ```js
 try {
-  ...
+  // fetch data here
 } catch (err) {
   setError(err.message);
   setposts(null);
@@ -204,10 +206,139 @@ return (
 
 Once we have retrieved our posts data (as an array), and saved it into state, we can `map` over it to display the data on screen.
 
-In the below screenshot, on the right you can see what the data looks like in the Network tab in devtools, and on the left how that data gets displayed on the page once we've returned it from our component:
+In the below screenshot, on the right you can see what the data looks like in the API response on the Network tab in devtools, and on the left how that data gets displayed on the page once we've returned it from our component:
 
 ![Fetched data](../images/fetched-data.webp "inline")
 
-// takes into account race conditions by using the "ignore" flag - https://beta.reactjs.org/learn/synchronizing-with-effects#fetching-data
-// provides loading information to user
-// provides error information to user
+The user will also see pertinent information regarding the status of the app, because of how we are handling our `loading` and `error` flags.
+
+When we are making our request:
+
+![Data loading](../images/data-loading.webp "inline")
+
+If there is a network error and the request fails:
+
+![Network error](../images/network-error.webp "inline")
+
+## 2 - Fetch With Promise Chaining
+
+This method is very similar to the first, in that it uses fetch. The difference is it uses promise chaining rather than async/await to handle the response from the request. Async/await is the newer method of the two, and what you will probably now encounter more frequently, which is why I put it in the number one spot.
+
+```js
+const fetchPosts = () => {
+  try {
+    fetch(`https://jsonplaceholder.typicode.com/posts?_limit=10`)
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+  } ...
+};
+```
+
+Notice that `async` and `await` have been removed. Rather than `await` our response, we handle the response promise with `.then`. We still need to run `json()` on the initial response, so we chain on another `.then` to handle that, and then finally get our actual data.
+
+## 3 - Axios Library
+
+Axios is a promise-based library which allows you to make requests, just like we've been doing with Fetch. While it has the downside of adding an extra dependency to your app, it can simplify our code ever so slightly.
+
+```js {1, 6-8}
+import axios from "axios";
+
+...
+const fetchPosts = async () => {
+  try {
+    const response = await axios.get(
+      `https://jsonplaceholder.typicode.com/posts?_limit=10`
+    );
+    ...
+};
+...
+```
+
+Note that we now need to import the axios library at the top of our component, and this time we wait for `axios.get` instead of `fetch`.
+
+You'll also notice that we no longer need to call `json()` on our response, as Axios automatically does this for us behind the scenes.
+
+![Using computer](../images/data-fetch.webp "inline")
+
+## 4 - useFetch Custom React Hook
+
+The `useFetch` hook comes from the `react-fetch-hook` library, which you will need to install before using.
+
+```js
+yarn add react-fetch-hook
+```
+
+This method allows us to remove the `useEffect` hook, as that is abstracted out into the `useFetch` custom hook for us.
+
+```js {1, 4-6}
+import useFetch from "react-fetch-hook";
+
+export default function App() {
+  const { isLoading, data, error } = useFetch(
+    "https://jsonplaceholder.typicode.com/posts?_limit=10"
+  );
+  return (
+    ...
+  );
+}
+```
+
+As before, we pass in the resource we want to fetch. We destructure the `isLoading`, `data` and `error` state, which we can use in our render as we did in the first example.
+
+## 5 - React Query
+
+[React Query](https://tanstack.com/query/v4/docs/react/overview) is a data fetching library we can use, but it provides a lot more functionality than just what we have been looking at in this article. It allows for fetching, caching, synchronizing and updating server state.
+
+To use it, we need to install the `react-query` library:
+
+```js
+yarn add react-query
+```
+
+We then need to wrap our parent component with a QueryClientProvider imported from react-query, passing a newly created client instance to it:
+
+```js
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
+
+ReactDOM.render(
+  <QueryClientProvider client={queryClient}>
+    <App />
+  </QueryClientProvider>
+);
+```
+
+Once that initial configuration has been made, we can use it within our component:
+
+```js
+import { useQuery } from "react-query";
+
+export default function App() {
+  const { isLoading, error, data } = useQuery("posts", () => {
+    const response = await fetch(
+      `https://jsonplaceholder.typicode.com/posts?_limit=10`
+    );
+    const data = await response.json();
+    return data;
+  });
+
+  return (
+    ...
+  );
+}
+```
+
+Here we are calling `useQuery` with two arguments. The first is something that uniquely identifies the query (here we are specifying posts, as that is what we will be fetching). The second is a function that will make our request (using e.g. Fetch, or Axios).
+
+## Summary
+
+An application will need to fetch data for all manner of different uses. As a user you will seldom encounter an app or website which is not fetching data in some way, as it is such a fundamental part of modern interfaces.
+
+In this article we covered five different methods for fetching data in your React aplication. We discussed each line of my favoured method in detail, explaining how you can ensure your app performs optimally, whilst providing your users with the best experience possible.
+
+We do this by preventing race conditions, so the user does not ever encounter bugs whereby they may see stale, or unexpected data.
+
+We use loading and error states, as a way for you to keep your user informed of what your app is doing, so they never encounter a situation where they are left wondering, or viewing a system error that should be getting handled by your code.
+
+Which data fetching method do you prefer, and why? Let me know in the comments below, or if you need any help with anything I've covered, ask away!
