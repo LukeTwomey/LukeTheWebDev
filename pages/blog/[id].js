@@ -44,7 +44,7 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
         <meta name="twitter:description" content={frontmatter.preview} />
         <meta
           name="twitter:image"
-          content={`https://luketheweb.dev/images/${frontmatter.previewImage}.webp`}
+          content={`https://luketheweb.dev/images/${frontmatter.previewImage}.jpg`}
         />
         <meta property="twitter:card" content="summary" />
         <meta name="twitter:site" content="@luke_the_webdev" />
