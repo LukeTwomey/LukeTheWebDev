@@ -12,7 +12,7 @@ export const BlogPreview = ({ posts, theme }) => {
         <article className={`post ${theme}`} key={post.slug}>
           <Link href={`/blog/${post.slug}`}>
             <Image
-              src={`/images/${post.data.previewImage}`}
+              src={`/images/${post.data.previewImage}.webp`}
               alt={post.data.title}
               width="358"
               height="188"

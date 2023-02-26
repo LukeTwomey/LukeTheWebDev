@@ -2,7 +2,7 @@
 title: "5 Methods to Fetch Data in React, With Performance and Your Users in Mind"
 date: "2023-02-25"
 feature: "true"
-previewImage: "data.webp"
+previewImage: "data"
 preview: "There are many different ways to fetch data in React, with important factors to take into consideration. I discuss them in more detail here."
 ---
 

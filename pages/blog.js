@@ -49,7 +49,7 @@ export const Blog = ({ posts }) => {
               >
                 <Link href={`/blog/${post.slug}`}>
                   <Image
-                    src={`/images/${post.data.previewImage}`}
+                    src={`/images/${post.data.previewImage}.webp`}
                     alt={post.data.title}
                     width="358"
                     height="170"

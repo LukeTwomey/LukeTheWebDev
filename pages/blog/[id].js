@@ -30,7 +30,7 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
         <meta property="og:url" content={`https://luketheweb.dev/blog/${id}`} />
         <meta
           property="og:image"
-          content={`https://luketheweb.dev/images/${frontmatter.previewImage}`}
+          content={`https://luketheweb.dev/images/${frontmatter.previewImage}.jpg`}
         />
 
         {/* Additional OpenGraph*/}
@@ -44,7 +44,7 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
         <meta name="twitter:description" content={frontmatter.preview} />
         <meta
           name="twitter:image"
-          content={`https://luketheweb.dev/images/${frontmatter.previewImage}`}
+          content={`https://luketheweb.dev/images/${frontmatter.previewImage}.webp`}
         />
         <meta property="twitter:card" content="summary" />
         <meta name="twitter:site" content="@luke_the_webdev" />
@@ -74,7 +74,7 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
             </h4>
           </div>
           <Image
-            src={`/images/${frontmatter.previewImage}`}
+            src={`/images/${frontmatter.previewImage}.webp`}
             alt={frontmatter.title}
             width="358"
             height="170"

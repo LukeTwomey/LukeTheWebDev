@@ -2,7 +2,7 @@
 title: "What is Vite and Why Should You Use It Instead of Create React App?"
 date: "2023-02-21"
 feature: "true"
-previewImage: "vite.webp"
+previewImage: "vite"
 preview: "Vite is the new kid on the block. Creat React App has lost its crown! Find out why you should be using Vite over Create React App in 2023."
 ---
 

@@ -2,7 +2,7 @@
 title: "Is Web Development Right For Me?"
 date: "2023-02-19"
 feature: "true"
-previewImage: "thinking2.jpg"
+previewImage: "thinking2"
 preview: "Wondering if development is the right career for you? I'll explain just what I believe it takes to be a web developer."
 ---
 
