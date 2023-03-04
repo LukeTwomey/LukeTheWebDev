@@ -2,7 +2,7 @@
 title: "Why Should You Start a Blog, Anyway?"
 date: "2023-03-04"
 feature: "true"
-previewImage: "blog"
+previewImage: "blog1"
 preview: "Are you trying to decide whether to start writing a blog? I'll discuss some of the benefits (and the drawbacks) and you can see if it sounds right for you."
 ---
 
@@ -28,7 +28,7 @@ I'm saying this specifically with web development in mind here, but this can pro
 
 By keeping a blog, you have that incentive to learn new cool stuff, because you can then write about it. I also find actually writing about a subject I've just learned helps embed it in my mind. Also the process of writing it in a way that is clearer for your users, also makes it clearer for you to understand and reinforces what you've already learned.
 
-![Reading blog](../images/blog3.webp "inline")
+![Reading blog](../images/blog33.webp "inline")
 
 ### It Could Lead to New Opportunities
 
@@ -60,7 +60,7 @@ Something I've learned while investigating the best ways to promote a new blog, 
 
 This can be whatever you like, daily, weekly, fortnightly, monthly etc. The key is keeping up to that schedule. This shows Google that your site is active and frequently updated, and this helps your cause. I do think having a shorter frequency will make things happen sooner, but obviously you'll only want to choose something that works for you and your lifestyle.
 
-![Reading blog](../images/blog2.webp "inline")
+![Reading blog](../images/blog22.webp "inline")
 
 ### If You Don't Enjoy Writing, You'll Find It A Chore
 
