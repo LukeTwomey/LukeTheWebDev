@@ -1,5 +1,5 @@
 ---
-title: "Sound Sniffer"
+title: "Sound Sniffer Project"
 description: "Sound Sniffer is a React app which tracks your favourite artists and displays their latest music releases by using the Spotify API."
 ---
 

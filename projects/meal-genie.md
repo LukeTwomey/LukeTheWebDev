@@ -1,5 +1,5 @@
 ---
-title: "Meal Genie"
+title: "Meal Genie Project"
 description: "Written in React and Redux, Meal Genie is a meal planning app to
   help you organise your recipes for the week."
 ---

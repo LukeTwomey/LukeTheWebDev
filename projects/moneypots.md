@@ -1,5 +1,5 @@
 ---
-title: "Moneypots"
+title: "Moneypots Project"
 description: "Moneypots is an Angular app which lets you create pots to keep
   track of your money across multiple bank accounts."
 ---
