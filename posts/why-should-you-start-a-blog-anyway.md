@@ -1,7 +1,7 @@
 ---
 title: "Why Should You Start a Blog, Anyway?"
 date: "2023-03-04"
-feature: "true"
+feature: "false"
 previewImage: "blog1"
 preview: "Are you trying to decide whether to start writing a blog? I'll discuss some of the benefits (and the drawbacks) and you can see if it sounds right for you."
 ---
