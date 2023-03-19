@@ -1,7 +1,7 @@
 ---
 title: "How to Become A Web Developer in 2023"
 date: "2023-02-18"
-feature: "true"
+feature: "false"
 previewImage: "developer"
 preview: "Want to Learn How to Become a Web Developer? I'll share the steps you need to follow to undertake this exciting new career path."
 ---
