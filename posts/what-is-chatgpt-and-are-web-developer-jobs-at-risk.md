@@ -121,9 +121,9 @@ You can ask as many questions as you like, and you can really let your imaginati
 
 There are other chatbots available, although its fair to say ChatGPT is probably the best overall. Some of the other options are:
 
+- Google Bard
 - Jasper
 - Chatsonic
-- Socratic by Google
 - Chinchilla
 - Bloom
 - Megatron Turing NLG
