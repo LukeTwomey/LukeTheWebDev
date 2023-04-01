@@ -1,7 +1,7 @@
 ---
 title: "What Is ChatGPT, and Are Web Developer Jobs at Risk?"
 date: "2023-03-18"
-feature: "true"
+feature: "false"
 previewImage: "chatgpt"
 preview: "ChatGPT is an AI chatbot, capable of producing scarily humanlike responses. Should we as web developers be worried about it taking our jobs?"
 ---
