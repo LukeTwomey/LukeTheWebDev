@@ -36,9 +36,9 @@ Cascading Style Sheets are the next logical step, as they allow you to style tho
 
 The last of the three amigos. Here’s where things get clever (and a little more complex than the first two to learn). JavaScript is a programming language which will enable you to do things like performing actions when users click on elements, fetching data from API’s to display on your site and is also your gateway to learning a front end framework to help create your site.
 
-### Front-End Framework (React, Angular, Vue etc)
+### Front-End Library (React, Angular, Vue etc)
 
-Not strictly an essential, although arguably it would be deemed so in today’s market. A front-end framework lets you build a SPA (Single Page Application) from scratch. You will put to use the JavaScript skills you learnt previously to build a web app that will display in the browser.
+Not strictly an essential, although arguably it would be deemed so in today’s market. A front-end library lets you build a SPA (Single Page Application) from scratch. You will put to use the JavaScript skills you learnt previously to build a web app that will display in the browser.
 
 ### Version Control (Git)
 
