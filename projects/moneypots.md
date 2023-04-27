@@ -19,5 +19,3 @@ Set targets for each pot individually, and watch as your progress towards that g
 Update an existing pot to re-purpose it for a new goal. Perhaps your partner has put their foot down over that luxury holiday to Bali, instead prioritising a deposit on a house… It is easy to update the pot name, account, target and icon to start saving for something else.
 
 The app is built in Angular, and communicates with a Node.js, Express and MongoDB back-end API to retrieve and update the pot data displayed in the client.
-
-[View App](https://luketheweb.dev/moneypots/index.html)
