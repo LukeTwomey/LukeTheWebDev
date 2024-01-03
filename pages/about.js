@@ -53,33 +53,11 @@ export const About = () => {
         </p>
 
         <p>
-          I currently live in London with my fiancée Fi and Twiglet the cat -
-          obligatory pic below! He loves to play fetch with the ball by his
-          tail. He thinks he's a dog.
-        </p>
-
-        <Image
-          src="/images/twigs.webp"
-          alt="Twiglet the cat"
-          width="358"
-          height="216"
-          style={{
-            height: "auto",
-            width: "100%",
-          }}
-          sizes="(max-width: 850px) 100vw,
-              (max-width: 1400px) 50vw,
-              33vw"
-          priority
-          className={styles.image}
-          itemProp="image"
-        />
-
-        <p>
-          You'll often find me working on personal projects outside of work, the
-          latest being the current iteration of this website. It is written in
-          React, and uses Next.js to benefit from server-side rendering. Among
-          other benefits, this means blazing fast page load times!
+          I currently live in London and you'll often find me working on
+          personal projects outside of work, the latest being the current
+          iteration of this website. It is written in React, and uses Next.js to
+          benefit from server-side rendering. Among other benefits, this means
+          blazing fast page load times!
         </p>
 
         <p>
