@@ -7,9 +7,8 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <nav>
         <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
+        <Link href="/about">About Me</Link>
         <Link href="/blog">Blog</Link>
-        <Link href="/projects">Projects</Link>
         <Link href="/contact">Contact</Link>
       </nav>
 

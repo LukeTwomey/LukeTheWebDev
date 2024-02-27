@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import BlogPreview from "../components/BlogPreview";
-import ProjectsPreview from "../components/ProjectsPreview";
 import SignupForm from "../components/SignupForm";
 import matter from "gray-matter";
 import fs from "fs";
@@ -78,8 +77,6 @@ export const App = ({ featurePosts }) => {
             </Link>
           </div>
         </section>
-
-        <ProjectsPreview />
       </main>
     </>
   );

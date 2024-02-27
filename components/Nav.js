@@ -40,15 +40,6 @@ export const Nav = ({ toggleNav }) => {
               Blog
             </a>
             <a
-              href="/projects"
-              title="Projects"
-              onClick={() => {
-                toggleNav();
-              }}
-            >
-              Projects
-            </a>
-            <a
               href="/contact"
               title="Contact Me"
               onClick={() => {
