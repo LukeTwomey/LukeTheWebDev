@@ -27,7 +27,7 @@ export const App = ({ featurePosts }) => {
         <section className="first">
           <div className="content">
             <Image
-              src="/images/luke-twomey.webp"
+              src="/images/luke-anderson.webp"
               alt="Luke Anderson"
               width="390"
               height="390"
