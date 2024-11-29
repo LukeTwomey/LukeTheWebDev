@@ -33,14 +33,14 @@ export const BlogPreview = ({ posts, theme }) => {
             </Link>
             <div className="postDetails">
               <Image
-                src="/images/luke-twomey.webp"
-                alt="Luke Twomey"
+                src="/images/luke-anderson.webp"
+                alt="Luke Anderson"
                 width="40"
                 height="40"
                 priority
                 className="authorImage"
               />
-              <h4 className="authorName">Luke Twomey</h4>
+              <h4 className="authorName">Luke Anderson</h4>
               <h4 className="publishedDate">{prettyDate(post.data.date)}</h4>
             </div>
             <p>{post.data.preview}</p>
