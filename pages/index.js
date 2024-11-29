@@ -20,7 +20,7 @@ export const App = ({ featurePosts }) => {
         <title>Luke the Web Dev | Web Development Blog and Portfolio</title>
         <meta
           name="description"
-          content="Welcome to Luke the Web Dev! My name is Luke Twomey and by day I'm a web engineer at ASOS. By night (or weekends) I write blog posts and code cool stuff."
+          content="Welcome to Luke the Web Dev! My name is Luke Anderson and by day I'm a web engineer at ASOS. By night (or weekends) I write blog posts and code cool stuff."
         ></meta>
       </Head>
       <main className="home" itemScope="" itemType="http://schema.org/Person">
@@ -28,7 +28,7 @@ export const App = ({ featurePosts }) => {
           <div className="content">
             <Image
               src="/images/luke-twomey.webp"
-              alt="Luke Twomey"
+              alt="Luke Anderson"
               width="390"
               height="390"
               style={{
@@ -47,7 +47,7 @@ export const App = ({ featurePosts }) => {
             <section className="blue">
               <p>
                 Hey guys! My name's <span itemProp="givenName">Luke</span>{" "}
-                <span itemProp="familyName">Twomey</span> and I'm a{" "}
+                <span itemProp="familyName">Anderson</span> and I'm a{" "}
                 <span itemProp="jobTitle">Web Engineer</span> at ASOS, before
                 which I was working at Sky.
               </p>
