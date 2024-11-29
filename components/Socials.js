@@ -15,7 +15,7 @@ export const Socials = () => {
           priority
         />
       </a>
-      <a href="https://uk.linkedin.com/in/luketwomey85">
+      <a href="https://uk.linkedin.com/in/lukeanderson85">
         <Image
           src="/images/linkedin.svg"
           alt="LinkedIn icon"
