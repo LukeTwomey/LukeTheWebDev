@@ -11,7 +11,7 @@ export const Contact = () => {
     <div className="background">
       <Head>
         <meta charset="utf-8" />
-        <meta name="author" content="Luke Twomey" />
+        <meta name="author" content="Luke Anderson" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Contact Me | Luke the Web Dev</title>
         <meta
@@ -26,7 +26,7 @@ export const Contact = () => {
             <div>
               <Image
                 src="/images/me-in-india.webp"
-                alt="Luke Twomey"
+                alt="Luke Anderson"
                 width="358"
                 height="166"
                 style={{
