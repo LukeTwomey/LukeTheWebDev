@@ -20,7 +20,7 @@ export const Blog = ({ posts }) => {
     <div>
       <Head>
         <meta charset="utf-8" />
-        <meta name="author" content="Luke Twomey" />
+        <meta name="author" content="Luke Anderson" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Web Development Blog | Luke the Web Dev</title>
         <meta
@@ -71,15 +71,15 @@ export const Blog = ({ posts }) => {
                   </Link>
                   <div className="postDetails">
                     <Image
-                      src="/images/luke-twomey.webp"
-                      alt="Luke Twomey"
+                      src="/images/luke-anderson.webp"
+                      alt="Luke Anderson"
                       width="40"
                       height="40"
                       priority
                       className="authorImage"
                     />
                     <h4 className="authorName" itemProp="author">
-                      Luke Twomey
+                      Luke Anderson
                     </h4>
                     <h4 className="publishedDate" itemProp="datePublished">
                       {prettyDate(post.data.date)}
