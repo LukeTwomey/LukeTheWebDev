@@ -9,9 +9,9 @@ export const About = () => {
     <div className="background">
       <Head>
         <meta charset="utf-8" />
-        <meta name="author" content="Luke Twomey" />
+        <meta name="author" content="Luke Anderson" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>About Luke Twomey | Luke the Web Dev</title>
+        <title>About Luke Anderson | Luke the Web Dev</title>
         <meta
           name="description"
           content="I'm a web dev from London, currently working for ASOS. I have been programming since 2015, and love the process of
@@ -24,7 +24,7 @@ export const About = () => {
         <h2>Here to Help You on Your Web Development Journey</h2>
         <p>
           Hello and welcome! My name's <span itemProp="givenName">Luke</span>{" "}
-          <span itemProp="familyName">Twomey</span> and I'm a{" "}
+          <span itemProp="familyName">Anderson</span> and I'm a{" "}
           <span itemProp="jobTitle">Web Engineer </span>
           from sunny London. I'm currently working for ASOS, before which I was
           working at Sky.
@@ -32,7 +32,7 @@ export const About = () => {
 
         <Image
           src="/images/me-in-new-york.webp"
-          alt="Luke Twomey"
+          alt="Luke Anderson"
           width="358"
           height="200"
           style={{
