@@ -20,7 +20,7 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
     <div className="background">
       <Head>
         <meta charset="utf-8" />
-        <meta name="author" content="Luke Twomey" />
+        <meta name="author" content="Luke Anderson" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{frontmatter.title}</title>
         <meta name="description" content={frontmatter.preview}></meta>
@@ -36,7 +36,7 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
         {/* Additional OpenGraph*/}
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={frontmatter.date} />
-        <meta property="article:author" content="Luke Twomey" />
+        <meta property="article:author" content="Luke Anderson" />
         <meta property="og:site_name" content="Luke the Web Dev" />
 
         {/* Twitter OpenGraph*/}
@@ -60,14 +60,14 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
           <div className="postDetails">
             <Image
               src="/images/luke-twomey.webp"
-              alt="Luke Twomey"
+              alt="Luke Anderson"
               width="40"
               height="40"
               priority
               className="authorImage"
             />
             <h4 className="authorName" itemProp="author">
-              Luke Twomey
+              Luke Anderson
             </h4>
             <h4 className="publishedDate" itemProp="datePublished">
               {prettyDate(frontmatter.date)}
