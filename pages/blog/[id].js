@@ -59,7 +59,7 @@ const Post = ({ id, frontmatter, content, otherPosts }) => {
           <h1 itemProp="headline name">{frontmatter.title}</h1>
           <div className="postDetails">
             <Image
-              src="/images/luke-twomey.webp"
+              src="/images/luke-anderson.webp"
               alt="Luke Anderson"
               width="40"
               height="40"
