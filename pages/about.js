@@ -25,7 +25,7 @@ export const About = () => {
         <p>
           Hello and welcome! My name's <span itemProp="givenName">Luke</span>{" "}
           <span itemProp="familyName">Anderson</span> and I'm a{" "}
-          <span itemProp="jobTitle">Web Engineer </span>
+          <span itemProp="jobTitle">Senior Web Engineer </span>
           from sunny London. I'm currently working for ASOS, before which I was
           working at Sky.
         </p>
