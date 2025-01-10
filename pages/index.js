@@ -1,4 +1,4 @@
-import Head from "next/head";
+rimport Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import BlogPreview from "../components/BlogPreview";
@@ -20,7 +20,7 @@ export const App = ({ featurePosts }) => {
         <title>Luke the Web Dev | Web Development Blog and Portfolio</title>
         <meta
           name="description"
-          content="Welcome to Luke the Web Dev! My name is Luke Anderson and by day I'm a web engineer at ASOS. By night (or weekends) I write blog posts and code cool stuff."
+          content="Welcome to Luke the Web Dev! My name is Luke Anderson and by day I'm a senior web engineer at ASOS. By night (or weekends) I write blog posts and code cool stuff."
         ></meta>
       </Head>
       <main className="home" itemScope="" itemType="http://schema.org/Person">
@@ -48,7 +48,7 @@ export const App = ({ featurePosts }) => {
               <p>
                 Hey guys! My name's <span itemProp="givenName">Luke</span>{" "}
                 <span itemProp="familyName">Anderson</span> and I'm a{" "}
-                <span itemProp="jobTitle">Web Engineer</span> at ASOS, before
+                <span itemProp="jobTitle">Senior Web Engineer</span> at ASOS, before
                 which I was working at Sky.
               </p>
               <p>
