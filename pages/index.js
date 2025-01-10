@@ -1,4 +1,4 @@
-rimport Head from "next/head";
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import BlogPreview from "../components/BlogPreview";
